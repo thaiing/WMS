@@ -1,0 +1,491 @@
+{
+  "dataOptions": {
+    "tableName": "base_product_type",
+    "idField": "typeId",
+    "idValue": 0,
+    "codeRegular": "",
+    "linkColumn": "typeName",
+    "prefixRouter": "/basic/product/productType",
+    "webRouter": "/basic/product/productType",
+    "menuId": 1763,
+    "pageIndex": 1,
+    "pageSize": 15,
+    "total": 0,
+    "orderBy": {
+      "typeId": "DESC"
+    },
+    "showActionField": false,
+    "editorType": "dialog",
+    "tableId": 44,
+    "tableTenantId": 0,
+    "tableTenantName": "商品类别"
+  },
+  "dataListOptions": {
+    "data": [],
+    "fields": [
+      {
+        "type": "input",
+        "label": "类目名称",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "typeName",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": true,
+        "key": "1697365998128_15410",
+        "tagColorList": []
+      },
+      {
+        "type": "input",
+        "label": "类别路径",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "fullTypeName",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697356590309_13460",
+        "tagColorList": []
+      },
+      {
+        "type": "input",
+        "label": "质检方案",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "qualityPlan",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697356598859_75097",
+        "tagColorList": []
+      },
+      {
+        "type": "input",
+        "label": "质检合格率%",
+        "dataType": "double",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "qualityProportion",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697356637451_12667",
+        "tagColorList": []
+      },
+      {
+        "type": "select",
+        "label": "是否可用",
+        "dataType": "byte",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "width": "100%",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "下拉框1"
+            },
+            {
+              "value": "下拉框2"
+            },
+            {
+              "value": "下拉框3"
+            }
+          ],
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "dropdownId": 20,
+          "props": {
+            "value": "value",
+            "label": "label"
+          }
+        },
+        "prop": "enable",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1698979028485_86057",
+        "tagColorList": [
+          {
+            "operator": "=",
+            "value": "1",
+            "color": "rgba(255, 255, 255, 1)",
+            "backgroudColor": "rgba(1, 179, 1, 1)"
+          },
+          {
+            "operator": "=",
+            "value": "0",
+            "color": "rgba(255, 255, 255, 1)",
+            "backgroudColor": "rgba(255, 0, 0, 1)"
+          }
+        ]
+      },
+      {
+        "type": "input",
+        "label": "备注",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "remark",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697356697986_8275",
+        "tagColorList": []
+      },
+      {
+        "type": "input",
+        "label": "图片",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "images",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697356706795_70289",
+        "tagColorList": []
+      },
+      {
+        "type": "input",
+        "label": "创建人",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "createByName",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697356724671_15691"
+      },
+      {
+        "type": "input",
+        "label": "创建时间",
+        "dataType": "datetime",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "createTime",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697356726445_85055"
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "新建",
+            "options": {
+              "icon": "yrt-addplus",
+              "type": "primary",
+              "authNode": "add"
+            },
+            "key": "btn-add"
+          },
+          {
+            "type": "button",
+            "label": "删除",
+            "options": {
+              "icon": "yrt-shanchu2",
+              "type": "danger",
+              "authNode": "delete"
+            },
+            "key": "btn-delete"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group01"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "刷新",
+            "options": {
+              "icon": "yrt-shuaxin",
+              "type": "default",
+              "authNode": "refresh"
+            },
+            "key": "btn-refresh"
+          },
+          {
+            "type": "button",
+            "label": "导出",
+            "options": {
+              "icon": "yrt-daochu1",
+              "type": "default",
+              "authNode": "export",
+              "importId": 1008
+            },
+            "key": "1738908754000_78699"
+          },
+          {
+            "type": "button",
+            "label": "导入",
+            "options": {
+              "authNode": "import",
+              "icon": "yrt-daoru2",
+              "type": "default",
+              "importId": 1008
+            },
+            "key": "1738908810000_58102"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group03"
+      }
+    ]
+  },
+  "editorOptions": {
+    "fields": [
+      {
+        "type": "input",
+        "label": "类目编号",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "dataType": "string",
+          "prop": "typeCode",
+          "searchRowNo": 0,
+          "width": "240px",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "key": "1698979919550_88961"
+      },
+      {
+        "type": "input",
+        "label": "类目名称",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "dataType": "string",
+          "prop": "typeName",
+          "searchRowNo": 0,
+          "width": "240px",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": true,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "key": "1697356803923_94844"
+      },
+      {
+        "type": "cascader",
+        "label": "上级类别",
+        "options": {
+          "width": "240px",
+          "defaultValue": null,
+          "showLabel": false,
+          "noLabel": false,
+          "options": [
+            {
+              "value": 0,
+              "label": "[根级]",
+              "chlidren": []
+            }
+          ],
+          "required": true,
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "props": {
+            "value": "value",
+            "label": "label"
+          },
+          "dataType": "integer",
+          "prop": "fullTypeId"
+        },
+        "key": "1697356873214_88333"
+      },
+      {
+        "type": "switch",
+        "label": "是否可用",
+        "options": {
+          "dataType": "byte",
+          "defaultValue": 1,
+          "required": false,
+          "disabled": false,
+          "noLabel": false,
+          "prop": "enable",
+          "active-value": 1,
+          "inactive-value": 0
+        },
+        "key": "1697356936983_70561"
+      },
+      {
+        "type": "input",
+        "label": "质检方案",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "dataType": "string",
+          "searchRowNo": 0,
+          "width": "240px",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "pattern": "",
+          "placeholder": "",
+          "prop": "qualityPlan"
+        },
+        "key": "1697356998728_39858"
+      },
+      {
+        "type": "input",
+        "label": "质检合格率%",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "dataType": "double",
+          "searchRowNo": 0,
+          "width": "240px",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "pattern": "",
+          "placeholder": "",
+          "prop": "qualityProportion"
+        },
+        "key": "1697357001532_74548"
+      },
+      {
+        "type": "textarea",
+        "label": "备注",
+        "icon": "yrt-duohangshurukuang",
+        "options": {
+          "width": "320PX",
+          "defaultValue": null,
+          "required": false,
+          "readonly": false,
+          "disabled": false,
+          "pattern": "",
+          "placeholder": "",
+          "noLabel": false,
+          "prop": "remark"
+        },
+        "key": "1697357088333_87956"
+      },
+      {
+        "type": "upload-image",
+        "label": "图片/文件",
+        "icon": "yrt-tupian",
+        "options": {
+          "defaultValue": null,
+          "size": {
+            "width": 180,
+            "height": 180
+          },
+          "serverAction": "/api/common/upload",
+          "disabled": false,
+          "max": 5,
+          "multiple": true,
+          "listType": "picture-card",
+          "noLabel": false,
+          "prop": "images"
+        },
+        "key": "1697357114202_2142"
+      }
+    ],
+    "config": {
+      "labelWidth": "100px",
+      "labelPosition": "right",
+      "top": "3vh",
+      "width": "1200px",
+      "visible": false,
+      "disabled": false,
+      "title": "商品类别",
+      "action": "add",
+      "formInline": false,
+      "saveButtonText": "保存"
+    }
+  }
+}

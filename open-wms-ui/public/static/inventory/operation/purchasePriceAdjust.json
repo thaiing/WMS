@@ -1,0 +1,1117 @@
+{
+  "dataOptions": {
+    "tableName": "storage_purchase_price_adjust",
+    "idField": "purchasePriceAdjustId",
+    "idValue": 0,
+    "codeRegular": "purchasePriceAdjustCode",
+    "linkColumn": "purchasePriceAdjustCode",
+    "prefixRouter": "/inventory/operation/purchasePriceAdjust",
+    "webRouter": "/inventory/operation/purchasePriceAdjust",
+    "menuId": 1783,
+    "pageIndex": 1,
+    "pageSize": 15,
+    "total": 0,
+    "orderBy": {
+      "purchasePriceAdjustId": "DESC"
+    },
+    "showActionField": false,
+    "editorType": "dialog",
+    "tableId": 124,
+    "tableTenantId": 0,
+    "tableTenantName": "库存成本价调整"
+  },
+  "dataListOptions": {
+    "data": [],
+    "fields": [
+      {
+        "prop": "purchasePriceAdjustCode",
+        "label": "成本价调整单号",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": true,
+        "key": "1547027194000_9177",
+        "model": "input_1547027194000_9177",
+        "width": "",
+        "tagColorList": []
+      },
+      {
+        "prop": "consignorName",
+        "label": "货主名称",
+        "dataType": "string",
+        "sortable": false,
+        "type": "select",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1547027199000_78331",
+        "model": "input_1547027199000_78331",
+        "width": "",
+        "dropdown_Id": 797,
+        "keyProp": "consignorId",
+        "tagColorList": [],
+        "options": {
+          "width": "100%",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "货位转移",
+              "label": "货位转移"
+            },
+            {
+              "value": "下架回拣",
+              "label": "下架回拣"
+            },
+            {
+              "value": "库内码盘",
+              "label": "库内码盘"
+            }
+          ],
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "dropdownId": 797,
+          "props": {
+            "value": "value",
+            "label": "label"
+          }
+        },
+        "filterable": true,
+        "clearable": true,
+        "searchRowNo": 200
+      },
+      {
+        "prop": "storageName",
+        "label": "仓库名称",
+        "dataType": "string",
+        "sortable": false,
+        "type": "select",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1547027200000_92557",
+        "model": "input_1547027200000_92557",
+        "width": "",
+        "dropdown_Id": 31,
+        "keyProp": "storageId",
+        "tagColorList": [],
+        "options": {
+          "width": "100%",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "货位转移",
+              "label": "货位转移"
+            },
+            {
+              "value": "下架回拣",
+              "label": "下架回拣"
+            },
+            {
+              "value": "库内码盘",
+              "label": "库内码盘"
+            }
+          ],
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "dropdownId": 31,
+          "props": {
+            "value": "value",
+            "label": "label"
+          }
+        },
+        "filterable": true,
+        "clearable": true,
+        "searchRowNo": 200
+      },
+      {
+        "prop": "adjustStatus",
+        "label": "调整状态",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1547027206000_23591",
+        "model": "input_1547027206000_23591",
+        "tagColorList": [
+          {
+            "operator": "=",
+            "value": "调整完成",
+            "color": "rgba(255, 255, 255, 1)",
+            "backgroudColor": "rgba(5, 200, 5, 1)"
+          },
+          {
+            "operator": "=",
+            "value": "确认调整",
+            "color": "rgba(96, 98, 102, 1)",
+            "backgroudColor": "rgba(0, 255, 0, 1)"
+          },
+          {
+            "operator": "=",
+            "value": "新建",
+            "color": "rgba(96, 98, 102, 1)",
+            "backgroudColor": "rgba(255, 255, 0, 1)"
+          }
+        ]
+      },
+      {
+        "prop": "applyDate",
+        "label": "调整日期",
+        "dataType": "datetime",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1547027203000_63457",
+        "model": "input_1547027203000_63457",
+        "width": "",
+        "formatter": "YYYY-MM-DD HH:mm:ss",
+        "tagColorList": []
+      },
+      {
+        "prop": "nickName",
+        "label": "经手人",
+        "dataType": "string",
+        "sortable": false,
+        "type": "select",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1547027201000_9410",
+        "model": "input_1547027201000_9410",
+        "dropdown_Id": 22,
+        "keyProp": "user_Id"
+      },
+      {
+        "prop": "deptName",
+        "label": "部门",
+        "dataType": "string",
+        "sortable": false,
+        "type": "select",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1547027204000_32468",
+        "model": "input_1547027204000_32468",
+        "dropdown_Id": 23,
+        "keyProp": "dept_Id"
+      },
+      {
+        "prop": "auditor",
+        "label": "审核人",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1547027208000_28163",
+        "model": "input_1547027208000_28163",
+        "tagColorList": []
+      },
+      {
+        "prop": "createByName",
+        "label": "创建人",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1547027221000_99132",
+        "model": "input_1547027221000_99132",
+        "tagColorList": []
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "dataType": "datetime",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1547027223000_90118",
+        "model": "input_1547027223000_90118",
+        "width": "",
+        "formatter": "YYYY-MM-DD HH:mm:ss",
+        "tagColorList": []
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "新建",
+            "options": {
+              "icon": "yrt-addplus",
+              "type": "primary",
+              "authNode": "add"
+            },
+            "key": "btn-add"
+          },
+          {
+            "type": "button",
+            "label": "删除",
+            "options": {
+              "icon": "yrt-shanchu2",
+              "type": "danger",
+              "authNode": "delete"
+            },
+            "key": "btn-delete"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group01"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "审核",
+            "options": {
+              "icon": "yrt-shenpi6",
+              "type": "success",
+              "authNode": "multiAuditing"
+            },
+            "key": "btn-confirm"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group02"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "刷新",
+            "options": {
+              "icon": "yrt-shuaxin",
+              "type": "default",
+              "authNode": "refresh"
+            },
+            "key": "btn-refresh"
+          },
+          {
+            "type": "button",
+            "label": "导出",
+            "options": {
+              "icon": "yrt-daochu1",
+              "type": "default",
+              "authNode": "export"
+            },
+            "key": "btn-export"
+          },
+          {
+            "type": "button",
+            "label": "打印",
+            "options": {
+              "icon": "yrt-dayin3",
+              "type": "default",
+              "authNode": "print"
+            },
+            "key": "btn-print"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group03"
+      }
+    ]
+  },
+  "editorOptions": {
+    "fields": [
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "成本调整单号",
+                "options": {
+                  "prop": "purchasePriceAdjustCode",
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1547462209000_80779",
+                  "readonly": true
+                },
+                "key": "1547462209000_80779",
+                "model": "input_1547462209000_80779"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "table-select",
+                "label": "仓库名称",
+                "dataType": "string",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": true,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "columns": [
+                    {
+                      "prop": "storageCode",
+                      "label": "仓库编号",
+                      "width": 100
+                    },
+                    {
+                      "prop": "storageName",
+                      "label": "仓库名称",
+                      "width": 150
+                    }
+                  ],
+                  "url": "/basic/storage/storage/getList",
+                  "searchFields": "storageId,storageCode,storageName",
+                  "prop": "storageName",
+                  "popoverWidth": "300px",
+                  "dataType": "string"
+                },
+                "key": "1701846639649_48034",
+                "model": "input_1701846639649_48034",
+                "rules": [
+                  {
+                    "required": true,
+                    "message": "仓库名称必须填写"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "table-select",
+                "label": "货主名称",
+                "dataType": "string",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": true,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "columns": [
+                    {
+                      "prop": "consignorCode",
+                      "label": "货主编号",
+                      "width": 100
+                    },
+                    {
+                      "prop": "consignorName",
+                      "label": "货主名称",
+                      "width": 150
+                    }
+                  ],
+                  "url": "/basic/base/consignor/getList",
+                  "searchFields": "consignorId,consignorCode,consignorName",
+                  "prop": "consignorName",
+                  "popoverWidth": "300px",
+                  "dataType": "string"
+                },
+                "key": "1701846665889_12916",
+                "model": "input_1701846665889_12916",
+                "rules": [
+                  {
+                    "required": true,
+                    "message": "货主名称必须填写"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1547462155000_82453"
+        },
+        "key": "1547462155000_82453",
+        "model": "grid_1547462155000_82453"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "select",
+                "label": "经手人",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "{currentNickName}",
+                  "multiple": false,
+                  "disabled": true,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": true,
+                  "showLabel": false,
+                  "noLabel": false,
+                  "options": [
+                    {
+                      "value": "下拉框1"
+                    },
+                    {
+                      "value": "下拉框2"
+                    },
+                    {
+                      "value": "下拉框3"
+                    }
+                  ],
+                  "remote": "bindDropdown",
+                  "remoteOptions": [],
+                  "dropdown_Id": 22,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "remoteFunc": "func_1576142080000_89856",
+                  "prop": "nickName",
+                  "dataType": "string",
+                  "ruleType": "string",
+                  "readonly": true
+                },
+                "key": "1576142080000_89856",
+                "model": "select_1576142080000_89856",
+                "rules": [
+                  {
+                    "required": true,
+                    "message": "经手人必须填写"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "tree",
+                "label": "部门",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "{currentDeptName}",
+                  "showLabel": false,
+                  "noLabel": false,
+                  "required": false,
+                  "onlySelectLeaf": true,
+                  "disabled": false,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "prop": "deptName",
+                  "popoverWidth": "300px",
+                  "dataType": "string",
+                  "keyProp": "deptId"
+                },
+                "key": "1576142082000_89488",
+                "model": "select_1576142082000_89488",
+                "ajaxParams": {
+                  "tableName": "sys_dept",
+                  "keyName": "deptId",
+                  "nodeName": "deptName",
+                  "fixHasChild": false,
+                  "showOutsideNode": false,
+                  "parentName": "parentId",
+                  "whereList": [
+                    {
+                      "column": "parentId",
+                      "values": 0,
+                      "queryType": "EQ",
+                      "dataType": "INT"
+                    }
+                  ],
+                  "orderByList": [
+                    {
+                      "column": "orderNum",
+                      "orderByType": "DESC"
+                    }
+                  ],
+                  "extendColumns": ""
+                }
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "date",
+                "label": "调整日期",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "{currentDate}",
+                  "readonly": false,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "date",
+                  "format": "yyyy-MM-dd",
+                  "timestamp": false,
+                  "required": true,
+                  "noLabel": false,
+                  "prop": "applyDate",
+                  "ruleType": "string",
+                  "dataType": "datetime",
+                  "remoteFunc": "func_1576142083000_81749"
+                },
+                "key": "1576142083000_81749",
+                "model": "date_1576142083000_81749",
+                "rules": [
+                  {
+                    "required": true,
+                    "message": "调整日期必须填写"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1547462157000_86620"
+        },
+        "key": "1547462157000_86620",
+        "model": "grid_1547462157000_86620"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "调整状态",
+                "options": {
+                  "prop": "adjustStatus",
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "新建",
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1576142090000_43541",
+                  "readonly": true
+                },
+                "key": "1576142090000_43541",
+                "model": "input_1576142090000_43541"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "审核人",
+                "options": {
+                  "prop": "auditor",
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1576142091000_38466",
+                  "readonly": true
+                },
+                "key": "1576142091000_38466",
+                "model": "input_1576142091000_38466"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "审核日期",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "required": false,
+                  "readonly": true,
+                  "disabled": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "auditDate",
+                  "remoteFunc": "func_1576142092000_2740"
+                },
+                "key": "1576142092000_2740",
+                "model": "input_1576142092000_2740"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1547462158000_86606"
+        },
+        "key": "1547462158000_86606",
+        "model": "grid_1547462158000_86606"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "创建人",
+                "options": {
+                  "prop": "createByName",
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1576142101000_31116",
+                  "readonly": true
+                },
+                "key": "1576142101000_31116",
+                "model": "input_1576142101000_31116"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "date",
+                "label": "创建时间",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": null,
+                  "readonly": true,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "datetime",
+                  "format": "yyyy-MM-dd",
+                  "timestamp": false,
+                  "required": false,
+                  "noLabel": false,
+                  "prop": "createTime",
+                  "remoteFunc": "func_1576142102000_57856"
+                },
+                "key": "1576142102000_57856",
+                "model": "date_1576142102000_57856"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "合计毛重",
+                "options": {
+                  "prop": "totalWeight",
+                  "searchRowNo": null,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "decimal",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1576142104000_7505",
+                  "readonly": true
+                },
+                "key": "1576142104000_7505",
+                "model": "input_1576142104000_7505"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1547462159000_79480"
+        },
+        "key": "1547462159000_79480",
+        "model": "grid_1547462159000_79480"
+      },
+      {
+        "type": "textarea",
+        "label": "备注",
+        "options": {
+          "width": "100%",
+          "defaultValue": "",
+          "required": false,
+          "readonly": false,
+          "disabled": false,
+          "pattern": "",
+          "placeholder": "",
+          "noLabel": false,
+          "prop": "remark"
+        },
+        "key": "1576142109000_48812",
+        "model": "input_1571208473000_29999"
+      },
+      {
+        "type": "detail-grid",
+        "label": "明细布局",
+        "fields": [
+          {
+            "prop": "inventoryId",
+            "label": "库存ID",
+            "dataType": "long",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1702630584722_44478",
+            "model": "input_1547463409000_81476",
+            "width": "",
+            "tagColorList": []
+          },
+          {
+            "prop": "productCode",
+            "label": "编号",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1547463409000_81476",
+            "model": "input_1547463409000_81476",
+            "width": 110,
+            "tagColorList": []
+          },
+          {
+            "prop": "productName",
+            "label": "商品名称",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1547463425000_80648",
+            "model": "input_1547463425000_80648",
+            "width": "220",
+            "tagColorList": []
+          },
+          {
+            "prop": "productModel",
+            "label": "条形码",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1547463427000_24122",
+            "model": "input_1547463427000_24122",
+            "width": "130",
+            "tagColorList": []
+          },
+          {
+            "prop": "smallUnit",
+            "label": "小单位",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1547463432000_68386",
+            "model": "input_1547463432000_68386"
+          },
+          {
+            "prop": "productStorage",
+            "label": "货位数量",
+            "dataType": "integer",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1703484431749_58089",
+            "model": "input_1547463435000_74922",
+            "tagColorList": [],
+            "formatter": "0.##"
+          },
+          {
+            "prop": "positionName",
+            "label": "货位名称",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1547463458000_7645",
+            "model": "input_1547463458000_7645",
+            "tagColorList": [],
+            "width": 100
+          },
+          {
+            "prop": "purchasePrice",
+            "label": "成本价",
+            "dataType": "bigDecimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1547463465000_11759",
+            "model": "input_1547463465000_11759",
+            "type": "none",
+            "options": {},
+            "tagColorList": [],
+            "formatter": "0.##"
+          },
+          {
+            "prop": "purchaseAmount",
+            "label": "成本额",
+            "dataType": "bigDecimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1547463475000_74348",
+            "model": "input_1547463475000_74348",
+            "tagColorList": [],
+            "formatter": "0.##"
+          },
+          {
+            "prop": "adjustPrice",
+            "label": "调整后成本价",
+            "dataType": "bigDecimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1701846102422_46398",
+            "headerAlign": "center",
+            "align": "left",
+            "type": "input",
+            "options": {
+              "width": "100%",
+              "defaultValue": "",
+              "required": false,
+              "readonly": false,
+              "disabled": false,
+              "pattern": "",
+              "placeholder": "",
+              "noLabel": false
+            },
+            "tagColorList": [],
+            "width": 100,
+            "formatter": "0.##"
+          },
+          {
+            "prop": "diffPrice",
+            "label": "差价",
+            "dataType": "bigDecimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1547463435000_74922",
+            "model": "input_1547463435000_74922",
+            "tagColorList": [],
+            "formatter": "0.##"
+          },
+          {
+            "prop": "rate",
+            "label": "税率",
+            "dataType": "bigDecimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1622172567000_28826",
+            "headerAlign": "center",
+            "align": "left",
+            "type": "input",
+            "options": {
+              "width": "100%",
+              "defaultValue": "",
+              "required": false,
+              "readonly": false,
+              "disabled": false,
+              "pattern": "",
+              "placeholder": "",
+              "noLabel": false
+            },
+            "tagColorList": [],
+            "width": 100,
+            "formatter": "%"
+          },
+          {
+            "prop": "ratePrice",
+            "label": "税价",
+            "dataType": "bigDecimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1547463510000_39283",
+            "model": "input_1547463510000_39283",
+            "tagColorList": [],
+            "formatter": "0.##"
+          },
+          {
+            "prop": "rateAmount",
+            "label": "价税合计",
+            "dataType": "bigDecimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1547463516000_19977",
+            "model": "input_1547463516000_19977",
+            "tagColorList": [],
+            "formatter": "0.##"
+          },
+          {
+            "prop": "weight",
+            "label": "单位重量",
+            "dataType": "bigDecimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1571208494000_1850",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "formatter": "0.#######"
+          },
+          {
+            "prop": "rowWeight",
+            "label": "合计重量",
+            "dataType": "bigDecimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1571208497000_18271",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "formatter": "0.#######"
+          },
+          {
+            "prop": "remark",
+            "label": "备注",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1547463523000_40313",
+            "model": "input_1547463523000_40313"
+          }
+        ],
+        "options": {
+          "border": true,
+          "size": "mini",
+          "pageIndex": 1,
+          "pageSize": 50,
+          "detailSelections": [],
+          "idField": "purchasePriceAdjustDetailId",
+          "remoteFunc": "func_1547462198000_17699",
+          "prefixRouter": "/inventory/operation/purchasePriceAdjustDetail",
+          "orderBy": {
+            "purchasePriceAdjustDetailId": "ASC"
+          }
+        },
+        "buttons": [
+          {
+            "type": "button-group",
+            "label": "按钮组",
+            "buttons": [
+              {
+                "type": "button",
+                "label": "商品库存添加",
+                "options": {
+                  "authNode": "detailAddPosition",
+                  "icon": "icon-yrt yrt-jiahao",
+                  "type": "primary"
+                },
+                "key": "1548666017000_92659"
+              },
+              {
+                "type": "button",
+                "label": "删除",
+                "options": {
+                  "icon": "yrt-shanchu2",
+                  "type": "danger",
+                  "authNode": "detailDelete"
+                },
+                "key": "detail_delete"
+              }
+            ],
+            "options": {
+              "icon": "yrt-anniuzu"
+            }
+          }
+        ],
+        "key": "1547462198000_17699",
+        "model": "detail-grid_1547462198000_17699",
+        "subTableView": "Storage_PurchasePriceAdjustList",
+        "subTableName": "storage_purchase_price_adjust_detail"
+      }
+    ],
+    "config": {
+      "labelWidth": "100px",
+      "labelPosition": "right",
+      "top": "3vh",
+      "width": "1200px",
+      "visible": false,
+      "disabled": false,
+      "title": "库存成本价调整",
+      "action": "add",
+      "formInline": false,
+      "saveButtonText": "保存"
+    }
+  }
+}

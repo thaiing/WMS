@@ -1,0 +1,954 @@
+{
+  "dataOptions": {
+    "tableName": "storage_sn_adjust",
+    "idField": "snAdjustId",
+    "idValue": 0,
+    "codeRegular": "snAdjustCode",
+    "linkColumn": "snAdjustCode",
+    "prefixRouter": "/inventory/operation/snAdjust",
+    "webRouter": "/inventory/operation/snAdjust",
+    "menuId": 1789,
+    "pageIndex": 1,
+    "pageSize": 15,
+    "total": 0,
+    "orderBy": {
+      "snAdjustId": "DESC"
+    },
+    "showActionField": true,
+    "editorType": "dialog",
+    "tableId": 399,
+    "tableTenantId": 0,
+    "tableTenantName": "SN调整"
+  },
+  "dataListOptions": {
+    "data": [],
+    "fields": [
+      {
+        "prop": "snAdjustCode",
+        "label": "SN调整单号",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1725530167170_38427",
+        "width": 120
+      },
+      {
+        "prop": "adjustStatus",
+        "label": "调整状态",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1725530167170_22279"
+      },
+      {
+        "prop": "adjustDate",
+        "label": "调整日期",
+        "dataType": "datetime",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1725530167170_21059",
+        "width": 140,
+        "tagColorList": []
+      },
+      {
+        "prop": "totalSnCount",
+        "label": "合计SN数",
+        "dataType": "bigDecimal",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1725530167170_94334",
+        "tagColorList": [],
+        "formatter": "0.##"
+      },
+      {
+        "prop": "nickName",
+        "label": "经手人",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1725530167170_69812",
+        "tagColorList": []
+      },
+      {
+        "prop": "auditor",
+        "label": "审核人",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1725530167170_89424",
+        "tagColorList": []
+      },
+      {
+        "prop": "auditing",
+        "label": "审核",
+        "dataType": "byte",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1725530167170_65404",
+        "tagColorList": []
+      },
+      {
+        "prop": "auditDate",
+        "label": "审核日期",
+        "dataType": "datetime",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1725530167170_85047",
+        "width": 120,
+        "tagColorList": []
+      },
+      {
+        "prop": "remark",
+        "label": "备注",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1725530167170_55968"
+      },
+      {
+        "prop": "createByName",
+        "label": "创建人",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1725530167170_72611"
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "dataType": "datetime",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1725530167170_71884",
+        "width": 140,
+        "tagColorList": []
+      },
+      {
+        "prop": "updateByName",
+        "label": "修改人",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1725530167170_10248"
+      },
+      {
+        "prop": "updateTime",
+        "label": "修改时间",
+        "dataType": "datetime",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1725530167171_88791",
+        "width": 140,
+        "tagColorList": []
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "新建",
+            "options": {
+              "icon": "yrt-addplus",
+              "type": "primary",
+              "authNode": "add"
+            },
+            "key": "btn-add"
+          },
+          {
+            "type": "button",
+            "label": "删除",
+            "options": {
+              "icon": "yrt-shanchu2",
+              "type": "primary",
+              "authNode": "delete"
+            },
+            "key": "btn-delete"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group01"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "审核",
+            "options": {
+              "icon": "yrt-shenpi6",
+              "type": "success",
+              "authNode": "auditing"
+            },
+            "key": "btn-confirm"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group02"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "刷新",
+            "options": {
+              "icon": "yrt-shuaxin",
+              "type": "default",
+              "authNode": "refresh"
+            },
+            "key": "btn-refresh"
+          },
+          {
+            "type": "button",
+            "label": "导出",
+            "options": {
+              "icon": "yrt-daochu1",
+              "type": "default",
+              "authNode": "export"
+            },
+            "key": "btn-export"
+          },
+          {
+            "type": "button",
+            "label": "打印",
+            "options": {
+              "icon": "yrt-dayin3",
+              "type": "default",
+              "authNode": "print"
+            },
+            "key": "btn-print"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group03"
+      }
+    ]
+  },
+  "editorOptions": {
+    "fields": [
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "SN调整单号",
+                "dataType": "string",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "dataType": "string",
+                  "prop": "snAdjustCode",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "readonly": true
+                },
+                "key": "1725530378232_52006",
+                "model": "input_1725530378232_52006"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "调整状态",
+                "dataType": "string",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "dataType": "string",
+                  "prop": "adjustStatus",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "新建",
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "readonly": true
+                },
+                "key": "1725530389148_84098",
+                "model": "input_1725530389148_84098"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "datetime",
+                "label": "调整日期",
+                "dataType": "datetime",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "{currentDate}",
+                  "readonly": false,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "datetime",
+                  "format": "YYYY-MM-DD HH:mm:ss",
+                  "timestamp": false,
+                  "required": false,
+                  "noLabel": false,
+                  "prop": "adjustDate",
+                  "popoverWidth": "300px",
+                  "dataType": "datetime",
+                  "formatter": "YYYY-MM-DD HH:mm:ss"
+                },
+                "key": "1725530390842_98818",
+                "model": "input_1725530390842_98818"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top"
+        },
+        "key": "1725530369323_35751"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "select",
+                "label": "经手人",
+                "dataType": "string",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "{currentNickName}",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "options": [
+                    {
+                      "value": "下拉框1"
+                    },
+                    {
+                      "value": "下拉框2"
+                    },
+                    {
+                      "value": "下拉框3"
+                    }
+                  ],
+                  "remote": "bindDropdown",
+                  "remoteOptions": [],
+                  "dropdownId": 0,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "prop": "nickName",
+                  "popoverWidth": "300px",
+                  "dataType": "string"
+                },
+                "key": "1725530393522_80576",
+                "model": "input_1725530393522_80576"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "审核人",
+                "dataType": "string",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "dataType": "string",
+                  "prop": "auditor",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "readonly": true
+                },
+                "key": "1725530396193_33489",
+                "model": "input_1725530396193_33489"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "审核",
+                "dataType": "byte",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "dataType": "byte",
+                  "prop": "auditing",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "readonly": true
+                },
+                "key": "1725530397818_90397",
+                "model": "input_1725530397818_90397"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top"
+        },
+        "key": "1725530370978_56065"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "审核日期",
+                "dataType": "datetime",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "dataType": "datetime",
+                  "prop": "auditDate",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "readonly": true
+                },
+                "key": "1725530399713_74267",
+                "model": "input_1725530399713_74267"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "合计SN数",
+                "dataType": "bigDecimal",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "dataType": "bigDecimal",
+                  "prop": "totalSnCount",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "readonly": true
+                },
+                "key": "1725530404732_64697",
+                "model": "input_1725530404732_64697"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "备注",
+                "dataType": "string",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "dataType": "string",
+                  "prop": "remark",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": ""
+                },
+                "key": "1725530409650_69661",
+                "model": "input_1725530409650_69661"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top"
+        },
+        "key": "1725530372170_74501"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "创建人",
+                "dataType": "string",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "dataType": "string",
+                  "prop": "createByName",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "readonly": true
+                },
+                "key": "1725530417038_56827",
+                "model": "input_1725530417038_56827"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "创建时间",
+                "dataType": "datetime",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "dataType": "datetime",
+                  "prop": "createTime",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "readonly": true
+                },
+                "key": "1725530415394_14291",
+                "model": "input_1725530415394_14291"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "修改时间",
+                "dataType": "datetime",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "dataType": "datetime",
+                  "prop": "updateTime",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "readonly": true
+                },
+                "key": "1725530419013_29774",
+                "model": "input_1725530419013_29774"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top"
+        },
+        "key": "1725530374290_93888"
+      },
+      {
+        "type": "detail-grid",
+        "label": "明细布局",
+        "icon": "yrt-liebiao2",
+        "fields": [
+          {
+            "prop": "inventoryId",
+            "label": "库存ID",
+            "dataType": "long",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1725530494927_60175",
+            "headerAlign": "center",
+            "align": "left"
+          },
+          {
+            "prop": "positionName",
+            "label": "货位名称",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1725530497909_49026",
+            "headerAlign": "center",
+            "align": "left"
+          },
+          {
+            "prop": "productCode",
+            "label": "产品编号",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1725530501106_72274",
+            "headerAlign": "center",
+            "align": "left"
+          },
+          {
+            "prop": "productName",
+            "label": "产品名称",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1725530502247_84283",
+            "headerAlign": "center",
+            "align": "left"
+          },
+          {
+            "prop": "productModel",
+            "label": "条形码",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1725530503697_49596",
+            "headerAlign": "center",
+            "align": "left"
+          },
+          {
+            "prop": "productSpec",
+            "label": "产品规格",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1725530505774_78561",
+            "headerAlign": "center",
+            "align": "left"
+          },
+          {
+            "prop": "enable",
+            "label": "是否可用",
+            "dataType": "byte",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1725593252945_77283",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "type": "select",
+            "options": {
+              "width": "100%",
+              "defaultValue": "",
+              "multiple": false,
+              "disabled": false,
+              "clearable": false,
+              "placeholder": "",
+              "required": false,
+              "showLabel": true,
+              "noLabel": false,
+              "options": [
+                {
+                  "value": "下拉框1"
+                },
+                {
+                  "value": "下拉框2"
+                },
+                {
+                  "value": "下拉框3"
+                }
+              ],
+              "remote": "bindDropdown",
+              "remoteOptions": [],
+              "dropdownId": 20,
+              "props": {
+                "value": "value",
+                "label": "label"
+              }
+            },
+            "readonly": true,
+            "width": 60
+          },
+          {
+            "prop": "snNo",
+            "label": "原SN号",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1725530534654_96817",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "type": "none",
+            "options": {
+              "width": "100%",
+              "defaultValue": "",
+              "multiple": false,
+              "disabled": false,
+              "clearable": false,
+              "placeholder": "",
+              "required": false,
+              "showLabel": true,
+              "noLabel": false,
+              "options": [
+                {
+                  "value": "下拉框1"
+                },
+                {
+                  "value": "下拉框2"
+                },
+                {
+                  "value": "下拉框3"
+                }
+              ],
+              "remote": "bindDropdown",
+              "remoteOptions": [],
+              "dropdownId": 20,
+              "props": {
+                "value": "value",
+                "label": "label"
+              }
+            },
+            "width": 130
+          },
+          {
+            "prop": "snNoTarget",
+            "label": "新SN号",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1725530536966_69708",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "width": 130,
+            "type": "input",
+            "options": {
+              "width": "100%",
+              "defaultValue": "",
+              "required": false,
+              "readonly": false,
+              "disabled": false,
+              "pattern": "",
+              "placeholder": "",
+              "noLabel": false
+            }
+          },
+          {
+            "prop": "enableTarget",
+            "label": "新是否可用",
+            "dataType": "byte",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1725593255742_30395",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "type": "select",
+            "options": {
+              "width": "100%",
+              "defaultValue": "",
+              "multiple": false,
+              "disabled": false,
+              "clearable": false,
+              "placeholder": "",
+              "required": false,
+              "showLabel": true,
+              "noLabel": false,
+              "options": [
+                {
+                  "value": "下拉框1"
+                },
+                {
+                  "value": "下拉框2"
+                },
+                {
+                  "value": "下拉框3"
+                }
+              ],
+              "remote": "bindDropdown",
+              "remoteOptions": [],
+              "dropdownId": 20,
+              "props": {
+                "value": "value",
+                "label": "label"
+              }
+            }
+          },
+          {
+            "prop": "storageName",
+            "label": "仓库名称",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1725530542073_57917",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": []
+          },
+          {
+            "prop": "consignorName",
+            "label": "货主名称",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1725530551387_99879",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": []
+          }
+        ],
+        "options": {
+          "border": true,
+          "size": "small",
+          "total": 0,
+          "pageIndex": 1,
+          "pageSize": 50,
+          "detailSelections": [],
+          "idField": "sn_adjust_detail_id",
+          "title": "SN明细",
+          "prefixRouter": "/inventory/operation/snAdjustDetail"
+        },
+        "buttons": [
+          {
+            "type": "button",
+            "label": "SN选择器添加",
+            "options": {
+              "authNode": "snSelector",
+              "icon": "icon-yrt yrt-tianjia",
+              "type": "primary"
+            },
+            "key": "1725582494000_42176"
+          },
+          {
+            "type": "button",
+            "label": "批量添加SN",
+            "options": {
+              "authNode": "detailAdd",
+              "icon": "icon-yrt yrt-jiahao",
+              "type": "primary"
+            },
+            "key": "1725530635000_83245"
+          },
+          {
+            "type": "button",
+            "label": "删除",
+            "options": {
+              "authNode": "detailDelete",
+              "icon": "icon-yrt yrt-shanchu6",
+              "type": "danger"
+            },
+            "key": "1725530636000_73591"
+          }
+        ],
+        "key": "1725530422415_38823",
+        "subTableName": "storage_sn_adjust_detail"
+      }
+    ],
+    "config": {
+      "labelWidth": "100px",
+      "labelPosition": "right",
+      "top": "3vh",
+      "width": "1200px",
+      "visible": false,
+      "disabled": false,
+      "title": "SN调整",
+      "action": "add",
+      "formInline": false,
+      "saveButtonText": "保存"
+    }
+  }
+}

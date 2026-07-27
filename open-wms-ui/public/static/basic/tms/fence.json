@@ -1,0 +1,621 @@
+{
+  "dataOptions": {
+    "tableName": "tms_fence",
+    "idField": "fenceId",
+    "idValue": 0,
+    "codeRegular": "fenceCode",
+    "linkColumn": "fenceCode",
+    "prefixRouter": "/basic/tms/fence",
+    "webRouter": "/basic/tms/fence",
+    "menuId": 1869,
+    "pageIndex": 1,
+    "pageSize": 15,
+    "total": 0,
+    "orderBy": {
+      "fenceId": "DESC"
+    },
+    "showActionField": true,
+    "editorType": "dialog",
+    "tableId": 160,
+    "tableTenantId": 0,
+    "tableTenantName": "围栏管理"
+  },
+  "dataListOptions": {
+    "data": [],
+    "fields": [
+      {
+        "prop": "fenceCode",
+        "label": "电子围栏编号",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1670396230000_47498",
+        "width": 120
+      },
+      {
+        "prop": "fenceName",
+        "label": "电子围栏名称",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1670396230000_43081"
+      },
+      {
+        "prop": "radius",
+        "label": "半径",
+        "dataType": "int",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1670396230000_24995"
+      },
+      {
+        "prop": "statusText",
+        "label": "状态",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1670396230000_53635"
+      },
+      {
+        "prop": "creator",
+        "label": "创建人",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1670396230000_16768"
+      },
+      {
+        "prop": "createDate",
+        "label": "创建时间",
+        "dataType": "datetime",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1670396230000_98453",
+        "width": 120
+      },
+      {
+        "prop": "modifier",
+        "label": "修改人",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1670396230000_36560"
+      },
+      {
+        "prop": "modifyDate",
+        "label": "修改时间",
+        "dataType": "datetime",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1670396230000_97732",
+        "width": 120
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "新建",
+            "options": {
+              "icon": "yrt-addplus",
+              "type": "primary",
+              "authNode": "add"
+            },
+            "key": "btn-add"
+          },
+          {
+            "type": "button",
+            "label": "删除",
+            "options": {
+              "icon": "yrt-shanchu2",
+              "type": "primary",
+              "authNode": "delete"
+            },
+            "key": "btn-delete"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group01"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "审核",
+            "options": {
+              "icon": "yrt-shenpi6",
+              "type": "success",
+              "authNode": "auditing"
+            },
+            "key": "btn-confirm"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group02"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "刷新",
+            "options": {
+              "icon": "yrt-shuaxin",
+              "type": "default",
+              "authNode": "refresh"
+            },
+            "key": "btn-refresh"
+          },
+          {
+            "type": "button",
+            "label": "导出",
+            "options": {
+              "icon": "yrt-daochu1",
+              "type": "default",
+              "authNode": "export"
+            },
+            "key": "btn-export"
+          },
+          {
+            "type": "button",
+            "label": "打印",
+            "options": {
+              "icon": "yrt-dayin3",
+              "type": "default",
+              "authNode": "print"
+            },
+            "key": "btn-print"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group03"
+      }
+    ]
+  },
+  "editorOptions": {
+    "fields": [
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "电子围栏编号",
+                "options": {
+                  "prop": "fenceCode",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "nvarchar",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1670396240000_26628",
+                  "readonly": true
+                },
+                "key": "1670396240000_26628"
+              },
+              {
+                "type": "input",
+                "label": "状态",
+                "options": {
+                  "prop": "statusText",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "nvarchar",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1670396240000_58136"
+                },
+                "key": "1670396240000_58136",
+                "rules": []
+              },
+              {
+                "type": "input",
+                "label": "修改人",
+                "options": {
+                  "prop": "modifier",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "nvarchar",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1670396240000_11404",
+                  "readonly": true
+                },
+                "key": "1670396240000_11404",
+                "rules": []
+              },
+              {
+                "type": "input",
+                "label": "维度",
+                "options": {
+                  "prop": "lat",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "nvarchar",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1677546847000_90392",
+                  "isExpandField": true
+                },
+                "key": "1677546847000_90392",
+                "model": "input_1677546847000_90392",
+                "rules": []
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "电子围栏名称",
+                "options": {
+                  "prop": "fenceName",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "nvarchar",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1670396240000_10226"
+                },
+                "key": "1670396240000_10226",
+                "rules": []
+              },
+              {
+                "type": "input",
+                "label": "创建人",
+                "options": {
+                  "prop": "creator",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "nvarchar",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1670396240000_62647",
+                  "readonly": true
+                },
+                "key": "1670396240000_62647",
+                "rules": []
+              },
+              {
+                "type": "date",
+                "label": "修改时间",
+                "options": {
+                  "prop": "modifyDate",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "datetime",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1670396240000_32570",
+                  "readonly": true
+                },
+                "key": "1670396240000_32570",
+                "rules": []
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "半径",
+                "options": {
+                  "prop": "radius",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "int",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1670396240000_31411"
+                },
+                "key": "1670396240000_31411",
+                "rules": []
+              },
+              {
+                "type": "date",
+                "label": "创建时间",
+                "options": {
+                  "prop": "createDate",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "datetime",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1670396240000_61726",
+                  "readonly": true
+                },
+                "key": "1670396240000_61726",
+                "rules": []
+              },
+              {
+                "type": "input",
+                "label": "经度",
+                "options": {
+                  "prop": "lng",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "nvarchar",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1677546828000_28854",
+                  "isExpandField": true
+                },
+                "key": "1677546828000_28854",
+                "model": "input_1677546828000_28854"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top"
+        },
+        "key": "1670396240000_64680"
+      },
+      {
+        "type": "detail-grid",
+        "label": "明细布局",
+        "fields": [
+          {
+            "prop": "truckNo",
+            "label": "车牌号",
+            "dataType": "nvarchar",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1670397554000_50754",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "type": "input",
+            "options": {
+              "width": "100%",
+              "defaultValue": "",
+              "required": false,
+              "readonly": false,
+              "disabled": false,
+              "pattern": "",
+              "placeholder": "",
+              "noLabel": false
+            }
+          },
+          {
+            "prop": "equipmentName",
+            "label": "设备名称",
+            "dataType": "nvarchar",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1670397559000_73195",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "type": "input",
+            "options": {
+              "width": "100%",
+              "defaultValue": "",
+              "required": false,
+              "readonly": false,
+              "disabled": false,
+              "pattern": "",
+              "placeholder": "",
+              "noLabel": false
+            }
+          },
+          {
+            "prop": "equipmentCode",
+            "label": "设备编号",
+            "dataType": "nvarchar",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1670397564000_21831",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "type": "input",
+            "options": {
+              "width": "100%",
+              "defaultValue": "",
+              "required": false,
+              "readonly": false,
+              "disabled": false,
+              "pattern": "",
+              "placeholder": "",
+              "noLabel": false
+            }
+          },
+          {
+            "prop": "statusText",
+            "label": "状态",
+            "dataType": "nvarchar",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1670397593000_58064",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "type": "input",
+            "options": {
+              "width": "100%",
+              "defaultValue": "",
+              "required": false,
+              "readonly": false,
+              "disabled": false,
+              "pattern": "",
+              "placeholder": "",
+              "noLabel": false
+            }
+          },
+          {
+            "prop": "creator",
+            "label": "创建人",
+            "dataType": "nvarchar",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1670397587000_35380",
+            "headerAlign": "center",
+            "align": "left"
+          },
+          {
+            "prop": "createDate",
+            "label": "创建时间",
+            "dataType": "datetime",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1670399390000_2352",
+            "headerAlign": "center",
+            "align": "left"
+          },
+          {
+            "prop": "modifier",
+            "label": "修改人",
+            "dataType": "nvarchar",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1670397571000_54240",
+            "headerAlign": "center",
+            "align": "left"
+          },
+          {
+            "prop": "modifyDate",
+            "label": "修改时间",
+            "dataType": "datetime",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1670397582000_27000",
+            "headerAlign": "center",
+            "align": "left"
+          }
+        ],
+        "options": {
+          "border": true,
+          "size": "mini",
+          "pageIndex": 1,
+          "pageSize": 50,
+          "detailSelections": [],
+          "idField": "fenceDetailId",
+          "remoteFunc": "func_1670396259000_52784",
+          "defaultValue": null,
+          "prefixRouter": "/basic/tms/fenceDetail"
+        },
+        "buttons": [
+          {
+            "type": "button-group",
+            "label": "按钮组",
+            "buttons": [
+              {
+                "type": "button",
+                "label": "新建",
+                "options": {
+                  "icon": "el-yrt-plus",
+                  "type": "primary",
+                  "authNode": "detailAdd",
+                  "plain": false
+                },
+                "key": "detail_add"
+              },
+              {
+                "type": "button",
+                "label": "删除",
+                "options": {
+                  "icon": "yrt-shanchu2",
+                  "type": "primary",
+                  "authNode": "detailDelete"
+                },
+                "key": "detail_delete"
+              }
+            ],
+            "options": {
+              "icon": "yrt-anniuzu"
+            }
+          }
+        ],
+        "key": "1670396259000_52784",
+        "subTableView": "tms_fenceDetail",
+        "subTableName": "tms_fence_detail"
+      }
+    ],
+    "config": {
+      "labelWidth": "100px",
+      "labelPosition": "right",
+      "top": "3vh",
+      "width": "1200px",
+      "visible": false,
+      "disabled": false,
+      "title": "围栏管理",
+      "action": "add",
+      "formInline": false,
+      "saveButtonText": "保存"
+    }
+  }
+}

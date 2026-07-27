@@ -1,0 +1,1445 @@
+{
+  "dataOptions": {
+    "tableName": "base_provider_contract",
+    "idField": "contractId",
+    "idValue": 0,
+    "codeRegular": "contractCode",
+    "linkColumn": "contractCode",
+    "prefixRouter": "/basic/product/providerContract",
+    "webRouter": "/basic/product/providerContract",
+    "menuId": 1848,
+    "pageIndex": 1,
+    "pageSize": 15,
+    "total": 0,
+    "orderBy": {
+      "contractId": "DESC"
+    },
+    "showActionField": true,
+    "editorType": "dialog",
+    "tableId": 46,
+    "tableTenantId": 0,
+    "tableTenantName": "供应商合同管理"
+  },
+  "dataListOptions": {
+    "data": [],
+    "fields": [
+      {
+        "type": "input",
+        "label": "合同编号",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "contractCode",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": true,
+        "key": "1697460596288_7008",
+        "tagColorList": [],
+        "width": "130"
+      },
+      {
+        "type": "input",
+        "label": "供应商编号",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "providerCode",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697460584704_17630"
+      },
+      {
+        "type": "input",
+        "label": "自定义号",
+        "dataType": "long",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "customNo",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697460633202_21140",
+        "tagColorList": []
+      },
+      {
+        "type": "input",
+        "label": "所属供应商",
+        "dataType": "long",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "providerName",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": true,
+        "key": "1697460651891_30806",
+        "tagColorList": []
+      },
+      {
+        "type": "input",
+        "label": "供应商简称",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "providerShortName",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": true,
+        "key": "1697460671128_77540",
+        "tagColorList": []
+      },
+      {
+        "type": "input",
+        "label": "所属客户",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "consignorName",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": true,
+        "key": "1697460695819_13287",
+        "tagColorList": []
+      },
+      {
+        "type": "input",
+        "label": "合同价格",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "quotation",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697460979312_47636",
+        "tagColorList": []
+      },
+      {
+        "type": "input",
+        "label": "账期开始日期",
+        "dataType": "datetime",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "contractStart",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697461005681_20914",
+        "tagColorList": [],
+        "width": "140",
+        "formatter": "YYYY-MM-DD"
+      },
+      {
+        "type": "input",
+        "label": "账期结束日期",
+        "dataType": "datetime",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "contractEnd",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697461007520_22696",
+        "tagColorList": [],
+        "width": "140",
+        "formatter": "YYYY-MM-DD"
+      },
+      {
+        "type": "input",
+        "label": "开票周期开始日期",
+        "dataType": "datetime",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "billingStartDate",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697461311059_13021",
+        "tagColorList": [],
+        "width": "140",
+        "formatter": "YYYY-MM-DD"
+      },
+      {
+        "type": "input",
+        "label": "开票周期结束日期",
+        "dataType": "datetime",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "billingEndDate",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697461313416_36929",
+        "tagColorList": [],
+        "width": "140",
+        "formatter": "YYYY-MM-DD"
+      },
+      {
+        "type": "input",
+        "label": "付款周期开始日期",
+        "dataType": "datetime",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "paymentStartDate",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697461315237_14675",
+        "tagColorList": [],
+        "width": "140",
+        "formatter": "YYYY-MM-DD"
+      },
+      {
+        "type": "input",
+        "label": "付款周期结束日期",
+        "dataType": "datetime",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "paymentEndDate",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697461317145_14870",
+        "tagColorList": [],
+        "width": "140",
+        "formatter": "YYYY-MM-DD"
+      },
+      {
+        "type": "input",
+        "label": "创建时间",
+        "dataType": "datetime",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "createTime",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697461368977_88724",
+        "tagColorList": [],
+        "width": "140"
+      },
+      {
+        "type": "input",
+        "label": "申请发票责任人",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "invoiceName",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697461376828_63831",
+        "tagColorList": []
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "新建",
+            "options": {
+              "icon": "yrt-addplus",
+              "type": "primary",
+              "authNode": "add"
+            },
+            "key": "btn-add"
+          },
+          {
+            "type": "button",
+            "label": "删除",
+            "options": {
+              "icon": "yrt-shanchu2",
+              "type": "primary",
+              "authNode": "delete"
+            },
+            "key": "btn-delete"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group01"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "审核",
+            "options": {
+              "icon": "yrt-shenpi6",
+              "type": "success",
+              "authNode": "auditing"
+            },
+            "key": "btn-confirm"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group02"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "刷新",
+            "options": {
+              "icon": "yrt-shuaxin",
+              "type": "default",
+              "authNode": "refresh"
+            },
+            "key": "btn-refresh"
+          },
+          {
+            "type": "button",
+            "label": "导出",
+            "options": {
+              "icon": "yrt-daochu1",
+              "type": "default",
+              "authNode": "export"
+            },
+            "key": "btn-export"
+          },
+          {
+            "type": "button",
+            "label": "打印",
+            "options": {
+              "icon": "yrt-dayin3",
+              "type": "default",
+              "authNode": "print"
+            },
+            "key": "btn-print"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group03"
+      }
+    ]
+  },
+  "editorOptions": {
+    "fields": [
+      {
+        "type": "splitter-group",
+        "label": "基础信息",
+        "icon": "yrt-biaoti",
+        "options": {
+          "defaultValue": null
+        },
+        "key": "1697461514355_74733"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "单行合同编号",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "dataType": "integer",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "required": false,
+                  "readonly": true,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "contractCode"
+                },
+                "key": "1697461534998_11254",
+                "model": "input_1697461534998_11254"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "对账责任人",
+                "options": {
+                  "dataType": "integer",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "required": false,
+                  "readonly": false,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "responsiblePerson"
+                },
+                "key": "1697461536867_6494",
+                "model": "input_1697461536867_6494"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "跟踪应收责任人",
+                "options": {
+                  "dataType": "integer",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "required": false,
+                  "readonly": false,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "receivablesName",
+                  "label-width": null
+                },
+                "key": "1697461573218_52067",
+                "model": "input_1697461573218_52067"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1697461524898_41974"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "供应商简称",
+                "options": {
+                  "dataType": "integer",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "required": false,
+                  "readonly": false,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "providerShortName"
+                },
+                "key": "1697462105555_84095",
+                "model": "input_1697462105555_84095"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "供应商编号",
+                "options": {
+                  "dataType": "integer",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "required": false,
+                  "readonly": false,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "providerCode"
+                },
+                "key": "1697462108371_48540",
+                "model": "input_1697462108371_48540"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "table-select",
+                "label": "供应商简称",
+                "dataType": "string",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "columns": [
+                    {
+                      "prop": "providerCode",
+                      "label": "供应商编号",
+                      "width": 100
+                    },
+                    {
+                      "prop": "providerShortName",
+                      "label": "供应商名称",
+                      "width": 150
+                    }
+                  ],
+                  "url": "/basic/product/provider/getList",
+                  "searchFields": "providerId,providerCode,providerShortName,providerName",
+                  "prop": "providerShortName",
+                  "popoverWidth": "300px",
+                  "dataType": "string"
+                },
+                "key": "1715586290783_53650",
+                "model": "input_1715586290783_53650"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1697462099397_86546"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "合同价格",
+                "options": {
+                  "dataType": "double",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "required": false,
+                  "readonly": false,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "contractPrice"
+                },
+                "key": "1697462424661_23323",
+                "model": "input_1697462424661_23323"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "申请发票责任人",
+                "options": {
+                  "dataType": "integer",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "required": false,
+                  "readonly": false,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "invoiceName",
+                  "label-width": null
+                },
+                "key": "1697462451235_11348",
+                "model": "input_1697462451235_11348"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "月结账单显示方式",
+                "options": {
+                  "dataType": "string",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "required": false,
+                  "readonly": false,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "monthWay",
+                  "label-width": 140
+                },
+                "key": "1697462453411_22926",
+                "model": "input_1697462453411_22926"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1697462102366_18953"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "税点",
+                "dataType": "bigDecimal",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "dataType": "double",
+                  "prop": "taxPoint",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": ""
+                },
+                "key": "1697462479671_86769",
+                "model": "input_1697462479671_86769"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "select",
+                "label": "所属客户",
+                "icon": "yrt-biaodanzujian-xialakuang",
+                "options": {
+                  "dataType": "integer",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "options": [
+                    {
+                      "value": "下拉框1"
+                    },
+                    {
+                      "value": "下拉框2"
+                    },
+                    {
+                      "value": "下拉框3"
+                    }
+                  ],
+                  "remote": "bindDropdown",
+                  "remoteOptions": [],
+                  "dropdownId": 0,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "prop": "consignorName"
+                },
+                "key": "1697462482773_46867",
+                "model": "select_1697462482773_46867"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "开票类型",
+                "dataType": "string",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "dataType": "string",
+                  "prop": "invoiceType",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": ""
+                },
+                "key": "1697462485486_81863",
+                "model": "input_1697462485486_81863"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1697462418591_22304"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "date",
+                "label": "账期开始日期",
+                "icon": "yrt-rili2",
+                "options": {
+                  "dataType": "datetime",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "readonly": false,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "date",
+                  "format": "yyyy-MM-dd",
+                  "timestamp": false,
+                  "required": false,
+                  "noLabel": false,
+                  "prop": "accountStartDate"
+                },
+                "key": "1697462495021_99989",
+                "model": "date_1697462495021_99989"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "发票类别",
+                "options": {
+                  "dataType": "string",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "required": false,
+                  "readonly": false,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "invoiceCategory"
+                },
+                "key": "1697462526447_8829",
+                "model": "input_1697462526447_8829"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "开票信息",
+                "options": {
+                  "dataType": "string",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "required": false,
+                  "readonly": false,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "invoiceInfo"
+                },
+                "key": "1697462548087_8325",
+                "model": "input_1697462548087_8325"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1697462420537_3409"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "date",
+                "label": "账期结束日期",
+                "options": {
+                  "dataType": "datetime",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "readonly": false,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "date",
+                  "format": "yyyy-MM-dd",
+                  "timestamp": false,
+                  "required": false,
+                  "noLabel": false,
+                  "prop": "accountEndDate"
+                },
+                "key": "1697462576763_131",
+                "model": "date_1697462576763_131"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "合同类型",
+                "options": {
+                  "dataType": "string",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "required": false,
+                  "readonly": false,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "contractType"
+                },
+                "key": "1697462626829_61540",
+                "model": "input_1697462626829_61540"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "报价方式",
+                "options": {
+                  "dataType": "string",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "required": false,
+                  "readonly": false,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "quotaTions"
+                },
+                "key": "1697462660941_44369",
+                "model": "input_1697462660941_44369"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1697462563679_51003"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "date",
+                "label": "付款周期开始日期",
+                "options": {
+                  "dataType": "datetime",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "readonly": false,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "date",
+                  "format": "yyyy-MM-dd",
+                  "timestamp": false,
+                  "required": false,
+                  "noLabel": false,
+                  "prop": "paymentStartDate",
+                  "label-width": null
+                },
+                "key": "1697462579131_58837",
+                "model": "date_1697462579131_58837"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "date",
+                "label": "开票周期开始日期",
+                "options": {
+                  "dataType": "datetime",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "readonly": false,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "date",
+                  "format": "yyyy-MM-dd",
+                  "timestamp": false,
+                  "required": false,
+                  "noLabel": false,
+                  "prop": "billingStartDate",
+                  "label-width": null
+                },
+                "key": "1697462593758_4685",
+                "model": "date_1697462593758_4685"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "date",
+                "label": "合同开始日期",
+                "options": {
+                  "dataType": "datetime",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "readonly": false,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "date",
+                  "format": "yyyy-MM-dd",
+                  "timestamp": false,
+                  "required": false,
+                  "noLabel": false,
+                  "prop": "contractStart"
+                },
+                "key": "1697462602645_59746",
+                "model": "date_1697462602645_59746"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1697462567278_89616"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "date",
+                "label": "付款周期结束日期",
+                "options": {
+                  "dataType": "datetime",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "readonly": false,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "date",
+                  "format": "yyyy-MM-dd",
+                  "timestamp": false,
+                  "required": false,
+                  "noLabel": false,
+                  "prop": "paymentEndDate",
+                  "label-width": null
+                },
+                "key": "1715151471427_99270",
+                "model": "date_1715151471427_99270"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "date",
+                "label": "开票周期结束日期",
+                "options": {
+                  "dataType": "datetime",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "readonly": false,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "date",
+                  "format": "yyyy-MM-dd",
+                  "timestamp": false,
+                  "required": false,
+                  "noLabel": false,
+                  "prop": "billingEndDate",
+                  "label-width": null
+                },
+                "key": "1715151473361_46435",
+                "model": "date_1715151473361_46435"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "date",
+                "label": "合同结束日期",
+                "options": {
+                  "dataType": "datetime",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "readonly": false,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "date",
+                  "format": "yyyy-MM-dd",
+                  "timestamp": false,
+                  "required": false,
+                  "noLabel": false,
+                  "prop": "contractEnd"
+                },
+                "key": "1697462600430_81285",
+                "model": "date_1697462600430_81285"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1697462569052_53839"
+      },
+      {
+        "type": "splitter-group",
+        "label": "其他",
+        "icon": "yrt-biaoti",
+        "options": {
+          "defaultValue": null
+        },
+        "key": "1697463004759_42180"
+      },
+      {
+        "type": "switch",
+        "label": "是否可用",
+        "icon": "yrt-kaiguanclose",
+        "options": {
+          "defaultValue": "0",
+          "required": false,
+          "disabled": false,
+          "noLabel": false,
+          "active-value": "1",
+          "inactive-value": "0"
+        },
+        "key": "1697463020726_74922"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "修改人",
+                "dataType": "string",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "dataType": "string",
+                  "prop": "modifier",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "readonly": true
+                },
+                "key": "1697463100849_71558",
+                "model": "input_1697463100849_71558"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "date",
+                "label": "修改时间",
+                "dataType": "datetime",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "readonly": true,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "date",
+                  "format": "YYYY-MM-DD",
+                  "timestamp": false,
+                  "required": false,
+                  "noLabel": false,
+                  "prop": "modifyDate",
+                  "popoverWidth": "300px",
+                  "dataType": "date"
+                },
+                "key": "1697463129525_19316",
+                "model": "input_1697463129525_19316"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "自定义号",
+                "options": {
+                  "dataType": "string",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "required": false,
+                  "readonly": false,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "customNo"
+                },
+                "key": "1697463147873_90720",
+                "model": "input_1697463147873_90720"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1697463058232_9474"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "创建人",
+                "dataType": "string",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "dataType": "string",
+                  "prop": "creator",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "readonly": true
+                },
+                "key": "1697463117300_87631",
+                "model": "input_1697463117300_87631"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "date",
+                "label": "创建时间",
+                "dataType": "datetime",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "readonly": true,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "date",
+                  "format": "YYYY-MM-DD",
+                  "timestamp": false,
+                  "required": false,
+                  "noLabel": false,
+                  "prop": "createDate",
+                  "popoverWidth": "300px",
+                  "dataType": "date"
+                },
+                "key": "1697463137205_22054",
+                "model": "input_1697463137205_22054"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": []
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1697463113147_85535"
+      },
+      {
+        "type": "textarea",
+        "label": "备注",
+        "icon": "yrt-duohangshurukuang",
+        "options": {
+          "dataType": "string",
+          "width": "100%",
+          "defaultValue": null,
+          "required": false,
+          "readonly": false,
+          "disabled": false,
+          "pattern": "",
+          "placeholder": "",
+          "noLabel": false,
+          "prop": "remark"
+        },
+        "key": "1697463223205_21248",
+        "model": "textarea_1697463217937_8659"
+      }
+    ],
+    "config": {
+      "labelWidth": "140px",
+      "labelPosition": "right",
+      "top": "3vh",
+      "width": "1200px",
+      "visible": false,
+      "disabled": false,
+      "title": "供应商合同管理",
+      "action": "add",
+      "formInline": false,
+      "saveButtonText": "保存"
+    }
+  }
+}

@@ -1,0 +1,440 @@
+{
+  "dataOptions": {
+    "tableName": "tms_subsidy",
+    "idField": "subsidyId",
+    "idValue": 0,
+    "codeRegular": "subsidyCode",
+    "linkColumn": "subsidyCode",
+    "prefixRouter": "/basic/tms/subsidy",
+    "webRouter": "/basic/tms/subsidy",
+    "menuId": 1866,
+    "pageIndex": 1,
+    "pageSize": 15,
+    "total": 0,
+    "orderBy": {
+      "subsidyId": "DESC"
+    },
+    "showActionField": true,
+    "editorType": "dialog",
+    "tableId": 157,
+    "tableTenantId": 0,
+    "tableTenantName": "车辆补贴管理"
+  },
+  "dataListOptions": {
+    "data": [],
+    "fields": [
+      {
+        "prop": "subsidyCode",
+        "label": "车贴单号",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1589352242000_94534",
+        "searchRowNo": "200"
+      },
+      {
+        "prop": "driverName",
+        "label": "司机姓名",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1589352245000_87136",
+        "searchRowNo": "200"
+      },
+      {
+        "prop": "truckNo",
+        "label": "车牌号",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1589352247000_27482",
+        "searchRowNo": "200"
+      },
+      {
+        "prop": "mobile",
+        "label": "手机号",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1589352249000_69598",
+        "searchRowNo": "200"
+      },
+      {
+        "prop": "buildStatus",
+        "label": "生成状态",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1589352250000_61159"
+      },
+      {
+        "prop": "subsidyReward",
+        "label": "车贴奖励",
+        "dataType": "decimal",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1589352252000_54779"
+      },
+      {
+        "prop": "settlementName",
+        "label": "结算对象",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1589352254000_63921"
+      },
+      {
+        "prop": "auditing",
+        "label": "审核状态",
+        "dataType": "int",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1589352256000_19718"
+      },
+      {
+        "prop": "auditor",
+        "label": "审核人",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1589352259000_91714"
+      },
+      {
+        "prop": "auditDate",
+        "label": "审核时间",
+        "dataType": "datetime",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1589352261000_17501"
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "新建",
+            "options": {
+              "icon": "yrt-addplus",
+              "type": "primary",
+              "authNode": "add"
+            },
+            "key": "btn-add"
+          },
+          {
+            "type": "button",
+            "label": "删除",
+            "options": {
+              "icon": "yrt-shanchu2",
+              "type": "primary",
+              "authNode": "delete"
+            },
+            "key": "btn-delete"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group01"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "审核",
+            "options": {
+              "icon": "yrt-shenpi6",
+              "type": "success",
+              "authNode": "auditing"
+            },
+            "key": "btn-confirm"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group02"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "刷新",
+            "options": {
+              "icon": "yrt-shuaxin",
+              "type": "default",
+              "authNode": "refresh"
+            },
+            "key": "btn-refresh"
+          },
+          {
+            "type": "button",
+            "label": "导出",
+            "options": {
+              "icon": "yrt-daochu1",
+              "type": "default",
+              "authNode": "export"
+            },
+            "key": "btn-export"
+          },
+          {
+            "type": "button",
+            "label": "打印",
+            "options": {
+              "icon": "yrt-dayin3",
+              "type": "default",
+              "authNode": "print"
+            },
+            "key": "btn-print"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group03"
+      }
+    ]
+  },
+  "editorOptions": {
+    "fields": [
+      {
+        "type": "input",
+        "label": "车贴单号",
+        "options": {
+          "dataType": "nvarchar",
+          "prop": "subsidyCode",
+          "searchRowNo": 0,
+          "width": "270px",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": "",
+          "remoteFunc": "func_1589352268000_42400",
+          "readonly": true
+        },
+        "key": "1715307782071_67988",
+        "model": "input_1715307714518_51323"
+      },
+      {
+        "type": "input",
+        "label": "车牌号",
+        "options": {
+          "dataType": "nvarchar",
+          "prop": "truckNo",
+          "searchRowNo": 0,
+          "width": "270px",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": "",
+          "remoteFunc": "func_1589352268000_22512"
+        },
+        "key": "1715307784366_22918"
+      },
+      {
+        "type": "input",
+        "label": "生成状态",
+        "options": {
+          "dataType": "nvarchar",
+          "prop": "buildStatus",
+          "searchRowNo": 0,
+          "width": "270px",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": "",
+          "remoteFunc": "func_1589352268000_44601"
+        },
+        "key": "1715307786404_60804"
+      },
+      {
+        "type": "input",
+        "label": "结算对象",
+        "options": {
+          "dataType": "nvarchar",
+          "prop": "settlementName",
+          "searchRowNo": 0,
+          "width": "270px",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": "",
+          "remoteFunc": "func_1589352268000_23394"
+        },
+        "key": "1715307788265_55411"
+      },
+      {
+        "type": "input",
+        "label": "审核人",
+        "options": {
+          "dataType": "nvarchar",
+          "prop": "auditor",
+          "searchRowNo": 0,
+          "width": "270px",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": "",
+          "remoteFunc": "func_1589352268000_99993",
+          "readonly": true
+        },
+        "key": "1715307789987_80888"
+      },
+      {
+        "type": "select",
+        "label": "司机姓名",
+        "options": {
+          "dataType": "string",
+          "width": "270px",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "下拉框1"
+            },
+            {
+              "value": "下拉框2"
+            },
+            {
+              "value": "下拉框3"
+            }
+          ],
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "dropdown_Id": 1052,
+          "props": {
+            "value": "value",
+            "label": "label"
+          },
+          "remoteFunc": "",
+          "prop": "driverName"
+        },
+        "key": "1715307791651_83616",
+        "model": "input_1592962064000_28438"
+      },
+      {
+        "type": "input",
+        "label": "手机号",
+        "options": {
+          "dataType": "nvarchar",
+          "prop": "mobile",
+          "searchRowNo": 0,
+          "width": "270px",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": "",
+          "remoteFunc": "func_1592962066000_78607"
+        },
+        "key": "1715307793493_74430",
+        "model": "input_1592962066000_78607"
+      },
+      {
+        "type": "input",
+        "label": "车贴奖励",
+        "options": {
+          "dataType": "decimal",
+          "prop": "subsidyReward",
+          "searchRowNo": 0,
+          "width": "270px",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": "",
+          "remoteFunc": "func_1592962068000_37634"
+        },
+        "key": "1715307795171_73930",
+        "model": "input_1592962068000_37634"
+      },
+      {
+        "type": "input",
+        "label": "审核状态",
+        "options": {
+          "dataType": "int",
+          "prop": "auditing",
+          "searchRowNo": 0,
+          "width": "270px",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": "",
+          "remoteFunc": "func_1592962070000_98885",
+          "readonly": true
+        },
+        "key": "1715307796802_68489",
+        "model": "input_1592962070000_98885"
+      },
+      {
+        "type": "date",
+        "label": "审核时间",
+        "options": {
+          "dataType": "datetime",
+          "prop": "auditDate",
+          "searchRowNo": 0,
+          "width": "270px",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": "",
+          "remoteFunc": "func_1592962072000_87083",
+          "readonly": true
+        },
+        "key": "1715307798419_96556",
+        "model": "date_1592962072000_87083"
+      }
+    ],
+    "config": {
+      "labelWidth": "100px",
+      "labelPosition": "right",
+      "top": "3vh",
+      "width": "900px",
+      "visible": false,
+      "disabled": false,
+      "title": "车辆补贴管理",
+      "action": "add",
+      "formInline": false,
+      "saveButtonText": "保存"
+    }
+  }
+}

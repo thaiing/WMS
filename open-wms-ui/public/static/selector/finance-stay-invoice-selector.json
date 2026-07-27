@@ -1,0 +1,223 @@
+{
+  "dataOptions": {
+    "tableName": "erp_sale_order",
+    "idField": "saleOrderId",
+    "idValue": 0,
+    "codeRegular": "saleOrderCode",
+    "linkColumn": "saleOrderCode",
+    "prefixRouter": "/erp/sale/saleOrder",
+    "webRouter": "/selector/finance-stay-invoice-selector",
+    "menuId": 2153,
+    "pageIndex": 1,
+    "pageSize": 15,
+    "total": 0,
+    "orderBy": {
+      "saleOrderId": "DESC"
+    },
+    "showActionField": true,
+    "editorType": "dialog",
+    "tableId": 275,
+    "tableTenantId": 98,
+    "tableTenantName": "待开票订单选择器"
+  },
+  "dataListOptions": {
+    "data": [],
+    "fields": [
+      {
+        "prop": "saleOrderCode",
+        "label": "来源单号",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1712736720685_2862",
+        "width": 120,
+        "tagColorList": []
+      },
+      {
+        "type": "input",
+        "label": "单据类型",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "orderType",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1715335691856_56481",
+        "tagColorList": []
+      },
+      {
+        "prop": "clientShortName",
+        "label": "客户名称",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1712736720685_74354",
+        "tagColorList": []
+      },
+      {
+        "type": "input",
+        "label": "订单金额",
+        "dataType": "bigDecimal",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "totalAmount",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1715335730280_77867",
+        "tagColorList": []
+      },
+      {
+        "type": "input",
+        "label": "单据状态",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "orderStatus",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1715335750377_80853"
+      },
+      {
+        "type": "input",
+        "label": "币种",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "currencyCode",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1715335763393_26639"
+      },
+      {
+        "type": "input",
+        "label": "待开票金额",
+        "dataType": "bigDecimal",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "invoiceAmount",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1713837198008_76312",
+        "tagColorList": []
+      },
+      {
+        "type": "input",
+        "label": "创建时间",
+        "dataType": "datetime",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "createTime",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1715335770136_76025",
+        "tagColorList": [],
+        "width": "140"
+      }
+    ],
+    "buttons": []
+  },
+  "editorOptions": {
+    "fields": [
+      {
+        "type": "input",
+        "label": "销售单号",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "dataType": "string",
+          "prop": "saleOrderCode",
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "key": "1715335558562_65281"
+      }
+    ],
+    "config": {
+      "labelWidth": "100px",
+      "labelPosition": "right",
+      "top": "3vh",
+      "width": "1100px",
+      "visible": false,
+      "disabled": false,
+      "title": "销售单",
+      "action": "add",
+      "formInline": false,
+      "saveButtonText": "保存"
+    }
+  }
+}

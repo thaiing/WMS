@@ -1,0 +1,1174 @@
+{
+  "dataOptions": {
+    "tableName": "sys_tenant_package",
+    "idField": "packageId",
+    "idValue": 0,
+    "linkColumn": "packageName",
+    "prefixRouter": "/system/tenant/tenantPackage",
+    "webRouter": "/system/tenant/tenantPackage",
+    "menuId": 122,
+    "pageIndex": 1,
+    "pageSize": 15,
+    "total": 0,
+    "orderBy": {
+      "packageId": "DESC"
+    },
+    "showActionField": true,
+    "editorType": "dialog",
+    "tableId": 51,
+    "tableTenantId": 0,
+    "tableTenantName": "租户套餐"
+  },
+  "dataListOptions": {
+    "data": [],
+    "fields": [
+      {
+        "type": "input",
+        "label": "租户套餐id",
+        "dataType": "long",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "packageId",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697463140935_78902",
+        "tagColorList": [],
+        "width": 80,
+        "minWidth": ""
+      },
+      {
+        "type": "input",
+        "label": "套餐名称",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "packageName",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697463139824_59312",
+        "tagColorList": [],
+        "width": 130
+      },
+      {
+        "type": "input",
+        "label": "套餐类别",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "packageType",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1716962695265_94685",
+        "tagColorList": []
+      },
+      {
+        "prop": "remark",
+        "label": "说明",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697463170198_41679",
+        "tagColorList": [],
+        "width": 150,
+        "dataType": "string"
+      },
+      {
+        "type": "input",
+        "label": "登录模板",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "loginTemplate",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1715928823927_47776"
+      },
+      {
+        "type": "select",
+        "label": "主界面模板",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "width": "100%",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "defaults",
+              "label": "默认"
+            },
+            {
+              "value": "classic",
+              "label": "经典"
+            },
+            {
+              "value": "transverse",
+              "label": "横向"
+            },
+            {
+              "value": "columns",
+              "label": "分栏"
+            },
+            {
+              "value": "tile",
+              "label": "平铺"
+            }
+          ],
+          "remote": false,
+          "remoteOptions": [],
+          "dropdownId": 0,
+          "props": {
+            "value": "value",
+            "label": "label"
+          }
+        },
+        "prop": "mainTemplate",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1715928842332_25087",
+        "tagColorList": []
+      },
+      {
+        "prop": "status",
+        "label": "套餐状态",
+        "sortable": false,
+        "type": "select",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697463170198_30937",
+        "tagColorList": [
+          {
+            "operator": "=",
+            "value": "1",
+            "color": "rgba(255, 255, 255, 1)",
+            "backgroudColor": "rgba(5, 200, 5, 1)"
+          },
+          {
+            "operator": "=",
+            "value": "0",
+            "color": "rgba(255, 255, 255, 1)",
+            "backgroudColor": "rgba(255, 0, 0, 1)"
+          }
+        ],
+        "dataType": "byte",
+        "options": {
+          "width": "100%",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "下拉框1"
+            },
+            {
+              "value": "下拉框2"
+            },
+            {
+              "value": "下拉框3"
+            }
+          ],
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "dropdownId": 20,
+          "props": {
+            "value": "value",
+            "label": "label"
+          }
+        },
+        "width": 70
+      },
+      {
+        "type": "select",
+        "label": "热门",
+        "dataType": "byte",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "width": "100%",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "下拉框1"
+            },
+            {
+              "value": "下拉框2"
+            },
+            {
+              "value": "下拉框3"
+            }
+          ],
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "dropdownId": 20,
+          "props": {
+            "value": "value",
+            "label": "label"
+          }
+        },
+        "prop": "hot",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1716962611791_90500",
+        "tagColorList": [
+          {
+            "operator": "=",
+            "value": "1",
+            "color": "rgba(255, 255, 255, 1)",
+            "backgroudColor": "rgba(0, 186, 189, 1)"
+          },
+          {
+            "operator": "=",
+            "value": "0",
+            "color": "rgba(255, 255, 255, 1)",
+            "backgroudColor": "rgba(255, 69, 0, 1)"
+          }
+        ],
+        "width": 60
+      },
+      {
+        "type": "select",
+        "label": "官方模板",
+        "dataType": "byte",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "width": "100%",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "下拉框1"
+            },
+            {
+              "value": "下拉框2"
+            },
+            {
+              "value": "下拉框3"
+            }
+          ],
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "dropdownId": 20,
+          "props": {
+            "value": "value",
+            "label": "label"
+          }
+        },
+        "prop": "official",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1716962613422_4219",
+        "tagColorList": [
+          {
+            "operator": "=",
+            "value": "0",
+            "color": "rgba(255, 255, 255, 1)",
+            "backgroudColor": "rgba(64, 158, 255, 1)"
+          },
+          {
+            "operator": "=",
+            "value": "1",
+            "color": "rgba(255, 255, 255, 1)",
+            "backgroudColor": "rgba(5, 200, 5, 1)"
+          }
+        ],
+        "width": 70
+      },
+      {
+        "type": "input",
+        "label": "套餐标签",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "tags",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1716962994583_25189",
+        "tagColorList": [],
+        "width": 130
+      },
+      {
+        "type": "input",
+        "label": "应用次数",
+        "dataType": "long",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "frequency",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1716963001615_51714",
+        "tagColorList": []
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697463170198_88876",
+        "tagColorList": [],
+        "dataType": "datetime",
+        "width": 140
+      },
+      {
+        "prop": "updateTime",
+        "label": "更新时间",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697463170198_66967",
+        "tagColorList": [],
+        "dataType": "datetime",
+        "width": 140
+      },
+      {
+        "prop": "createByName",
+        "label": "创建人",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697463170198_81051"
+      },
+      {
+        "prop": "updateByName",
+        "label": "修改人",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697463170198_68864"
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "新建",
+            "options": {
+              "icon": "yrt-addplus",
+              "type": "primary",
+              "authNode": "add"
+            },
+            "key": "btn-add"
+          },
+          {
+            "type": "button",
+            "label": "删除",
+            "options": {
+              "icon": "yrt-shanchu2",
+              "type": "primary",
+              "authNode": "delete"
+            },
+            "key": "btn-delete"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group01"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "审核",
+            "options": {
+              "icon": "yrt-shenpi6",
+              "type": "success",
+              "authNode": "auditing"
+            },
+            "key": "btn-confirm"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group02"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "刷新",
+            "options": {
+              "icon": "yrt-shuaxin",
+              "type": "default",
+              "authNode": "refresh"
+            },
+            "key": "btn-refresh"
+          },
+          {
+            "type": "button",
+            "label": "导出",
+            "options": {
+              "icon": "yrt-daochu1",
+              "type": "default",
+              "authNode": "export"
+            },
+            "key": "btn-export"
+          },
+          {
+            "type": "button",
+            "label": "打印",
+            "options": {
+              "icon": "yrt-dayin3",
+              "type": "default",
+              "authNode": "print"
+            },
+            "key": "btn-print"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group03"
+      }
+    ]
+  },
+  "editorOptions": {
+    "fields": [
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "租户套餐id",
+                "dataType": "long",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "dataType": "long",
+                  "prop": "packageId",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "readonly": true,
+                  "label-width": null
+                },
+                "key": "1715926689309_9460",
+                "model": "input_1715926689309_9460"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "套餐名称",
+                "dataType": "string",
+                "options": {
+                  "dataType": "string",
+                  "prop": "packageName",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": true,
+                  "pattern": "",
+                  "placeholder": ""
+                },
+                "key": "1715926693072_58449",
+                "model": "input_1715926693072_58449",
+                "rules": [
+                  {
+                    "required": true,
+                    "message": "套餐名称必须填写"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "switch",
+                "label": "套餐状态",
+                "dataType": "integer",
+                "options": {
+                  "dataType": "byte",
+                  "defaultValue": 1,
+                  "required": false,
+                  "disabled": false,
+                  "noLabel": false,
+                  "prop": "status",
+                  "popoverWidth": "300px",
+                  "active-value": 1,
+                  "inactive-value": 0
+                },
+                "key": "1715926697215_33018",
+                "model": "switch_1715926697215_33018"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top"
+        },
+        "key": "1715926686098_40786"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "系统全称",
+                "dataType": "string",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "dataType": "string",
+                  "prop": "sysFullName",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": true,
+                  "pattern": "",
+                  "placeholder": ""
+                },
+                "key": "1715932974200_23859",
+                "model": "input_1715932974200_23859"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "系统简称",
+                "dataType": "string",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "dataType": "string",
+                  "prop": "sysShortName",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": true,
+                  "pattern": "",
+                  "placeholder": ""
+                },
+                "key": "1715932976390_38066",
+                "model": "input_1715932976390_38066"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "select",
+                "label": "套餐类别",
+                "dataType": "string",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "options": [
+                    {
+                      "value": "仓配一体化",
+                      "label": "仓配一体化"
+                    },
+                    {
+                      "value": "WMS",
+                      "label": "WMS"
+                    },
+                    {
+                      "value": "TMS",
+                      "label": "TMS"
+                    },
+                    {
+                      "value": "MES",
+                      "label": "MES"
+                    },
+                    {
+                      "value": "物流园区",
+                      "label": "物流园区"
+                    }
+                  ],
+                  "remote": false,
+                  "remoteOptions": [],
+                  "dropdownId": 0,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "prop": "packageType",
+                  "popoverWidth": "300px",
+                  "dataType": "string"
+                },
+                "key": "1716962808692_27365",
+                "model": "input_1716962808692_27365"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top"
+        },
+        "key": "1715926687763_36407"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "switch",
+                "label": "热门",
+                "dataType": "byte",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "defaultValue": 1,
+                  "required": false,
+                  "disabled": false,
+                  "noLabel": false,
+                  "prop": "hot",
+                  "popoverWidth": "300px",
+                  "dataType": "byte",
+                  "active-value": 1,
+                  "inactive-value": 0
+                },
+                "key": "1716962747729_95776",
+                "model": "input_1716962747729_95776"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "switch",
+                "label": "官方模板",
+                "dataType": "byte",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "defaultValue": 1,
+                  "required": false,
+                  "disabled": false,
+                  "noLabel": false,
+                  "prop": "official",
+                  "popoverWidth": "300px",
+                  "dataType": "byte",
+                  "active-value": 1,
+                  "inactive-value": 0
+                },
+                "key": "1716962774118_76631",
+                "model": "input_1716962774118_76631"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "select",
+                "label": "套餐标签",
+                "dataType": "string",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": [],
+                  "multiple": true,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "options": [
+                    {
+                      "value": "WMS",
+                      "label": "WMS"
+                    },
+                    {
+                      "value": "仓配一体化",
+                      "label": "仓配一体化"
+                    },
+                    {
+                      "value": "TMS",
+                      "label": "TMS"
+                    },
+                    {
+                      "value": "ERP",
+                      "label": "ERP"
+                    },
+                    {
+                      "value": "MES",
+                      "label": "MES"
+                    },
+                    {
+                      "value": "采购",
+                      "label": "采购"
+                    },
+                    {
+                      "value": "出库",
+                      "label": "出库"
+                    },
+                    {
+                      "value": "进销存",
+                      "label": "进销存"
+                    }
+                  ],
+                  "remote": false,
+                  "remoteOptions": [],
+                  "dropdownId": 0,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "prop": "tags",
+                  "popoverWidth": "300px",
+                  "dataType": "string",
+                  "allowCreate": true,
+                  "filterable": true
+                },
+                "key": "1716962816562_91407",
+                "model": "input_1716962816562_91407"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top"
+        },
+        "key": "1716962709298_85901"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "应用次数",
+                "dataType": "long",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "dataType": "long",
+                  "prop": "frequency",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": 1,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": ""
+                },
+                "key": "1716963022778_96930",
+                "model": "input_1716963022778_96930"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "说明",
+                "dataType": "string",
+                "options": {
+                  "dataType": "string",
+                  "width": "100%",
+                  "defaultValue": "",
+                  "required": false,
+                  "readonly": false,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "remark",
+                  "popoverWidth": "300px"
+                },
+                "key": "1716963023603_92812",
+                "model": "input_1716963023603_92812"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "static",
+                "label": "创建人",
+                "dataType": "string",
+                "options": {
+                  "dataType": "string",
+                  "styles": {
+                    "fontSize": 14,
+                    "lineHeight": null
+                  },
+                  "noLabel": false,
+                  "prop": "createByName",
+                  "popoverWidth": "300px"
+                },
+                "key": "1716963020330_26841",
+                "model": "static_1716963020330_26841"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top"
+        },
+        "key": "1716962806001_7994"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "static",
+                "label": "创建时间",
+                "dataType": "datetime",
+                "options": {
+                  "dataType": "string",
+                  "styles": {
+                    "fontSize": 14,
+                    "lineHeight": null
+                  },
+                  "noLabel": false,
+                  "prop": "createTime",
+                  "popoverWidth": "300px"
+                },
+                "key": "1716963018845_6982",
+                "model": "static_1716963018845_6982"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "static",
+                "label": "更新时间",
+                "dataType": "datetime",
+                "options": {
+                  "dataType": "string",
+                  "styles": {
+                    "fontSize": 14,
+                    "lineHeight": null
+                  },
+                  "noLabel": false,
+                  "prop": "updateTime",
+                  "popoverWidth": "300px"
+                },
+                "key": "1716963016208_30687",
+                "model": "static_1716963016208_30687"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": []
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top"
+        },
+        "key": "1715926711723_70688"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 12,
+            "fields": [
+              {
+                "type": "upload-image",
+                "label": "套餐切图",
+                "dataType": "string",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "defaultValue": [],
+                  "size": {
+                    "width": 180,
+                    "height": 180
+                  },
+                  "serverAction": "/api/common/upload",
+                  "disabled": false,
+                  "max": 5,
+                  "multiple": true,
+                  "listType": "picture-card",
+                  "noLabel": false,
+                  "prop": "packageImage",
+                  "popoverWidth": "300px",
+                  "dataType": "string",
+                  "acceptList": []
+                },
+                "key": "1716885266061_16316",
+                "model": "input_1716885266061_16316"
+              }
+            ]
+          },
+          {
+            "span": 12,
+            "fields": []
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top"
+        },
+        "key": "1716885154409_58796"
+      },
+      {
+        "type": "blank",
+        "label": "登录页模板",
+        "icon": "yrt-layout-custom",
+        "options": {
+          "defaultType": "String",
+          "noLabel": false,
+          "prop": "loginTemplate"
+        },
+        "key": "1715915457558_23862"
+      },
+      {
+        "type": "blank",
+        "label": "主界面模板",
+        "icon": "yrt-layout-custom",
+        "options": {
+          "defaultType": "String",
+          "noLabel": false,
+          "prop": "mainTemplate"
+        },
+        "key": "1715915459383_47857"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 12,
+            "fields": [
+              {
+                "type": "upload-image",
+                "label": "长logo",
+                "dataType": "string",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "defaultValue": [],
+                  "size": {
+                    "width": 180,
+                    "height": 180
+                  },
+                  "serverAction": "/api/common/upload",
+                  "disabled": false,
+                  "max": 5,
+                  "multiple": true,
+                  "listType": "picture-card",
+                  "noLabel": false,
+                  "prop": "logoLong",
+                  "popoverWidth": "300px",
+                  "dataType": "string",
+                  "acceptList": []
+                },
+                "key": "1715933038770_48640",
+                "model": "input_1715933038770_48640"
+              }
+            ]
+          },
+          {
+            "span": 12,
+            "fields": [
+              {
+                "type": "upload-image",
+                "label": "短logo",
+                "dataType": "string",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "defaultValue": [],
+                  "size": {
+                    "width": 180,
+                    "height": 180
+                  },
+                  "serverAction": "/api/common/upload",
+                  "disabled": false,
+                  "max": 5,
+                  "multiple": true,
+                  "listType": "picture-card",
+                  "noLabel": false,
+                  "prop": "logoShort",
+                  "popoverWidth": "300px",
+                  "dataType": "string",
+                  "acceptList": []
+                },
+                "key": "1715933042343_58071",
+                "model": "number_1715933042343_58071"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top"
+        },
+        "key": "1715933016467_77564"
+      }
+    ],
+    "config": {
+      "labelWidth": "100px",
+      "labelPosition": "right",
+      "top": "3vh",
+      "width": "1200px",
+      "visible": false,
+      "disabled": false,
+      "title": "租户套餐",
+      "action": "add",
+      "formInline": false,
+      "saveButtonText": "保存"
+    }
+  }
+}

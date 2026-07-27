@@ -1,0 +1,1000 @@
+{
+  "dataOptions": {
+    "tableName": "base_trailer",
+    "idField": "trailerId",
+    "idValue": 0,
+    "codeRegular": "trailerCode",
+    "linkColumn": "trailerCode",
+    "prefixRouter": "/basic/tms/trailer",
+    "webRouter": "/basic/tms/trailer",
+    "menuId": 1865,
+    "pageIndex": 1,
+    "pageSize": 15,
+    "total": 0,
+    "orderBy": {
+      "trailerId": "DESC"
+    },
+    "showActionField": true,
+    "editorType": "dialog",
+    "tableId": 156,
+    "tableTenantId": 0,
+    "tableTenantName": "挂车管理"
+  },
+  "dataListOptions": {
+    "data": [],
+    "fields": [
+      {
+        "prop": "trailerCode",
+        "label": "挂车编号",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1589011238000_3741",
+        "searchRowNo": "200"
+      },
+      {
+        "prop": "licenseCode",
+        "label": "车牌号码",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1589011242000_47503"
+      },
+      {
+        "prop": "trailerType",
+        "label": "挂车类型",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1589011271000_46327"
+      },
+      {
+        "prop": "trailerCaptain",
+        "label": "挂车车长",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1589011279000_94019"
+      },
+      {
+        "prop": "approvedQuality",
+        "label": "核定载质量",
+        "dataType": "decimal",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1589011333000_27242"
+      },
+      {
+        "prop": "approvedVolume",
+        "label": "核定容积",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1589011340000_92123"
+      },
+      {
+        "prop": "remark",
+        "label": "备注",
+        "dataType": "varchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1589011404000_65395"
+      },
+      {
+        "prop": "creator",
+        "label": "创建人",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1589011406000_92234"
+      },
+      {
+        "prop": "createDate",
+        "label": "创建时间",
+        "dataType": "datetime",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1589011409000_57252"
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "新建",
+            "options": {
+              "icon": "yrt-addplus",
+              "type": "primary",
+              "authNode": "add"
+            },
+            "key": "btn-add"
+          },
+          {
+            "type": "button",
+            "label": "删除",
+            "options": {
+              "icon": "yrt-shanchu2",
+              "type": "primary",
+              "authNode": "delete"
+            },
+            "key": "btn-delete"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group01"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "审核",
+            "options": {
+              "icon": "yrt-shenpi6",
+              "type": "success",
+              "authNode": "auditing"
+            },
+            "key": "btn-confirm"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group02"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "刷新",
+            "options": {
+              "icon": "yrt-shuaxin",
+              "type": "default",
+              "authNode": "refresh"
+            },
+            "key": "btn-refresh"
+          },
+          {
+            "type": "button",
+            "label": "导出",
+            "options": {
+              "icon": "yrt-daochu1",
+              "type": "default",
+              "authNode": "export"
+            },
+            "key": "btn-export"
+          },
+          {
+            "type": "button",
+            "label": "打印",
+            "options": {
+              "icon": "yrt-dayin3",
+              "type": "default",
+              "authNode": "print"
+            },
+            "key": "btn-print"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group03"
+      }
+    ]
+  },
+  "editorOptions": {
+    "fields": [
+      {
+        "type": "splitter-group",
+        "label": "基础信息",
+        "options": {
+          "remoteFunc": "func_1589522634000_88449"
+        },
+        "key": "1589522634000_88449",
+        "rules": []
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "保单单号",
+                "options": {
+                  "prop": "policyNo",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "nvarchar",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1590656509000_68813"
+                },
+                "key": "1590656509000_68813",
+                "model": "input_1590656509000_68813",
+                "rules": []
+              },
+              {
+                "type": "input",
+                "label": "保险到期时间",
+                "options": {
+                  "prop": "insurerDueDate",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "datetime",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1590656518000_36719"
+                },
+                "key": "1590656518000_36719",
+                "model": "input_1590656518000_36719",
+                "rules": []
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "保险保额",
+                "options": {
+                  "prop": "insuranceCoverage",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "decimal",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1590656001000_4076"
+                },
+                "key": "1590656001000_4076",
+                "model": "input_1590656001000_4076",
+                "rules": []
+              },
+              {
+                "type": "input",
+                "label": "货物温度险保额",
+                "options": {
+                  "prop": "tempCoverage",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "decimal",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1590656537000_20990"
+                },
+                "key": "1590656537000_20990",
+                "model": "input_1590656537000_20990",
+                "rules": []
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "保险公司名称",
+                "options": {
+                  "prop": "insurerName",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "nvarchar",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1590656015000_18295"
+                },
+                "key": "1590656015000_18295",
+                "model": "input_1590656015000_18295"
+              },
+              {
+                "type": "date",
+                "label": "车辆登记日期",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "readonly": false,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "date",
+                  "format": "yyyy-MM-dd",
+                  "timestamp": false,
+                  "required": false,
+                  "noLabel": false,
+                  "prop": "registerDate",
+                  "remoteFunc": "func_1590654593000_25795"
+                },
+                "key": "1590654593000_25795",
+                "model": "date_1590654593000_25795",
+                "rules": []
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1589011418000_67498"
+        },
+        "key": "1589011418000_67498"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "挂车编号",
+                "options": {
+                  "prop": "trailerCode",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "nvarchar",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1590656565000_1168",
+                  "readonly": true
+                },
+                "key": "1590656565000_1168",
+                "model": "input_1590656565000_1168"
+              },
+              {
+                "type": "input",
+                "label": "货箱内部尺寸",
+                "options": {
+                  "prop": "containerInnerSize",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "nvarchar",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1590656486000_43067"
+                },
+                "key": "1590656486000_43067",
+                "model": "input_1590656486000_43067",
+                "rules": []
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "select",
+                "label": "挂车车长",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": true,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "options": [
+                    {
+                      "value": "下拉框1"
+                    },
+                    {
+                      "value": "下拉框2"
+                    },
+                    {
+                      "value": "下拉框3"
+                    }
+                  ],
+                  "remote": "bindDropdown",
+                  "remoteOptions": [],
+                  "dropdown_Id": 971,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "remoteFunc": "func_1590655965000_56745",
+                  "prop": "trailerCaptain",
+                  "dropdownId": 971
+                },
+                "key": "1590655965000_56745",
+                "model": "select_1590655965000_56745",
+                "rules": [
+                  {
+                    "required": true,
+                    "message": "挂车车长必须填写"
+                  }
+                ]
+              },
+              {
+                "type": "input",
+                "label": "车辆原产地",
+                "options": {
+                  "prop": "originVehicle",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "datetime",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1590656572000_92896"
+                },
+                "key": "1590656572000_92896",
+                "model": "input_1590656572000_92896",
+                "rules": []
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "select",
+                "label": "挂车类型",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": true,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "options": [
+                    {
+                      "value": "下拉框1"
+                    },
+                    {
+                      "value": "下拉框2"
+                    },
+                    {
+                      "value": "下拉框3"
+                    }
+                  ],
+                  "remote": "bindDropdown",
+                  "remoteOptions": [],
+                  "dropdown_Id": 969,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "remoteFunc": "func_1590654710000_41173",
+                  "prop": "trailerType",
+                  "dropdownId": 969
+                },
+                "key": "1590654710000_41173",
+                "model": "select_1590654710000_41173",
+                "rules": [
+                  {
+                    "required": true,
+                    "message": "挂车类型必须填写"
+                  }
+                ]
+              },
+              {
+                "type": "input",
+                "label": "车辆外廓尺寸",
+                "options": {
+                  "prop": "vehicleDimensions",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "nvarchar",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1590656574000_77679"
+                },
+                "key": "1590656574000_77679",
+                "model": "input_1590656574000_77679",
+                "rules": []
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1590654526000_64273"
+        },
+        "key": "1590654526000_64273"
+      },
+      {
+        "type": "splitter-group",
+        "label": "行驶证信息",
+        "options": {
+          "remoteFunc": "func_1589522653000_8829"
+        },
+        "key": "1589522653000_8829",
+        "rules": []
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "品牌型号",
+                "options": {
+                  "prop": "brandModel",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "nvarchar",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1590656747000_12283"
+                },
+                "key": "1590656747000_12283",
+                "model": "input_1590656747000_12283"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "车牌号码",
+                "options": {
+                  "prop": "licenseCode",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": true,
+                  "dataType": "nvarchar",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1590656752000_49868"
+                },
+                "key": "1590656752000_49868",
+                "model": "input_1590656752000_49868",
+                "rules": [
+                  {
+                    "required": true,
+                    "message": "车牌号码必须填写"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "车辆识别代号",
+                "options": {
+                  "prop": "vehicleIdentifyNo",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "nvarchar",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1590656767000_44423"
+                },
+                "key": "1590656767000_44423",
+                "model": "input_1590656767000_44423"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1590656734000_44973"
+        },
+        "key": "1590656734000_44973"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "核定载质量",
+                "options": {
+                  "prop": "approvedQuality",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": true,
+                  "dataType": "decimal",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1590656793000_32432"
+                },
+                "key": "1590656793000_32432",
+                "model": "input_1590656793000_32432",
+                "rules": [
+                  {
+                    "required": true,
+                    "message": "核定载质量必须填写"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "核定容积",
+                "options": {
+                  "prop": "approvedVolume",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": true,
+                  "dataType": "nvarchar",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1590656796000_54903"
+                },
+                "key": "1590656796000_54903",
+                "model": "input_1590656796000_54903",
+                "rules": []
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "道路运输号",
+                "options": {
+                  "prop": "transportnoNo",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "nvarchar",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1590656829000_19688"
+                },
+                "key": "1590656829000_19688",
+                "model": "input_1590656829000_19688"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1589011420000_53113"
+        },
+        "key": "1589011420000_53113"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "date",
+                "label": "检验有效期",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "readonly": false,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "date",
+                  "format": "yyyy-MM-dd",
+                  "timestamp": false,
+                  "required": false,
+                  "noLabel": false,
+                  "prop": "inspectionValidity",
+                  "remoteFunc": "func_1590656832000_85860"
+                },
+                "key": "1590656832000_85860",
+                "model": "date_1590656832000_85860"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "date",
+                "label": "证件注册日期",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "readonly": false,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "date",
+                  "format": "yyyy-MM-dd",
+                  "timestamp": false,
+                  "required": false,
+                  "noLabel": false,
+                  "prop": "iDRegistrerDate",
+                  "remoteFunc": "func_1590656842000_87345"
+                },
+                "key": "1590656842000_87345",
+                "model": "date_1590656842000_87345",
+                "rules": []
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "date",
+                "label": "年审到期日",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "readonly": false,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "date",
+                  "format": "yyyy-MM-dd",
+                  "timestamp": false,
+                  "required": false,
+                  "noLabel": false,
+                  "prop": "annualDueDate",
+                  "remoteFunc": "func_1590656845000_12078"
+                },
+                "key": "1590656845000_12078",
+                "model": "date_1590656845000_12078",
+                "rules": []
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1589011421000_89386"
+        },
+        "key": "1589011421000_89386"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "date",
+                "label": "证件发证日期",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "readonly": false,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "date",
+                  "format": "yyyy-MM-dd",
+                  "timestamp": false,
+                  "required": false,
+                  "noLabel": false,
+                  "prop": "iDIssueDate",
+                  "remoteFunc": "func_1590656855000_83295"
+                },
+                "key": "1590656855000_83295",
+                "model": "date_1590656855000_83295"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "date",
+                "label": "强制报废日期",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "readonly": false,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "date",
+                  "format": "yyyy-MM-dd",
+                  "timestamp": false,
+                  "required": false,
+                  "noLabel": false,
+                  "prop": "retirementDate",
+                  "remoteFunc": "func_1590656857000_58540"
+                },
+                "key": "1590656857000_58540",
+                "model": "date_1590656857000_58540",
+                "rules": []
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "date",
+                "label": "证件发证日期",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "readonly": false,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "date",
+                  "format": "yyyy-MM-dd",
+                  "timestamp": false,
+                  "required": false,
+                  "noLabel": false,
+                  "prop": "dateIssue",
+                  "remoteFunc": "func_1590656859000_92426"
+                },
+                "key": "1590656859000_92426",
+                "model": "date_1590656859000_92426",
+                "rules": []
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1589011421000_98218"
+        },
+        "key": "1589011421000_98218"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 24,
+            "fields": [
+              {
+                "type": "textarea",
+                "label": "备注",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "required": false,
+                  "readonly": false,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "remark"
+                },
+                "key": "1589341074000_71809",
+                "model": "input_1589341074000_71809"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1589341066000_13565"
+        },
+        "key": "1589341066000_13565"
+      }
+    ],
+    "config": {
+      "labelWidth": "100px",
+      "labelPosition": "right",
+      "top": "3vh",
+      "width": "1200px",
+      "visible": false,
+      "disabled": false,
+      "title": "挂车管理",
+      "action": "add",
+      "formInline": false,
+      "saveButtonText": "保存"
+    }
+  }
+}

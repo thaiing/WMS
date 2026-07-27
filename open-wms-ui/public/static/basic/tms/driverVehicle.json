@@ -1,0 +1,512 @@
+{
+  "dataOptions": {
+    "tableName": "base_driver_vehicle",
+    "idField": "driverVehicleId",
+    "idValue": 0,
+    "codeRegular": "",
+    "linkColumn": "truckNo",
+    "prefixRouter": "/basic/tms/driverVehicle",
+    "webRouter": "/basic/tms/driverVehicle",
+    "menuId": 1863,
+    "pageIndex": 1,
+    "pageSize": 15,
+    "total": 0,
+    "orderBy": {
+      "driverVehicleId": "DESC"
+    },
+    "showActionField": true,
+    "editorType": "dialog",
+    "tableId": 155,
+    "tableTenantId": 0,
+    "tableTenantName": "司机车辆绑定"
+  },
+  "dataListOptions": {
+    "data": [],
+    "fields": [
+      {
+        "prop": "driverName",
+        "label": "所属司机",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1589008209000_10869",
+        "searchRowNo": "200",
+        "tagColorList": []
+      },
+      {
+        "type": "input",
+        "label": "车牌号",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "truckNo",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1715736946564_50998",
+        "tagColorList": []
+      },
+      {
+        "prop": "remark",
+        "label": "备注",
+        "dataType": "varchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1589008225000_6444",
+        "tagColorList": []
+      },
+      {
+        "type": "input",
+        "label": "创建人",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "createByName",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1715736430406_40175"
+      },
+      {
+        "type": "input",
+        "label": "创建时间",
+        "dataType": "datetime",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "createTime",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1715736416780_45629",
+        "tagColorList": [],
+        "width": "140"
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "新建",
+            "options": {
+              "icon": "yrt-addplus",
+              "type": "primary",
+              "authNode": "add"
+            },
+            "key": "btn-add"
+          },
+          {
+            "type": "button",
+            "label": "删除",
+            "options": {
+              "icon": "yrt-shanchu2",
+              "type": "primary",
+              "authNode": "delete"
+            },
+            "key": "btn-delete"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group01"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "审核",
+            "options": {
+              "icon": "yrt-shenpi6",
+              "type": "success",
+              "authNode": "auditing"
+            },
+            "key": "btn-confirm"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group02"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "刷新",
+            "options": {
+              "icon": "yrt-shuaxin",
+              "type": "default",
+              "authNode": "refresh"
+            },
+            "key": "btn-refresh"
+          },
+          {
+            "type": "button",
+            "label": "导出",
+            "options": {
+              "icon": "yrt-daochu1",
+              "type": "default",
+              "authNode": "export"
+            },
+            "key": "btn-export"
+          },
+          {
+            "type": "button",
+            "label": "打印",
+            "options": {
+              "icon": "yrt-dayin3",
+              "type": "default",
+              "authNode": "print"
+            },
+            "key": "btn-print"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group03"
+      }
+    ]
+  },
+  "editorOptions": {
+    "fields": [
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 12,
+            "fields": [
+              {
+                "type": "input",
+                "label": "车辆编号",
+                "options": {
+                  "prop": "vehicleCode",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "nvarchar",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1589008273000_93677",
+                  "readonly": true
+                },
+                "key": "1589008273000_93677",
+                "model": "input_1589008273000_93677"
+              }
+            ]
+          },
+          {
+            "span": 12,
+            "fields": []
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1589008253000_1179"
+        },
+        "key": "1589008253000_1179"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 12,
+            "fields": [
+              {
+                "type": "input",
+                "label": "创建人",
+                "options": {
+                  "prop": "creator",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "nvarchar",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1591927352000_51383",
+                  "readonly": true
+                },
+                "key": "1591927352000_51383",
+                "model": "input_1591927352000_51383"
+              }
+            ]
+          },
+          {
+            "span": 12,
+            "fields": []
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1591927350000_46778"
+        },
+        "key": "1591927350000_46778"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 12,
+            "fields": [
+              {
+                "type": "select",
+                "label": "车牌号",
+                "dataType": "string",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "options": [
+                    {
+                      "value": "下拉框1"
+                    },
+                    {
+                      "value": "下拉框2"
+                    },
+                    {
+                      "value": "下拉框3"
+                    }
+                  ],
+                  "remote": "bindDropdown",
+                  "remoteOptions": [],
+                  "dropdownId": 1010,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "prop": "truckNo",
+                  "popoverWidth": "300px",
+                  "dataType": "string",
+                  "keyProp": "vehicleId"
+                },
+                "key": "1715737018771_14960",
+                "model": "input_1715737018771_14960"
+              }
+            ]
+          },
+          {
+            "span": 12,
+            "fields": []
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1589008254000_7219"
+        },
+        "key": "1589008254000_7219"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 12,
+            "fields": [
+              {
+                "type": "select",
+                "label": "所属司机",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "options": [
+                    {
+                      "value": "下拉框1"
+                    },
+                    {
+                      "value": "下拉框2"
+                    },
+                    {
+                      "value": "下拉框3"
+                    }
+                  ],
+                  "remote": "bindDropdown",
+                  "remoteOptions": [],
+                  "dropdown_Id": 874,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "remoteFunc": "func_1591927343000_75566",
+                  "prop": "driverName",
+                  "dataType": "string",
+                  "dropdownId": 1009,
+                  "keyProp": "driverId"
+                },
+                "key": "1591927343000_75566",
+                "model": "select_1591927343000_75566"
+              }
+            ]
+          },
+          {
+            "span": 12,
+            "fields": []
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1591927339000_88123"
+        },
+        "key": "1591927339000_88123"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 12,
+            "fields": [
+              {
+                "type": "input",
+                "label": "创建时间",
+                "options": {
+                  "prop": "createDate",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "datetime",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1589008286000_51115",
+                  "readonly": true
+                },
+                "key": "1589008286000_51115",
+                "model": "input_1589008286000_51115",
+                "rules": []
+              }
+            ]
+          },
+          {
+            "span": 12,
+            "fields": []
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1589008255000_40729"
+        },
+        "key": "1589008255000_40729"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 24,
+            "fields": [
+              {
+                "type": "textarea",
+                "label": "备注",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "required": false,
+                  "readonly": false,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "remark"
+                },
+                "key": "1589008302000_84445",
+                "model": "input_1589008302000_84445"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1589008295000_87061"
+        },
+        "key": "1589008295000_87061"
+      }
+    ],
+    "config": {
+      "labelWidth": "100px",
+      "labelPosition": "right",
+      "top": "3vh",
+      "width": "1000px",
+      "visible": false,
+      "disabled": false,
+      "title": "司机车辆绑定",
+      "action": "add",
+      "formInline": false,
+      "saveButtonText": "保存"
+    }
+  }
+}

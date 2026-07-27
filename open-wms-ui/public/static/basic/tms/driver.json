@@ -1,0 +1,1600 @@
+{
+  "dataOptions": {
+    "tableName": "base_driver",
+    "idField": "driverId",
+    "idValue": 0,
+    "codeRegular": "driverCode",
+    "linkColumn": "driverName",
+    "prefixRouter": "/basic/tms/driver",
+    "webRouter": "/basic/tms/driver",
+    "menuId": 1861,
+    "pageIndex": 1,
+    "pageSize": 15,
+    "total": 0,
+    "orderBy": {
+      "driverId": "DESC"
+    },
+    "showActionField": true,
+    "editorType": "dialog",
+    "tableId": 153,
+    "tableTenantId": 0,
+    "tableTenantName": "司机管理"
+  },
+  "dataListOptions": {
+    "data": [],
+    "fields": [
+      {
+        "prop": "driverName",
+        "label": "司机名称",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1588929836000_47849",
+        "searchRowNo": "200",
+        "tagColorList": []
+      },
+      {
+        "prop": "tel",
+        "label": "手机号",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1592897044000_54900",
+        "searchRowNo": "200",
+        "tagColorList": []
+      },
+      {
+        "prop": "userName",
+        "label": "登录名",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1588929838000_33292",
+        "searchRowNo": "200"
+      },
+      {
+        "prop": "carrierName",
+        "label": "承运商名称",
+        "dataType": "string",
+        "sortable": false,
+        "type": "select",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1655777193000_99432",
+        "options": {
+          "width": "100%",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "下拉框1"
+            },
+            {
+              "value": "下拉框2"
+            },
+            {
+              "value": "下拉框3"
+            }
+          ],
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "dropdown_Id": 1003,
+          "props": {
+            "value": "value",
+            "label": "label"
+          },
+          "remoteFunc": "",
+          "dropdownId": 1003
+        },
+        "tagColorList": [],
+        "width": "120",
+        "searchRowNo": 200,
+        "filterable": true
+      },
+      {
+        "type": "select",
+        "label": "仓库名称",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "width": "100%",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "下拉框1"
+            },
+            {
+              "value": "下拉框2"
+            },
+            {
+              "value": "下拉框3"
+            }
+          ],
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "dropdownId": 31,
+          "props": {
+            "value": "value",
+            "label": "label"
+          }
+        },
+        "prop": "storageName",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1710904113711_97644",
+        "tagColorList": [],
+        "searchRowNo": 200,
+        "keyProp": "storageId"
+      },
+      {
+        "prop": "partnership",
+        "label": "合作关系",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1588932128000_84707"
+      },
+      {
+        "prop": "drivingModel",
+        "label": "准驾车型",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1595990921000_3129",
+        "options": {
+          "width": "100%",
+          "defaultValue": "",
+          "required": false,
+          "readonly": false,
+          "disabled": false,
+          "pattern": "",
+          "placeholder": "",
+          "noLabel": false
+        }
+      },
+      {
+        "prop": "driverImage",
+        "label": "驾驶证照片",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1591759661000_38987"
+      },
+      {
+        "prop": "drivingAge",
+        "label": "驾龄",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1592897044000_7165",
+        "searchRowNo": "",
+        "tagColorList": []
+      },
+      {
+        "prop": "driverLevel",
+        "label": "司机等级",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1588929861000_18821",
+        "searchRowNo": "",
+        "tagColorList": []
+      },
+      {
+        "prop": "remark",
+        "label": "备注",
+        "dataType": "varchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1588932273000_28875"
+      },
+      {
+        "prop": "deptName",
+        "label": "部门",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "tree",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1592897044000_25044",
+        "searchRowNo": "",
+        "tagColorList": [],
+        "options": {
+          "width": "100%",
+          "defaultValue": null,
+          "showLabel": false,
+          "noLabel": false,
+          "required": false,
+          "onlySelectLeaf": true,
+          "disabled": false,
+          "props": {
+            "value": "value",
+            "label": "label"
+          }
+        },
+        "ajaxParams": {
+          "tableName": "sys_dept",
+          "keyName": "deptId",
+          "nodeName": "deptName",
+          "fixHasChild": false,
+          "showOutsideNode": false,
+          "parentName": "parentId",
+          "whereList": [
+            {
+              "column": "parentId",
+              "values": 0,
+              "queryType": "EQ",
+              "dataType": "INT"
+            }
+          ],
+          "orderByList": [
+            {
+              "column": "orderNum",
+              "orderByType": "DESC"
+            }
+          ],
+          "extendColumns": ""
+        }
+      },
+      {
+        "prop": "address",
+        "label": "地址",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1592897044000_69110",
+        "tagColorList": []
+      },
+      {
+        "prop": "enable",
+        "label": "是否可用",
+        "dataType": "byte",
+        "sortable": false,
+        "type": "select",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1592897044000_14480",
+        "tagColorList": [
+          {
+            "operator": "=",
+            "value": "1",
+            "color": "rgba(255, 255, 255, 1)",
+            "backgroudColor": "rgba(5, 200, 5, 1)"
+          },
+          {
+            "operator": "=",
+            "value": "0",
+            "color": "rgba(255, 255, 255, 1)",
+            "backgroudColor": "rgba(255, 0, 0, 1)"
+          }
+        ],
+        "options": {
+          "width": "100%",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "下拉框1"
+            },
+            {
+              "value": "下拉框2"
+            },
+            {
+              "value": "下拉框3"
+            }
+          ],
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "dropdownId": 20,
+          "props": {
+            "value": "value",
+            "label": "label"
+          }
+        }
+      },
+      {
+        "prop": "creator",
+        "label": "创建人",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1588932275000_43999"
+      },
+      {
+        "prop": "createDate",
+        "label": "创建时间",
+        "dataType": "datetime",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1588932277000_57591",
+        "width": 140
+      },
+      {
+        "prop": "driverCode",
+        "label": "司机编号",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": true,
+        "isQuickSearch": false,
+        "key": "1588929835000_73033",
+        "width": 190,
+        "searchRowNo": "",
+        "tagColorList": []
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "新建",
+            "options": {
+              "icon": "yrt-addplus",
+              "type": "primary",
+              "authNode": "add"
+            },
+            "key": "btn-add"
+          },
+          {
+            "type": "button",
+            "label": "删除",
+            "options": {
+              "icon": "yrt-shanchu2",
+              "type": "danger",
+              "authNode": "delete"
+            },
+            "key": "btn-delete"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group01"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "审核",
+            "options": {
+              "icon": "yrt-shenpi6",
+              "type": "success",
+              "authNode": "auditing"
+            },
+            "key": "btn-confirm"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group02"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "刷新",
+            "options": {
+              "icon": "yrt-shuaxin",
+              "type": "default",
+              "authNode": "refresh"
+            },
+            "key": "btn-refresh"
+          },
+          {
+            "type": "button",
+            "label": "导出",
+            "options": {
+              "icon": "yrt-daochu1",
+              "type": "default",
+              "authNode": "export"
+            },
+            "key": "btn-export"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group03"
+      }
+    ]
+  },
+  "editorOptions": {
+    "fields": [
+      {
+        "type": "splitter-group",
+        "label": "基础信息",
+        "options": {
+          "remoteFunc": "func_1590401714000_92645"
+        },
+        "key": "1590401714000_92645",
+        "rules": []
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "司机名称",
+                "options": {
+                  "dataType": "nvarchar",
+                  "prop": "driverName",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": true,
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1588932301000_18556",
+                  "label-width": 120
+                },
+                "key": "1710145751751_6922",
+                "model": "input_1710145751751_6922",
+                "rules": [
+                  {
+                    "required": true,
+                    "message": "司机名称必须填写"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "手机号",
+                "options": {
+                  "dataType": "nvarchar",
+                  "prop": "tel",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": true,
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1589183382000_94615",
+                  "label-width": 120
+                },
+                "key": "1710145756639_21401",
+                "model": "input_1710145756639_21401",
+                "rules": [
+                  {
+                    "required": true,
+                    "message": "手机号必须填写"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "司机编号",
+                "options": {
+                  "dataType": "nvarchar",
+                  "prop": "driverCode",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1588932299000_44355",
+                  "readonly": true,
+                  "label-width": 120
+                },
+                "key": "1710145759677_93569",
+                "model": "input_1710145759677_93569"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1588932291000_75352"
+        },
+        "key": "1588932291000_75352"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "登录名",
+                "options": {
+                  "dataType": "nvarchar",
+                  "prop": "userName",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1588932328000_21362",
+                  "label-width": 120
+                },
+                "key": "1710145769519_89365",
+                "model": "input_1710145769519_89365",
+                "rules": [
+                  {
+                    "required": true,
+                    "message": "登录名必须填写"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "身份证",
+                "options": {
+                  "dataType": "nvarchar",
+                  "prop": "idCardCode",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1589183371000_65977",
+                  "label-width": 120
+                },
+                "key": "1717400378584_35812",
+                "model": "input_1717400378584_35812"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "tree",
+                "label": "部门",
+                "options": {
+                  "dataType": "string",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "showLabel": false,
+                  "noLabel": false,
+                  "required": false,
+                  "onlySelectLeaf": true,
+                  "disabled": false,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "prop": "deptName",
+                  "popoverWidth": "300px"
+                },
+                "key": "1717400380304_20715",
+                "model": "tree_1717400380304_20715",
+                "ajaxParams": {
+                  "tableName": "sys_dept",
+                  "keyName": "deptId",
+                  "nodeName": "deptName",
+                  "fixHasChild": false,
+                  "showOutsideNode": false,
+                  "parentName": "parentId",
+                  "whereList": [
+                    {
+                      "column": "parentId",
+                      "values": 0,
+                      "queryType": "EQ",
+                      "dataType": "INT"
+                    }
+                  ],
+                  "orderByList": [
+                    {
+                      "column": "orderNum",
+                      "orderByType": "DESC"
+                    }
+                  ],
+                  "extendColumns": ""
+                }
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1588932292000_35139"
+        },
+        "key": "1588932292000_35139"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "select",
+                "label": "性别",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "男",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "options": [
+                    {
+                      "value": "下拉框1"
+                    },
+                    {
+                      "value": "下拉框2"
+                    },
+                    {
+                      "value": "下拉框3"
+                    }
+                  ],
+                  "remote": "bindDropdown",
+                  "remoteOptions": [],
+                  "dropdown_Id": 25,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "remoteFunc": "",
+                  "prop": "sex",
+                  "label-width": 120
+                },
+                "key": "1717400381311_24460",
+                "model": "select_1717400381311_24460"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "司机地址",
+                "options": {
+                  "dataType": "nvarchar",
+                  "prop": "address",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1589183387000_45570",
+                  "label-width": 120
+                },
+                "key": "1717400382317_88245",
+                "model": "input_1717400382317_88245"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "备注",
+                "options": {
+                  "dataType": "string",
+                  "width": "100%",
+                  "defaultValue": "",
+                  "required": false,
+                  "readonly": false,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "remark",
+                  "popoverWidth": "300px"
+                },
+                "key": "1717400391868_81148",
+                "model": "input_1717400391868_81148"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top"
+        },
+        "key": "1710145781882_64588"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "select",
+                "label": "配送线路",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "options": [
+                    {
+                      "value": "下拉框1"
+                    },
+                    {
+                      "value": "下拉框2"
+                    },
+                    {
+                      "value": "下拉框3"
+                    }
+                  ],
+                  "remote": "bindDropdown",
+                  "remoteOptions": [],
+                  "dropdown_Id": 1025,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "remoteFunc": "",
+                  "prop": "lineName",
+                  "dataType": "string",
+                  "label-width": 120,
+                  "dropdownId": 1025
+                },
+                "key": "1603333162000_24511",
+                "model": "input_1603333162000_24511"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "select",
+                "label": "承运商名称",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "options": [
+                    {
+                      "value": "下拉框1"
+                    },
+                    {
+                      "value": "下拉框2"
+                    },
+                    {
+                      "value": "下拉框3"
+                    }
+                  ],
+                  "remote": "bindDropdown",
+                  "remoteOptions": [],
+                  "dropdown_Id": 1003,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "remoteFunc": "",
+                  "prop": "carrierName",
+                  "dataType": "string",
+                  "label-width": 120,
+                  "dropdownId": 1003,
+                  "filterable": true
+                },
+                "key": "1655776887000_95612",
+                "model": "input_1655776887000_95612"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "table-select",
+                "label": "仓库名称",
+                "dataType": "string",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "columns": [
+                    {
+                      "prop": "storageCode",
+                      "label": "仓库编号",
+                      "width": 100
+                    },
+                    {
+                      "prop": "storageName",
+                      "label": "仓库名称",
+                      "width": 150
+                    }
+                  ],
+                  "url": "/basic/storage/storage/getList",
+                  "searchFields": "storageId,storageCode,storageName",
+                  "prop": "storageName",
+                  "popoverWidth": "300px",
+                  "dataType": "string",
+                  "label-width": 120
+                },
+                "key": "1710903917398_41276",
+                "model": "input_1710903917398_41276"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1588932293000_35123"
+        },
+        "key": "1588932293000_35123"
+      },
+      {
+        "type": "splitter-group",
+        "label": "账户信息",
+        "options": {
+          "remoteFunc": "func_1590401809000_53180"
+        },
+        "key": "1590401809000_53180"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "帐户名",
+                "options": {
+                  "dataType": "nvarchar",
+                  "prop": "bankName",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1589183721000_98927",
+                  "label-width": 120
+                },
+                "key": "1710145917220_30174",
+                "model": "input_1710145917220_30174"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "银行卡号",
+                "options": {
+                  "dataType": "nvarchar",
+                  "prop": "bankCode",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1589183729000_43500",
+                  "label-width": 120
+                },
+                "key": "1710145919549_43161",
+                "model": "input_1710145919549_43161"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "开户银行",
+                "dataType": "string",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "dataType": "string",
+                  "prop": "bank",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": ""
+                },
+                "key": "1710145935857_71073",
+                "model": "input_1710145935857_71073"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top"
+        },
+        "key": "1710145904864_86006"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "switch",
+                "label": "结算冻结",
+                "options": {
+                  "dataType": "int32",
+                  "defaultValue": 0,
+                  "required": false,
+                  "disabled": false,
+                  "noLabel": false,
+                  "prop": "settlementFreeze",
+                  "active-value": 1,
+                  "inactive-value": 0,
+                  "remoteFunc": "func_1590460920000_2144",
+                  "label-width": 120
+                },
+                "key": "1710145951011_38571",
+                "model": "switch_1710145951011_38571"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "select",
+                "label": "运费结算周期",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "options": [
+                    {
+                      "value": "下拉框1"
+                    },
+                    {
+                      "value": "下拉框2"
+                    },
+                    {
+                      "value": "下拉框3"
+                    }
+                  ],
+                  "remote": "bindDropdown",
+                  "remoteOptions": [],
+                  "dropdown_Id": 964,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "remoteFunc": "func_1590460958000_6388",
+                  "prop": "freightCycle",
+                  "label-width": 120,
+                  "dropdownId": 964
+                },
+                "key": "1710145952665_74058",
+                "model": "select_1710145952665_74058"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "运营区域",
+                "options": {
+                  "dataType": "nvarchar",
+                  "prop": "operatingArea",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1590403975000_64809",
+                  "label-width": 120
+                },
+                "key": "1710145957232_27557",
+                "model": "input_1710145957232_27557"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top"
+        },
+        "key": "1710145907745_76687"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "创建人",
+                "options": {
+                  "prop": "creator",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "nvarchar",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1590403966000_34034",
+                  "readonly": false,
+                  "label-width": 120
+                },
+                "key": "1590403966000_34034",
+                "model": "input_1590403966000_34034"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "time",
+                "label": "创建时间",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "readonly": false,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "isRange": false,
+                  "arrowControl": true,
+                  "format": "HH:mm:ss",
+                  "required": false,
+                  "noLabel": false,
+                  "prop": "createDate",
+                  "label-width": 120
+                },
+                "key": "1590403973000_51274",
+                "model": "input_1590403973000_51274"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": []
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1589183695000_50388"
+        },
+        "key": "1589183695000_50388"
+      },
+      {
+        "type": "splitter-group",
+        "label": "驾驶证信息",
+        "options": {
+          "remoteFunc": "func_1590401169000_49921"
+        },
+        "key": "1590401169000_49921",
+        "rules": []
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "驾驶证号",
+                "options": {
+                  "prop": "driverNo",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "nvarchar",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1590402791000_87198",
+                  "label-width": 120
+                },
+                "key": "1590402791000_87198",
+                "model": "input_1590402791000_87198",
+                "rules": [
+                  {
+                    "required": true,
+                    "message": "驾驶证号必须填写"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "驾龄",
+                "options": {
+                  "prop": "drivingAge",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "nvarchar",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1590402790000_56427",
+                  "label-width": 120
+                },
+                "key": "1590402790000_56427",
+                "model": "input_1590402790000_56427"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "驾驶证档案号",
+                "options": {
+                  "prop": "driverLicenseNo",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "nvarchar",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1590403826000_24956",
+                  "label-width": 120
+                },
+                "key": "1590403826000_24956",
+                "model": "input_1590403826000_24956",
+                "rules": [
+                  {
+                    "required": true,
+                    "message": "驾驶证档案号必须填写"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1590401842000_89323"
+        },
+        "key": "1590401842000_89323"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "date",
+                "label": "初次领证日期",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "readonly": false,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "date",
+                  "format": "yyyy-MM-dd",
+                  "timestamp": false,
+                  "required": false,
+                  "noLabel": false,
+                  "prop": "issueDate",
+                  "label-width": 120
+                },
+                "key": "1590403861000_35971",
+                "model": "input_1590403861000_35971",
+                "rules": [
+                  {
+                    "required": true,
+                    "message": "初次领证日期必须填写"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "date",
+                "label": "有效期",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "readonly": false,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "date",
+                  "format": "yyyy-MM-dd",
+                  "timestamp": false,
+                  "required": false,
+                  "noLabel": false,
+                  "prop": "termofvalidity",
+                  "label-width": 120
+                },
+                "key": "1590403873000_85155",
+                "model": "input_1590403873000_85155",
+                "rules": [
+                  {
+                    "required": true,
+                    "message": "有效期必须填写"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "发证机关",
+                "options": {
+                  "prop": "issuingauthority",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "nvarchar",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1590403883000_31134",
+                  "label-width": 120
+                },
+                "key": "1590403883000_31134",
+                "model": "input_1590403883000_31134",
+                "rules": [
+                  {
+                    "required": true,
+                    "message": "发证机关必须填写"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1590403834000_71466"
+        },
+        "key": "1590403834000_71466"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "select",
+                "label": "司机等级",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "options": [
+                    {
+                      "value": "下拉框1"
+                    },
+                    {
+                      "value": "下拉框2"
+                    },
+                    {
+                      "value": "下拉框3"
+                    }
+                  ],
+                  "remote": "bindDropdown",
+                  "remoteOptions": [],
+                  "dropdown_Id": 973,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "remoteFunc": "",
+                  "prop": "driverLevel",
+                  "label-width": 120
+                },
+                "key": "1590403931000_49387",
+                "model": "input_1590403931000_49387"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "select",
+                "label": "司机类型",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "options": [
+                    {
+                      "value": "下拉框1"
+                    },
+                    {
+                      "value": "下拉框2"
+                    },
+                    {
+                      "value": "下拉框3"
+                    }
+                  ],
+                  "remote": "bindDropdown",
+                  "remoteOptions": [],
+                  "dropdown_Id": 965,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "remoteFunc": "func_1590403943000_81089",
+                  "prop": "driverType",
+                  "label-width": 120
+                },
+                "key": "1590403943000_81089",
+                "model": "select_1590403943000_81089"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "select",
+                "label": "准驾车型",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "options": [
+                    {
+                      "value": "下拉框1"
+                    },
+                    {
+                      "value": "下拉框2"
+                    },
+                    {
+                      "value": "下拉框3"
+                    }
+                  ],
+                  "remote": "bindDropdown",
+                  "remoteOptions": [],
+                  "dropdown_Id": 1017,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "remoteFunc": "",
+                  "prop": "drivingModel",
+                  "dataType": "string",
+                  "label-width": 120,
+                  "dropdownId": 1017
+                },
+                "key": "1595990455000_65787",
+                "model": "input_1595990455000_65787"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1590403917000_12148"
+        },
+        "key": "1590403917000_12148"
+      },
+      {
+        "type": "upload-image",
+        "label": "驾驶证照片",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "defaultValue": [],
+          "size": {
+            "width": 180,
+            "height": 180
+          },
+          "serverAction": "/api/common/upload",
+          "disabled": false,
+          "max": 5,
+          "multiple": true,
+          "listType": "picture-card",
+          "noLabel": false,
+          "prop": "driverImage",
+          "popoverWidth": "300px",
+          "dataType": "string",
+          "acceptList": []
+        },
+        "key": "1710205847616_82106"
+      }
+    ],
+    "config": {
+      "labelWidth": "100px",
+      "labelPosition": "right",
+      "top": "3vh",
+      "width": "1200px",
+      "visible": false,
+      "disabled": false,
+      "title": "司机管理",
+      "action": "add",
+      "formInline": false,
+      "saveButtonText": "保存"
+    }
+  }
+}

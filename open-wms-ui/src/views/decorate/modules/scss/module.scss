@@ -1,0 +1,27 @@
+$homeNavLengh: 8;
+.module-container {
+	.inner {
+		padding: 5px 0;
+	}
+}
+.box-shadow {
+	width: 100%;
+	&:hover {
+		box-shadow: 0 2px 12px var(--next-color-dark-hover);
+		transition: all ease 0.3s;
+	}
+	&-icon {
+		width: 70px;
+		height: 70px;
+		border-radius: 100%;
+		flex-shrink: 1;
+		i {
+			color: var(--el-text-color-placeholder);
+		}
+	}
+	&-title {
+		font-size: 15px;
+		font-weight: bold;
+		height: 30px;
+	}
+}

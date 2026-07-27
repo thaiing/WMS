@@ -1,0 +1,2255 @@
+{
+  "dataOptions": {
+    "tableName": "out_order_plan",
+    "idField": "orderPlanId",
+    "idValue": 0,
+    "codeRegular": "orderPlanCode",
+    "linkColumn": "orderPlanCode",
+    "prefixRouter": "/outbound/out/orderPlan",
+    "webRouter": "/outbound/out/orderPlan",
+    "menuId": 1669,
+    "pageIndex": 1,
+    "pageSize": 15,
+    "total": 0,
+    "orderBy": {
+      "orderPlanId": "DESC"
+    },
+    "showActionField": false,
+    "editorType": "dialog",
+    "tableId": 84,
+    "tableTenantId": 0,
+    "tableTenantName": "出库计划单",
+    "openTabGroup": true,
+    "showSumField": true
+  },
+  "dataListOptions": {
+    "data": [],
+    "fields": [
+      {
+        "type": "input",
+        "label": "出库计划单号",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "orderPlanCode",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": true,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1697701025772_47645",
+        "tagColorList": []
+      },
+      {
+        "type": "input",
+        "label": "货主名称",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "consignorName",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1697701035039_91101",
+        "tagColorList": [],
+        "width": 200
+      },
+      {
+        "type": "input",
+        "label": "计划单状态",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "planStatus",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1697701320239_31177",
+        "tagColorList": [
+          {
+            "operator": "=",
+            "value": "新建",
+            "color": "rgba(96, 98, 102, 1)",
+            "backgroudColor": "rgba(255, 255, 0, 1)"
+          },
+          {
+            "operator": "=",
+            "value": "审核成功",
+            "color": "rgba(255, 255, 255, 1)",
+            "backgroudColor": "rgba(2, 183, 2, 1)"
+          },
+          {
+            "operator": "=",
+            "value": "已转出库单",
+            "color": "rgba(255, 255, 255, 1)",
+            "backgroudColor": "rgba(33, 141, 252, 1)"
+          },
+          {
+            "operator": "=",
+            "value": "终止",
+            "color": "rgba(255, 255, 255, 1)",
+            "backgroudColor": "rgba(255, 0, 0, 1)"
+          },
+          {
+            "operator": "=",
+            "value": "已出库",
+            "color": "rgba(255, 255, 255, 1)",
+            "backgroudColor": "rgba(0, 46, 252, 1)"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "label": "审核状态",
+        "dataType": "byte",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "width": "100%",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "下拉框1"
+            },
+            {
+              "value": "下拉框2"
+            },
+            {
+              "value": "下拉框3"
+            }
+          ],
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "dropdownId": 21,
+          "props": {
+            "value": "value",
+            "label": "label"
+          }
+        },
+        "prop": "auditing",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1697701322502_67665",
+        "tagColorList": [
+          {
+            "operator": "=",
+            "value": "2",
+            "color": "rgba(255, 255, 255, 1)",
+            "backgroudColor": "rgba(3, 164, 3, 1)"
+          },
+          {
+            "operator": "=",
+            "value": "0",
+            "color": "rgba(96, 98, 102, 1)",
+            "backgroudColor": "rgba(255, 255, 0, 1)"
+          },
+          {
+            "operator": "=",
+            "value": "3",
+            "color": "rgba(255, 255, 255, 1)",
+            "backgroudColor": "rgba(255, 0, 0, 1)"
+          }
+        ]
+      },
+      {
+        "type": "input",
+        "label": "客户名称",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "clientShortName",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1697701384959_48599"
+      },
+      {
+        "type": "select",
+        "label": "经手人",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "width": "100%",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "下拉框1"
+            },
+            {
+              "value": "下拉框2"
+            },
+            {
+              "value": "下拉框3"
+            }
+          ],
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "dropdownId": 22,
+          "props": {
+            "value": "value",
+            "label": "label"
+          }
+        },
+        "prop": "nickName",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1697701429829_8900",
+        "tagColorList": []
+      },
+      {
+        "type": "input",
+        "label": "合计数量",
+        "dataType": "integer",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "totalQuantity",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1697701479741_53211",
+        "tagColorList": [],
+        "formatter": "0.##",
+        "isSum": true
+      },
+      {
+        "type": "input",
+        "label": "大单位数量",
+        "dataType": "bigDecimal",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "bigQtyTotal",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1702525061261_37735",
+        "tagColorList": [],
+        "formatter": "0.####",
+        "isSum": true
+      },
+      {
+        "type": "input",
+        "label": "合计重量",
+        "dataType": "bigDecimal",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "totalWeight",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1697701468443_92430",
+        "tagColorList": [],
+        "formatter": "0.#####",
+        "isSum": true
+      },
+      {
+        "type": "input",
+        "label": "合计金额",
+        "dataType": "double",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "totalAmount",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1697701532330_16857",
+        "tagColorList": [],
+        "formatter": "0.##",
+        "isSum": true
+      },
+      {
+        "type": "input",
+        "label": "计划出库日期",
+        "dataType": "date",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "planDate",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1701933860133_98376"
+      },
+      {
+        "type": "input",
+        "label": "创建人",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "createByName",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1697701556502_57690"
+      },
+      {
+        "type": "input",
+        "label": "创建时间",
+        "dataType": "datetime",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "createTime",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1697701558103_11731",
+        "tagColorList": [],
+        "width": 150
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "新建",
+            "options": {
+              "icon": "yrt-addplus",
+              "type": "primary",
+              "authNode": "add"
+            },
+            "key": "btn-add"
+          },
+          {
+            "type": "button",
+            "label": "删除",
+            "options": {
+              "icon": "yrt-shanchu2",
+              "type": "danger",
+              "authNode": "delete"
+            },
+            "key": "btn-delete"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group01"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "审核",
+            "options": {
+              "icon": "yrt-shenpi6",
+              "type": "success",
+              "authNode": "multiAuditing",
+              "defaultValue": null
+            },
+            "key": "btn-confirm"
+          },
+          {
+            "type": "button",
+            "label": "转出库单",
+            "options": {
+              "authNode": "toOutOrder",
+              "icon": "yrt-yrt yrt-tongzhi4",
+              "type": "primary",
+              "defaultValue": null
+            },
+            "key": "1698217647000_75638"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group02"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "刷新",
+            "options": {
+              "icon": "yrt-shuaxin",
+              "type": "default",
+              "authNode": "refresh"
+            },
+            "key": "btn-refresh"
+          },
+          {
+            "type": "button",
+            "label": "导入",
+            "options": {
+              "authNode": "import",
+              "icon": "yrt-yrt yrt-import",
+              "type": "default",
+              "importId": 194
+            },
+            "key": "1701163324000_96889"
+          },
+          {
+            "type": "button",
+            "label": "导出",
+            "options": {
+              "icon": "yrt-yrt yrt-daochu",
+              "type": "default",
+              "authNode": "export",
+              "exportId": 55
+            },
+            "key": "btn-export"
+          },
+          {
+            "type": "button",
+            "label": "打印",
+            "options": {
+              "icon": "yrt-dayin3",
+              "type": "default",
+              "authNode": "print"
+            },
+            "key": "btn-print"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group03"
+      }
+    ]
+  },
+  "editorOptions": {
+    "fields": [
+      {
+        "type": "splitter-group",
+        "label": "基础信息",
+        "icon": "yrt-biaoti",
+        "options": {
+          "defaultValue": null
+        },
+        "key": "1697701590359_16023",
+        "tabGroupName": "基础信息"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "出库计划单号",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "dataType": "string",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "required": false,
+                  "readonly": true,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "系统生成",
+                  "noLabel": false,
+                  "prop": "orderPlanCode"
+                },
+                "key": "1697701825535_4676",
+                "model": "input_1697701825535_4676"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "date",
+                "label": "计划出库日期",
+                "options": {
+                  "dataType": "date",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "readonly": false,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "date",
+                  "format": "yyyy-MM-dd",
+                  "timestamp": false,
+                  "required": false,
+                  "noLabel": false,
+                  "prop": "planDate"
+                },
+                "key": "1705627165460_63396",
+                "model": "date_1705627165460_63396"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "table-select",
+                "label": "货主名称",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "columns": [
+                    {
+                      "prop": "consignorCode",
+                      "label": "货主编号",
+                      "width": 100
+                    },
+                    {
+                      "prop": "consignorName",
+                      "label": "货主名称",
+                      "width": 150
+                    }
+                  ],
+                  "url": "/basic/base/consignor/getList",
+                  "searchFields": "consignorId,consignorCode,consignorName",
+                  "prop": "consignorName",
+                  "dataType": "string"
+                },
+                "key": "1697701830985_25144",
+                "model": "input_1697701830985_25144"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1697701593232_76303",
+        "tabGroupName": "基础信息"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "select",
+                "label": "经手人",
+                "options": {
+                  "dataType": "string",
+                  "width": "100%",
+                  "defaultValue": "{currentNickName}",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "options": [
+                    {
+                      "value": "下拉框1"
+                    },
+                    {
+                      "value": "下拉框2"
+                    },
+                    {
+                      "value": "下拉框3"
+                    }
+                  ],
+                  "remote": "bindDropdown",
+                  "remoteOptions": [],
+                  "dropdownId": 22,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "prop": "nickName"
+                },
+                "key": "1705627170141_48255",
+                "model": "select_1705627170141_48255"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "tree",
+                "label": "部门",
+                "dataType": "string",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "dataType": "string",
+                  "width": "100%",
+                  "defaultValue": "{currentDeptName}",
+                  "showLabel": false,
+                  "noLabel": false,
+                  "required": false,
+                  "onlySelectLeaf": true,
+                  "disabled": false,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "prop": "deptName",
+                  "popoverWidth": "300px"
+                },
+                "key": "1705627172224_9685",
+                "model": "tree_1705627172224_9685",
+                "ajaxParams": {
+                  "tableName": "sys_dept",
+                  "keyName": "deptId",
+                  "nodeName": "deptName",
+                  "fixHasChild": false,
+                  "showOutsideNode": false,
+                  "parentName": "parentId",
+                  "whereList": [
+                    {
+                      "column": "parentId",
+                      "values": 0,
+                      "queryType": "EQ",
+                      "dataType": "INT"
+                    },
+                    {
+                      "column": "enable",
+                      "values": 1,
+                      "queryType": "EQ",
+                      "dataType": "INT"
+                    },
+                    {
+                      "column": "delFlag",
+                      "values": 0,
+                      "queryType": "EQ",
+                      "dataType": "INT"
+                    }
+                  ],
+                  "orderByList": [
+                    {
+                      "column": "orderNum",
+                      "orderByType": "DESC"
+                    }
+                  ],
+                  "extendColumns": ""
+                }
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "table-select",
+                "label": "客户名称",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "columns": [
+                    {
+                      "prop": "clientCode",
+                      "label": "客户编号",
+                      "width": 100
+                    },
+                    {
+                      "prop": "clientShortName",
+                      "label": "客户名称",
+                      "width": 150
+                    }
+                  ],
+                  "url": "/basic/client/client/getList",
+                  "searchFields": "clientId,clientCode,clientShortName,clientFullName",
+                  "prop": "clientShortName",
+                  "popoverWidth": "300px",
+                  "dataType": "string"
+                },
+                "key": "1697702018729_11864",
+                "model": "input_1697702018729_11864"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1697701819352_34989",
+        "tabGroupName": "基础信息"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "合计数量",
+                "options": {
+                  "dataType": "bigDecimal",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "required": false,
+                  "readonly": true,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "totalQuantity",
+                  "formatter": "0.##"
+                },
+                "key": "1701394485182_15784",
+                "model": "input_1701394485182_15784"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "合计金额",
+                "options": {
+                  "dataType": "bigDecimal",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "required": false,
+                  "readonly": true,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "totalAmount",
+                  "formatter": "0.##"
+                },
+                "key": "1701394491828_46240",
+                "model": "input_1701394491828_46240"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "合计重量",
+                "options": {
+                  "dataType": "bigDecimal",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "required": false,
+                  "readonly": true,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "totalWeight",
+                  "formatter": "0.######"
+                },
+                "key": "1701394490566_10707",
+                "model": "input_1701394490566_10707"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1697701820672_25395",
+        "tabGroupName": "基础信息"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "大单位数量",
+                "dataType": "bigDecimal",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "dataType": "bigDecimal",
+                  "prop": "bigQtyTotal",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "readonly": true
+                },
+                "key": "1705568908217_82342",
+                "model": "input_1705568908217_82342"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "来源单号",
+                "options": {
+                  "dataType": "string",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "required": false,
+                  "readonly": false,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "sourceCode"
+                },
+                "key": "1705568903467_42263",
+                "model": "input_1705568903467_42263"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "合计体积",
+                "dataType": "bigDecimal",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "dataType": "bigDecimal",
+                  "prop": "totalCube",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "readonly": true,
+                  "formatter": "0.######"
+                },
+                "key": "1700731506902_5197",
+                "model": "input_1700731506902_5197"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1697701821907_40557",
+        "tabGroupName": "基础信息"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "计划单状态",
+                "options": {
+                  "dataType": "string",
+                  "width": "100%",
+                  "defaultValue": "新建",
+                  "required": false,
+                  "readonly": true,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "planStatus"
+                },
+                "key": "1705627176662_57273",
+                "model": "input_1705627176662_57273"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "来源",
+                "options": {
+                  "dataType": "string",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "required": false,
+                  "readonly": false,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "source"
+                },
+                "key": "1705627174303_71479",
+                "model": "input_1705627174303_71479"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": []
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top"
+        },
+        "key": "1702458232068_27395",
+        "tabGroupName": "基础信息"
+      },
+      {
+        "type": "splitter-group",
+        "label": "物流信息",
+        "icon": "yrt-biaoti",
+        "options": {
+          "defaultValue": null
+        },
+        "key": "1697701600082_32381",
+        "tabGroupName": "物流信息"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "联系人",
+                "options": {
+                  "dataType": "string",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "required": false,
+                  "readonly": false,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "linkerName"
+                },
+                "key": "1697702638673_85817",
+                "model": "input_1697702638673_85817"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "邮编",
+                "options": {
+                  "dataType": "string",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "required": false,
+                  "readonly": false,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "zip"
+                },
+                "key": "1697702649820_48583",
+                "model": "input_1697702649820_48583"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "国家",
+                "options": {
+                  "dataType": "string",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "required": false,
+                  "readonly": false,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "countryName"
+                },
+                "key": "1697702651346_80808",
+                "model": "input_1697702651346_80808"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1697702634878_32915",
+        "tabGroupName": "物流信息"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "收货人",
+                "options": {
+                  "dataType": "string",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "required": true,
+                  "readonly": false,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "shippingName"
+                },
+                "key": "1697702702907_88962",
+                "model": "input_1697702702907_88962",
+                "rules": [
+                  {
+                    "required": true,
+                    "message": "收货人必须填写"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "手机",
+                "options": {
+                  "dataType": "string",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "required": true,
+                  "readonly": false,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "mobile"
+                },
+                "key": "1697702704675_60962",
+                "model": "input_1697702704675_60962"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "电话",
+                "options": {
+                  "dataType": "string",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "required": false,
+                  "readonly": false,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "tel"
+                },
+                "key": "1697702706411_53269",
+                "model": "input_1697702706411_53269"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1697702686191_82887",
+        "tabGroupName": "物流信息"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 16,
+            "fields": [
+              {
+                "type": "input",
+                "label": "收货地址",
+                "options": {
+                  "dataType": "integer",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "required": true,
+                  "readonly": false,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "shippingAddress"
+                },
+                "key": "1697703548094_22588",
+                "model": "input_1697703548094_22588",
+                "rules": [
+                  {
+                    "required": true,
+                    "message": "收货地址必须填写"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": []
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1697702688590_93435",
+        "tabGroupName": "物流信息"
+      },
+      {
+        "type": "inline-group",
+        "label": "省市区",
+        "icon": "yrt-ai-list",
+        "fields": [
+          {
+            "type": "select",
+            "label": "省",
+            "options": {
+              "width": "100px",
+              "defaultValue": "",
+              "multiple": false,
+              "disabled": false,
+              "clearable": false,
+              "placeholder": "",
+              "required": false,
+              "showLabel": true,
+              "noLabel": false,
+              "options": [
+                {
+                  "value": "下拉框1"
+                },
+                {
+                  "value": "下拉框2"
+                },
+                {
+                  "value": "下拉框3"
+                }
+              ],
+              "remote": "bindDropdown",
+              "remoteOptions": [],
+              "dropdownId": 613,
+              "props": {
+                "value": "value",
+                "label": "label"
+              },
+              "prop": "provinceName",
+              "popoverWidth": "300px",
+              "dataType": "string",
+              "keyProp": "provinceId"
+            },
+            "key": "1700534161258_34305",
+            "model": "input_1697704352193_70867"
+          },
+          {
+            "type": "select",
+            "label": "市",
+            "options": {
+              "width": "100px",
+              "defaultValue": "",
+              "multiple": false,
+              "disabled": false,
+              "clearable": false,
+              "placeholder": "",
+              "required": false,
+              "showLabel": true,
+              "noLabel": false,
+              "options": [
+                {
+                  "value": "下拉框1"
+                },
+                {
+                  "value": "下拉框2"
+                },
+                {
+                  "value": "下拉框3"
+                }
+              ],
+              "remote": "bindDropdown",
+              "remoteOptions": [],
+              "dropdownId": 614,
+              "props": {
+                "value": "value",
+                "label": "label"
+              },
+              "prop": "cityName",
+              "popoverWidth": "300px",
+              "dataType": "string",
+              "keyProp": "cityId"
+            },
+            "key": "1700534163769_41735",
+            "model": "input_1697704343076_77247"
+          },
+          {
+            "type": "select",
+            "label": "区",
+            "options": {
+              "width": "100px",
+              "defaultValue": "",
+              "multiple": false,
+              "disabled": false,
+              "clearable": false,
+              "placeholder": "",
+              "required": false,
+              "showLabel": true,
+              "noLabel": false,
+              "options": [
+                {
+                  "value": "下拉框1"
+                },
+                {
+                  "value": "下拉框2"
+                },
+                {
+                  "value": "下拉框3"
+                }
+              ],
+              "remote": "bindDropdown",
+              "remoteOptions": [],
+              "dropdownId": 615,
+              "props": {
+                "value": "value",
+                "label": "label"
+              },
+              "prop": "regionName",
+              "popoverWidth": "300px",
+              "dataType": "string",
+              "keyProp": "regionId"
+            },
+            "key": "1700534171004_21623",
+            "model": "input_1697704401928_44514"
+          }
+        ],
+        "options": {},
+        "key": "1700534149059_62501",
+        "tabGroupName": "物流信息"
+      },
+      {
+        "type": "splitter-group",
+        "label": "其他信息",
+        "icon": "yrt-biaoti",
+        "options": {
+          "defaultValue": null
+        },
+        "key": "1697701602295_64552",
+        "tabGroupName": "其他信息/附件"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "审核状态",
+                "options": {
+                  "dataType": "string",
+                  "width": "100%",
+                  "defaultValue": "0",
+                  "required": false,
+                  "readonly": true,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "auditing"
+                },
+                "key": "1697702620598_19409",
+                "model": "input_1697702620598_19409"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "date",
+                "label": "审核日期",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": null,
+                  "readonly": true,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "date",
+                  "format": "yyyy-MM-dd",
+                  "timestamp": false,
+                  "required": false,
+                  "noLabel": false,
+                  "dataType": "date",
+                  "prop": "auditDate"
+                },
+                "key": "1697705727818_59887",
+                "model": "input_1697705727818_59887"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "审核人",
+                "options": {
+                  "dataType": "string",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "required": false,
+                  "readonly": true,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "auditor"
+                },
+                "key": "1697705815943_18943",
+                "model": "input_1697705815943_18943"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1697702607849_9459",
+        "tabGroupName": "其他信息/附件"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "创建人",
+                "dataType": "string",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "dataType": "string",
+                  "prop": "createByName",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "readonly": true
+                },
+                "key": "1697705962185_100",
+                "model": "input_1697705962185_100"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "创建时间",
+                "dataType": "datetime",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "dataType": "datetime",
+                  "prop": "createTime",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "readonly": true
+                },
+                "key": "1697705963761_33274",
+                "model": "input_1697705963761_33274"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "集装箱号",
+                "dataType": "string",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "dataType": "string",
+                  "prop": "containerNo",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": ""
+                },
+                "key": "1700534427754_67521",
+                "model": "input_1700534427754_67521"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1697705889829_83627",
+        "tabGroupName": "其他信息/附件"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "备注",
+                "dataType": "string",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "dataType": "string",
+                  "prop": "remark",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": ""
+                },
+                "key": "1700534430822_67637",
+                "model": "input_1700534430822_67637"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "审核说明",
+                "options": {
+                  "dataType": "string",
+                  "width": "100%",
+                  "defaultValue": null,
+                  "required": false,
+                  "readonly": true,
+                  "disabled": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "noLabel": false,
+                  "prop": "auditRemark"
+                },
+                "key": "1700534466304_92996",
+                "model": "input_1700534466304_92996"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": []
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1697705867559_31219",
+        "tabGroupName": "其他信息/附件"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 24,
+            "fields": [
+              {
+                "type": "upload-image",
+                "label": "上传文件",
+                "dataType": "string",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "defaultValue": [],
+                  "size": {
+                    "width": 180,
+                    "height": 180
+                  },
+                  "serverAction": "/api/common/upload",
+                  "disabled": false,
+                  "max": 5,
+                  "multiple": true,
+                  "listType": "picture-card",
+                  "noLabel": false,
+                  "prop": "uploadFile",
+                  "popoverWidth": "300px",
+                  "dataType": "string"
+                },
+                "key": "1700618015269_54972",
+                "model": "input_1700618015269_54972"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1697705820276_84196",
+        "tabGroupName": "其他信息/附件"
+      },
+      {
+        "type": "detail-grid",
+        "label": "明细布局",
+        "icon": "yrt-liebiao2",
+        "fields": [
+          {
+            "prop": "productCode",
+            "label": "商品编号",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1697706392563_1978",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "width": "110"
+          },
+          {
+            "prop": "productName",
+            "label": "商品名称",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1697706394730_67025",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "width": 220
+          },
+          {
+            "prop": "storageName",
+            "label": "所属仓库",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1700732820366_99104",
+            "headerAlign": "center",
+            "align": "left",
+            "type": "select",
+            "options": {
+              "width": "100%",
+              "defaultValue": "",
+              "multiple": false,
+              "disabled": false,
+              "clearable": false,
+              "placeholder": "",
+              "required": false,
+              "showLabel": true,
+              "noLabel": false,
+              "options": [
+                {
+                  "value": "下拉框1"
+                },
+                {
+                  "value": "下拉框2"
+                },
+                {
+                  "value": "下拉框3"
+                }
+              ],
+              "remote": "bindDropdown",
+              "remoteOptions": [],
+              "dropdownId": 31,
+              "props": {
+                "value": "value",
+                "label": "label"
+              }
+            },
+            "keyProp": "storageId"
+          },
+          {
+            "prop": "quantity",
+            "label": "预出库数量",
+            "dataType": "bigDecimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1697706793408_85366",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "type": "input",
+            "options": {
+              "width": "100%",
+              "defaultValue": "",
+              "required": false,
+              "readonly": false,
+              "disabled": false,
+              "pattern": "",
+              "placeholder": "",
+              "noLabel": false
+            }
+          },
+          {
+            "prop": "weight",
+            "label": "单位重量",
+            "dataType": "bigDecimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1697707104052_435",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "type": "input",
+            "options": {
+              "width": "100%",
+              "defaultValue": "",
+              "required": false,
+              "readonly": false,
+              "disabled": false,
+              "pattern": "",
+              "placeholder": "",
+              "noLabel": false
+            },
+            "formatter": "0.########"
+          },
+          {
+            "prop": "rowWeight",
+            "label": "小计毛重",
+            "dataType": "bigDecimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1704178641872_65702",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "formatter": "0.########"
+          },
+          {
+            "prop": "unitCube",
+            "label": "单位体积",
+            "dataType": "bigDecimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1700728516192_11127",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "type": "input",
+            "options": {
+              "width": "100%",
+              "defaultValue": "",
+              "required": false,
+              "readonly": false,
+              "disabled": false,
+              "pattern": "",
+              "placeholder": "",
+              "noLabel": false
+            },
+            "formatter": "0.########"
+          },
+          {
+            "prop": "rowCube",
+            "label": "小计体积",
+            "dataType": "bigDecimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1700728517966_90235",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "formatter": "0.########"
+          },
+          {
+            "prop": "smallUnit",
+            "label": "小单位",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1697707092719_88880",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": []
+          },
+          {
+            "prop": "bigQty",
+            "label": "大单位数量",
+            "dataType": "bigDecimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1700728523350_2024",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "formatter": "大单位格式化",
+            "type": "none",
+            "options": {
+              "width": "100%",
+              "defaultValue": "",
+              "required": false,
+              "readonly": false,
+              "disabled": false,
+              "pattern": "",
+              "placeholder": "",
+              "noLabel": false
+            }
+          },
+          {
+            "prop": "unitConvert",
+            "label": "换算关系",
+            "dataType": "bigDecimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1702458544118_74609",
+            "headerAlign": "center",
+            "align": "left"
+          },
+          {
+            "prop": "productModel",
+            "label": "条形码",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1697707099810_42706",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "width": "120"
+          },
+          {
+            "prop": "productSpec",
+            "label": "商品规格",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1697707096801_66305",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": []
+          },
+          {
+            "prop": "produceDate",
+            "label": "生产日期",
+            "dataType": "datetime",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1697707042166_64275",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "width": 140
+          },
+          {
+            "prop": "batchNumber",
+            "label": "批次号",
+            "dataType": "integer",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1697707102549_41956",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "width": "100"
+          },
+          {
+            "prop": "containerNo",
+            "label": "集装箱号",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1697706452304_1684",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "width": 120
+          },
+          {
+            "prop": "orignPlace",
+            "label": "原产地",
+            "dataType": "integer",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1697707018399_13064",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": []
+          },
+          {
+            "prop": "salePrice",
+            "label": "销售单价",
+            "dataType": "bigDecimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1702361133891_26712",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "type": "input",
+            "options": {
+              "width": "100%",
+              "defaultValue": "",
+              "required": false,
+              "readonly": false,
+              "disabled": false,
+              "pattern": "",
+              "placeholder": "",
+              "noLabel": false
+            },
+            "formatter": "0.##"
+          },
+          {
+            "prop": "saleAmount",
+            "label": "销售金额",
+            "dataType": "bigDecimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1702361148171_52682",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "formatter": "0.##"
+          },
+          {
+            "prop": "rate",
+            "label": "税率",
+            "dataType": "bigDecimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1702361098372_79392",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "type": "input",
+            "options": {
+              "width": "100%",
+              "defaultValue": "",
+              "required": false,
+              "readonly": false,
+              "disabled": false,
+              "pattern": "",
+              "placeholder": "",
+              "noLabel": false
+            },
+            "formatter": "%"
+          },
+          {
+            "prop": "ratePrice",
+            "label": "含税单价",
+            "dataType": "bigDecimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1702361178507_74256",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "formatter": "0.##"
+          },
+          {
+            "prop": "rateAmount",
+            "label": "价税合计",
+            "dataType": "bigDecimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1697707094051_87185",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "formatter": "0.##"
+          },
+          {
+            "prop": "singleSignCode",
+            "label": "定制唯一码",
+            "dataType": "integer",
+            "sortable": false,
+            "hidden": true,
+            "isQuickSearch": false,
+            "key": "1697707090903_99749",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "width": 240
+          },
+          {
+            "prop": "surplusQuantity",
+            "label": "未出库数量",
+            "dataType": "double",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1697706796766_98396",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": []
+          },
+          {
+            "prop": "outQuantity",
+            "label": "已出库数量",
+            "dataType": "bigDecimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1697706851216_39193",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": []
+          },
+          {
+            "prop": "projectCode",
+            "label": "项目号",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1726037284880_93718",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "type": "input",
+            "options": {
+              "width": "100%",
+              "defaultValue": "",
+              "required": false,
+              "readonly": false,
+              "disabled": false,
+              "pattern": "",
+              "placeholder": "",
+              "noLabel": false
+            }
+          },
+          {
+            "prop": "caseNumber",
+            "label": "箱号",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1726037286657_40883",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "type": "input",
+            "options": {
+              "width": "100%",
+              "defaultValue": "",
+              "required": false,
+              "readonly": false,
+              "disabled": false,
+              "pattern": "",
+              "placeholder": "",
+              "noLabel": false
+            }
+          }
+        ],
+        "options": {
+          "border": true,
+          "size": "small",
+          "total": 0,
+          "pageIndex": 1,
+          "pageSize": 50,
+          "detailSelections": [],
+          "idField": "orderPlanDetailId",
+          "defaultValue": null,
+          "prefixRouter": "/outbound/out/orderPlanDetail"
+        },
+        "buttons": [
+          {
+            "type": "button-group",
+            "label": "按钮组",
+            "buttons": [
+              {
+                "type": "button",
+                "label": "商品添加",
+                "options": {
+                  "authNode": "detailAdd",
+                  "icon": "yrt-yrt yrt-addplus",
+                  "type": "primary",
+                  "defaultValue": null
+                },
+                "key": "1703817008000_33566"
+              },
+              {
+                "type": "button",
+                "label": "商品库存添加",
+                "options": {
+                  "authNode": "detailAddPosition",
+                  "icon": "yrt-yrt yrt-addplus",
+                  "type": "primary",
+                  "defaultValue": null
+                },
+                "key": "1703817010000_44528"
+              },
+              {
+                "type": "button",
+                "label": "删除",
+                "options": {
+                  "authNode": "detailDelete",
+                  "icon": "yrt-yrt yrt-shanchu2",
+                  "type": "danger",
+                  "defaultValue": null
+                },
+                "key": "1703817013000_91581"
+              }
+            ],
+            "options": {
+              "icon": "yrt-anniuzu"
+            },
+            "key": "1703817006000_52254"
+          }
+        ],
+        "key": "1697701631222_79757",
+        "subTableName": "out_order_plan_detail"
+      }
+    ],
+    "config": {
+      "labelWidth": "100px",
+      "labelPosition": "right",
+      "top": "3vh",
+      "width": "1200px",
+      "visible": false,
+      "disabled": false,
+      "title": "出库计划单",
+      "action": "add",
+      "formInline": false,
+      "saveButtonText": "保存"
+    }
+  }
+}

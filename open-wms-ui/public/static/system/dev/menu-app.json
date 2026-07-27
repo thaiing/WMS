@@ -1,0 +1,359 @@
+{
+  "dataOptions": {
+    "tableName": "sys_menu_app",
+    "idField": "menuId",
+    "router": "/system/dev/menu",
+    "idValue": 0,
+    "linkColumn": "menuName",
+    "menuId": 2095,
+    "pageIndex": 1,
+    "pageSize": 15,
+    "total": 0,
+    "showActionField": true,
+    "editorType": "single",
+    "prefixRouter": "/system/dataHandler/menuApp",
+    "tableId": 200,
+    "tableTenantId": 0,
+    "tableTenantName": "APP菜单管理",
+    "webRouter": "/system/dev/menu-app"
+  },
+  "dataListOptions": {
+    "data": [],
+    "fields": [],
+    "buttons": [
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "新建",
+            "options": {
+              "icon": "el-yrt-plus",
+              "type": "primary",
+              "authNode": "add"
+            },
+            "key": "btn-add"
+          },
+          {
+            "type": "button",
+            "label": "删除",
+            "options": {
+              "icon": "yrt-shanchu2",
+              "type": "primary",
+              "authNode": "delete"
+            },
+            "key": "btn-delete"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group01"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "审核",
+            "options": {
+              "icon": "yrt-shenpi6",
+              "type": "success",
+              "authNode": "auditing"
+            },
+            "key": "btn-confirm"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group02"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "刷新",
+            "options": {
+              "icon": "yrt-shuaxin",
+              "type": "default",
+              "authNode": "refresh"
+            },
+            "key": "btn-refresh"
+          },
+          {
+            "type": "button",
+            "label": "导出",
+            "options": {
+              "icon": "yrt-daochu1",
+              "type": "default",
+              "authNode": "export"
+            },
+            "key": "btn-export"
+          },
+          {
+            "type": "button",
+            "label": "打印",
+            "options": {
+              "icon": "yrt-dayin3",
+              "type": "default",
+              "authNode": "print"
+            },
+            "key": "btn-print"
+          },
+          {
+            "type": "button",
+            "label": "帮助",
+            "options": {
+              "icon": "el-yrt-info",
+              "type": "default",
+              "authNode": "helper"
+            },
+            "key": "btn-help"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group03"
+      }
+    ]
+  },
+  "editorOptions": {
+    "fields": [
+      {
+        "type": "input",
+        "label": "模块ID",
+        "options": {
+          "prop": "menuId",
+          "searchRowNo": 1,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "dataType": "integer",
+          "pattern": "",
+          "placeholder": "",
+          "remoteFunc": "func_1565965927000_97955",
+          "readonly": true
+        },
+        "key": "1565965927000_97955"
+      },
+      {
+        "type": "input",
+        "label": "父级ID",
+        "options": {
+          "prop": "parentId",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": true,
+          "dataType": "integer",
+          "pattern": "",
+          "placeholder": "",
+          "remoteFunc": "func_1573209688000_54880"
+        },
+        "key": "1573209688000_54880",
+        "rules": [
+          {
+            "required": true,
+            "message": "父级ID必须填写"
+          }
+        ]
+      },
+      {
+        "type": "input",
+        "label": "模块名称",
+        "options": {
+          "prop": "menuName",
+          "searchRowNo": 1,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": true,
+          "dataType": "string",
+          "pattern": "",
+          "placeholder": "",
+          "remoteFunc": "func_1565623077000_2550"
+        },
+        "key": "1565623077000_2550",
+        "rules": [
+          {
+            "required": true,
+            "message": "模块名称必须填写"
+          }
+        ]
+      },
+      {
+        "type": "input",
+        "label": "前端路由",
+        "options": {
+          "prop": "vueUrl",
+          "searchRowNo": null,
+          "width": "480px",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "dataType": "string",
+          "pattern": "",
+          "placeholder": "",
+          "remoteFunc": "func_1565623077000_10677"
+        },
+        "key": "1565623077000_10677"
+      },
+      {
+        "type": "textarea",
+        "label": "权限点",
+        "options": {
+          "width": "480px",
+          "defaultValue": null,
+          "required": false,
+          "readonly": false,
+          "disabled": false,
+          "pattern": "",
+          "placeholder": "",
+          "noLabel": false,
+          "prop": "vueAuth"
+        },
+        "key": "1565623077000_19833"
+      },
+      {
+        "type": "input",
+        "label": "菜单编号",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "dataType": "string",
+          "prop": "menuCode",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "key": "1725707024167_82458"
+      },
+      {
+        "type": "input",
+        "label": "模块类型",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "dataType": "string",
+          "prop": "menuType",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "key": "1724827382238_72463"
+      },
+      {
+        "type": "input",
+        "label": "图标",
+        "options": {
+          "prop": "icon",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "dataType": "string",
+          "pattern": "",
+          "placeholder": "",
+          "remoteFunc": "func_1565623077000_75540"
+        },
+        "key": "1565623077000_75540"
+      },
+      {
+        "type": "input",
+        "label": "图标颜色",
+        "options": {
+          "prop": "iconColor",
+          "searchRowNo": null,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "dataType": "string",
+          "pattern": "",
+          "placeholder": "",
+          "remoteFunc": "func_1565623077000_24687"
+        },
+        "key": "1565623077000_24687"
+      },
+      {
+        "type": "input",
+        "label": "排序号",
+        "options": {
+          "prop": "orderNum",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "dataType": "integer",
+          "pattern": "",
+          "placeholder": "",
+          "remoteFunc": "func_1565623077000_70799"
+        },
+        "key": "1565623077000_70799"
+      },
+      {
+        "type": "input",
+        "label": "置顶权重",
+        "dataType": "long",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "dataType": "long",
+          "prop": "topNum",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "key": "1725707050420_99341"
+      },
+      {
+        "type": "switch",
+        "label": "是否可用",
+        "options": {
+          "defaultValue": 1,
+          "required": false,
+          "disabled": false,
+          "noLabel": false,
+          "prop": "enable",
+          "dataType": "integer",
+          "active-value": 1,
+          "inactive-value": 0
+        },
+        "key": "1688203045393_7651"
+      }
+    ],
+    "config": {
+      "labelWidth": "100px",
+      "labelPosition": "right",
+      "top": "3vh",
+      "width": "1200px",
+      "visible": false,
+      "disabled": false,
+      "title": "菜单权限表",
+      "action": "add",
+      "formInline": false,
+      "saveButtonText": "保存"
+    }
+  }
+}

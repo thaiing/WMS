@@ -1,0 +1,1408 @@
+{
+  "dataOptions": {
+    "tableName": "storage_profit_loss",
+    "idField": "profitLossId",
+    "idValue": 0,
+    "codeRegular": "profitLossCode",
+    "linkColumn": "profitLossCode",
+    "prefixRouter": "/inventory/operation/profitLoss",
+    "webRouter": "/inventory/operation/profitLoss",
+    "menuId": 1040,
+    "pageIndex": 1,
+    "pageSize": 15,
+    "total": 0,
+    "orderBy": {
+      "profitLossId": "DESC"
+    },
+    "showActionField": false,
+    "editorType": "dialog",
+    "tableId": 119,
+    "tableTenantId": 0,
+    "tableTenantName": "盈亏单"
+  },
+  "dataListOptions": {
+    "data": [],
+    "fields": [
+      {
+        "prop": "profitLossCode",
+        "label": "盈亏单号",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": true,
+        "key": "1547024455000_4971",
+        "model": "input_1547024455000_4971",
+        "width": "130",
+        "tagColorList": []
+      },
+      {
+        "prop": "checkCode",
+        "label": "盘点单号",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": true,
+        "key": "1547024459000_71369",
+        "model": "input_1547024459000_71369",
+        "width": "130",
+        "tagColorList": []
+      },
+      {
+        "prop": "storageName",
+        "label": "仓库名称",
+        "dataType": "string",
+        "sortable": false,
+        "type": "select",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1547024460000_51859",
+        "model": "input_1547024460000_51859",
+        "keyProp": "storageId",
+        "dropdown_Id": 31,
+        "tagColorList": [],
+        "searchRowNo": 200,
+        "options": {
+          "width": "100%",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "下拉框1"
+            },
+            {
+              "value": "下拉框2"
+            },
+            {
+              "value": "下拉框3"
+            }
+          ],
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "dropdownId": 31,
+          "props": {
+            "value": "value",
+            "label": "label"
+          }
+        },
+        "clearable": true,
+        "filterable": true,
+        "remoteQuery": false
+      },
+      {
+        "prop": "consignorName",
+        "label": "货主名称",
+        "dataType": "string",
+        "sortable": false,
+        "type": "select",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1547024462000_33799",
+        "model": "input_1547024462000_33799",
+        "dropdown_Id": 797,
+        "keyProp": "consignorId",
+        "tagColorList": [],
+        "searchRowNo": 200,
+        "options": {
+          "width": "100%",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "下拉框1"
+            },
+            {
+              "value": "下拉框2"
+            },
+            {
+              "value": "下拉框3"
+            }
+          ],
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "dropdownId": 797,
+          "props": {
+            "value": "value",
+            "label": "label"
+          }
+        },
+        "clearable": true,
+        "filterable": true
+      },
+      {
+        "prop": "lossStatus",
+        "label": "状态",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1550994490000_94021",
+        "model": "input_1550994490000_94021",
+        "tagColorList": [
+          {
+            "operator": "=",
+            "value": "新建",
+            "color": "rgba(96, 98, 102, 1)",
+            "backgroudColor": "rgba(255, 255, 0, 1)"
+          },
+          {
+            "operator": "=",
+            "value": "已调整",
+            "color": "rgba(255, 255, 255, 1)",
+            "backgroudColor": "rgba(2, 124, 251, 1)"
+          },
+          {
+            "operator": "=",
+            "value": "已复盘",
+            "color": "rgba(96, 98, 102, 1)",
+            "backgroudColor": "rgba(0, 255, 0, 1)"
+          },
+          {
+            "operator": "=",
+            "value": "复盘中",
+            "color": "rgba(96, 98, 102, 1)",
+            "backgroudColor": "rgba(255, 215, 0, 1)"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "label": "分拣状态",
+        "dataType": "byte",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "width": "100%",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "下拉框1"
+            },
+            {
+              "value": "下拉框2"
+            },
+            {
+              "value": "下拉框3"
+            }
+          ],
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "dropdownId": 518,
+          "props": {
+            "value": "value",
+            "label": "label"
+          }
+        },
+        "prop": "sortingStatus",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1705654545624_53927",
+        "tagColorList": [
+          {
+            "operator": "=",
+            "value": "1",
+            "color": "rgba(96, 98, 102, 1)",
+            "backgroudColor": "rgba(255, 255, 0, 1)"
+          },
+          {
+            "operator": "=",
+            "value": "2",
+            "color": "rgba(255, 255, 255, 1)",
+            "backgroudColor": "rgba(5, 200, 5, 1)"
+          },
+          {
+            "operator": "=",
+            "value": "3",
+            "color": "rgba(255, 255, 255, 1)",
+            "backgroudColor": "rgba(255, 0, 0, 1)"
+          },
+          {
+            "operator": "=",
+            "value": "5",
+            "color": "rgba(255, 255, 255, 1)",
+            "backgroudColor": "rgba(255, 0, 255, 1)"
+          }
+        ]
+      },
+      {
+        "prop": "totalProductStorage",
+        "label": "合计账面库存量",
+        "dataType": "decimal",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1611819235000_37771",
+        "formatter": "0.##",
+        "tagColorList": []
+      },
+      {
+        "prop": "totalWeight",
+        "label": "账面库存毛重合计",
+        "dataType": "bigDecimal",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1570593815000_38299",
+        "width": 140,
+        "tagColorList": [],
+        "formatter": "0.#######"
+      },
+      {
+        "prop": "totalCheckQuantity",
+        "label": "合计盘点数量",
+        "dataType": "bigDecimal",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1611819245000_1345",
+        "tagColorList": [],
+        "formatter": "0.##"
+      },
+      {
+        "prop": "totalProfitQuantity",
+        "label": "合计盘盈数量",
+        "dataType": "bigDecimal",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1547024469000_30457",
+        "model": "input_1547024469000_30457",
+        "tagColorList": [],
+        "formatter": "0.##"
+      },
+      {
+        "type": "input",
+        "label": "合计盘亏数量",
+        "dataType": "bigDecimal",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "totalLossQuantity",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1712455127116_97135",
+        "tagColorList": [],
+        "formatter": "0.##"
+      },
+      {
+        "prop": "sortingDate",
+        "label": "调整日期",
+        "dataType": "datetime",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1547024475000_61741",
+        "model": "input_1547024475000_61741",
+        "width": 140,
+        "formatter": "YYYY-MM-DD HH:mm:ss",
+        "tagColorList": []
+      },
+      {
+        "type": "select",
+        "label": "审核状态",
+        "dataType": "long",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "width": "100%",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "下拉框1"
+            },
+            {
+              "value": "下拉框2"
+            },
+            {
+              "value": "下拉框3"
+            }
+          ],
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "dropdownId": 21,
+          "props": {
+            "value": "value",
+            "label": "label"
+          }
+        },
+        "prop": "auditing",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1712454858701_91233",
+        "tagColorList": [
+          {
+            "operator": "=",
+            "value": "0",
+            "color": "rgba(96, 98, 102, 1)",
+            "backgroudColor": "rgba(255, 255, 0, 1)"
+          },
+          {
+            "operator": "=",
+            "value": "2",
+            "color": "rgba(255, 255, 255, 1)",
+            "backgroudColor": "rgba(5, 200, 5, 1)"
+          }
+        ]
+      },
+      {
+        "prop": "auditor",
+        "label": "审核人",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1547024482000_82069",
+        "model": "input_1547024482000_82069",
+        "tagColorList": []
+      },
+      {
+        "prop": "createTime",
+        "label": "创建时间",
+        "dataType": "datetime",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1547024491000_18960",
+        "model": "input_1547024491000_18960",
+        "width": 140,
+        "formatter": "YYYY-MM-DD HH:mm:ss",
+        "tagColorList": []
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "审核",
+            "options": {
+              "icon": "yrt-shenpi6",
+              "type": "success",
+              "authNode": "auditing"
+            },
+            "key": "btn-confirm"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group02"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "刷新",
+            "options": {
+              "icon": "yrt-shuaxin",
+              "type": "default",
+              "authNode": "refresh"
+            },
+            "key": "btn-refresh"
+          },
+          {
+            "type": "button",
+            "label": "导出",
+            "options": {
+              "icon": "yrt-daochu1",
+              "type": "default",
+              "authNode": "export"
+            },
+            "key": "btn-export"
+          },
+          {
+            "type": "button",
+            "label": "打印",
+            "options": {
+              "icon": "yrt-dayin3",
+              "type": "default",
+              "authNode": "print"
+            },
+            "key": "btn-print"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group03"
+      }
+    ]
+  },
+  "editorOptions": {
+    "fields": [
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "盈亏单号",
+                "options": {
+                  "prop": "profitLossCode",
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1547194933000_71129",
+                  "readonly": true
+                },
+                "key": "1547194933000_71129",
+                "model": "input_1547194933000_71129"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "盘点单号",
+                "options": {
+                  "prop": "checkCode",
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1547194941000_93960",
+                  "readonly": true
+                },
+                "key": "1547194941000_93960",
+                "model": "input_1547194941000_93960",
+                "rules": []
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "table-select",
+                "label": "仓库名称",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "columns": [
+                    {
+                      "prop": "storageCode",
+                      "label": "仓库编号",
+                      "width": 100
+                    },
+                    {
+                      "prop": "storageName",
+                      "label": "仓库名称",
+                      "width": 150
+                    }
+                  ],
+                  "url": "/basic/storage/storage/getList",
+                  "searchFields": "storageId,storageCode,storageName",
+                  "prop": "storageName",
+                  "popoverWidth": "300px",
+                  "dataType": "string"
+                },
+                "key": "1547194945000_48311",
+                "model": "input_1547194945000_48311"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1547194855000_51612"
+        },
+        "key": "1547194855000_51612",
+        "model": "grid_1547194855000_51612"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "table-select",
+                "label": "货主名称",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "columns": [
+                    {
+                      "prop": "consignorCode",
+                      "label": "货主编号",
+                      "width": 100
+                    },
+                    {
+                      "prop": "consignorName",
+                      "label": "货主名称",
+                      "width": 150
+                    }
+                  ],
+                  "url": "/basic/base/consignor/getList",
+                  "searchFields": "consignorId,consignorCode,consignorName",
+                  "prop": "consignorName",
+                  "popoverWidth": "300px",
+                  "dataType": "string"
+                },
+                "key": "1547194947000_858",
+                "model": "input_1547194947000_858"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "date",
+                "label": "生成日期",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "readonly": true,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "datetime",
+                  "format": "yyyy-MM-dd HH:mm:ss",
+                  "timestamp": false,
+                  "required": false,
+                  "noLabel": false,
+                  "prop": "applyDate",
+                  "dataType": "datetime"
+                },
+                "key": "1547194952000_24660",
+                "model": "input_1547194952000_24660"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "状态",
+                "options": {
+                  "prop": "statusText",
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "新建",
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1547194954000_3146",
+                  "readonly": true
+                },
+                "key": "1547194954000_3146",
+                "model": "input_1547194954000_3146"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1547194856000_31314"
+        },
+        "key": "1547194856000_31314",
+        "model": "grid_1547194856000_31314"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "select",
+                "label": "经手人",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": true,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": false,
+                  "noLabel": false,
+                  "options": [
+                    {
+                      "value": "下拉框1"
+                    },
+                    {
+                      "value": "下拉框2"
+                    },
+                    {
+                      "value": "下拉框3"
+                    }
+                  ],
+                  "remote": "bindDropdown",
+                  "remoteOptions": [],
+                  "dropdown_Id": 22,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "remoteFunc": "",
+                  "prop": "nickName",
+                  "readonly": true
+                },
+                "key": "1547194968000_89744",
+                "model": "input_1547194968000_89744"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "select",
+                "label": "部门",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "options": [
+                    {
+                      "value": "下拉框1"
+                    },
+                    {
+                      "value": "下拉框2"
+                    },
+                    {
+                      "value": "下拉框3"
+                    }
+                  ],
+                  "remote": "bindDropdown",
+                  "remoteOptions": [],
+                  "dropdownId": 0,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "prop": "deptName",
+                  "popoverWidth": "300px",
+                  "dataType": "string"
+                },
+                "key": "1547194969000_21867",
+                "model": "input_1547194969000_21867",
+                "ajaxParams": {
+                  "openNodeApi": true,
+                  "folder": "sys/core",
+                  "DBServer": "Sys",
+                  "tableName": "Sys_Dept",
+                  "tableView": "Sys_Dept",
+                  "keyName": "dept_Id",
+                  "nodeName": "deptName",
+                  "fixHasChild": false,
+                  "isBreakWay": false,
+                  "displayBreakWay": false,
+                  "parentName": "parentId",
+                  "orderBy": "orderNo desc, dept_Id",
+                  "extendColumns": ""
+                }
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "select",
+                "label": "分拣状态",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "1",
+                  "multiple": false,
+                  "disabled": true,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": false,
+                  "noLabel": false,
+                  "options": [
+                    {
+                      "value": "下拉框1"
+                    },
+                    {
+                      "value": "下拉框2"
+                    },
+                    {
+                      "value": "下拉框3"
+                    }
+                  ],
+                  "remote": "bindDropdown",
+                  "remoteOptions": [],
+                  "dropdown_Id": 518,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "remoteFunc": "",
+                  "prop": "sortingStatus",
+                  "dataType": "string",
+                  "readonly": false
+                },
+                "key": "1547194982000_16964",
+                "model": "input_1547194982000_16964"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1547194856000_81417"
+        },
+        "key": "1547194856000_81417",
+        "model": "grid_1547194856000_81417"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "date",
+                "label": "分拣日期",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "readonly": true,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "datetime",
+                  "format": "yyyy-MM-dd HH:mm:ss",
+                  "timestamp": false,
+                  "required": false,
+                  "noLabel": false,
+                  "prop": "sortingDate",
+                  "dataType": "datetime"
+                },
+                "key": "1547194985000_17492",
+                "model": "input_1547194985000_17492"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "合计盘盈金额",
+                "options": {
+                  "prop": "totalProfitAmount",
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "dataType": "decimal",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1547194990000_71957",
+                  "readonly": true
+                },
+                "key": "1547194990000_71957",
+                "model": "input_1547194990000_71957"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "合计盘亏金额",
+                "options": {
+                  "prop": "totalLossAmount",
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "dataType": "double",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1547194997000_81906",
+                  "readonly": true
+                },
+                "key": "1547194997000_81906",
+                "model": "input_1547194997000_81906"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1547194857000_31381"
+        },
+        "key": "1547194857000_31381",
+        "model": "grid_1547194857000_31381"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "创建人",
+                "options": {
+                  "prop": "createByName",
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1547194975000_43114",
+                  "readonly": true
+                },
+                "key": "1547194975000_43114",
+                "model": "input_1547194975000_43114"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "date",
+                "label": "创建时间",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": null,
+                  "readonly": true,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "datetime",
+                  "format": "yyyy-MM-dd HH:mm:ss",
+                  "timestamp": false,
+                  "required": false,
+                  "noLabel": false,
+                  "prop": "createTime",
+                  "dataType": "datetime"
+                },
+                "key": "1547194977000_24204",
+                "model": "input_1547194977000_24204"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "备注",
+                "options": {
+                  "prop": "remark",
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1550712775000_30102"
+                },
+                "key": "1550712775000_30102",
+                "model": "input_1550712775000_30102"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1547194858000_53579"
+        },
+        "key": "1547194858000_53579",
+        "model": "grid_1547194858000_53579"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "账面毛重合计",
+                "options": {
+                  "prop": "totalWeight",
+                  "searchRowNo": null,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "decimal",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1570603829000_24922",
+                  "readonly": true
+                },
+                "key": "1570603829000_24922",
+                "model": "input_1570603829000_24922"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": []
+          },
+          {
+            "span": 8,
+            "fields": []
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1570603803000_73156"
+        },
+        "key": "1570603803000_73156"
+      },
+      {
+        "type": "detail-grid",
+        "label": "明细布局",
+        "fields": [
+          {
+            "prop": "positionName",
+            "label": "货位",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1551692359000_32093",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "width": "90"
+          },
+          {
+            "prop": "productCode",
+            "label": "编号",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1547195280000_14378",
+            "model": "input_1547195280000_14378",
+            "width": 110
+          },
+          {
+            "prop": "productName",
+            "label": "产品名称",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1547195282000_24071",
+            "model": "input_1547195282000_24071",
+            "width": "230",
+            "tagColorList": []
+          },
+          {
+            "prop": "productModel",
+            "label": "条形码",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1547195285000_66211",
+            "model": "input_1547195285000_66211",
+            "width": "120",
+            "tagColorList": []
+          },
+          {
+            "prop": "productSpec",
+            "label": "产品规格",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1547195295000_70733",
+            "model": "input_1547195295000_70733"
+          },
+          {
+            "prop": "productStorage",
+            "label": "账面库存",
+            "dataType": "decimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1547195318000_1777",
+            "model": "input_1547195318000_1777",
+            "formatter": "0.##",
+            "tagColorList": []
+          },
+          {
+            "prop": "checkQuantity",
+            "label": "初盘数量",
+            "dataType": "decimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1547195327000_87029",
+            "model": "input_1547195327000_87029",
+            "formatter": "0.##",
+            "tagColorList": []
+          },
+          {
+            "prop": "profitQuantity",
+            "label": "盘盈数量",
+            "dataType": "decimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1547195332000_58905",
+            "model": "input_1547195332000_58905",
+            "formatter": "0.##",
+            "tagColorList": []
+          },
+          {
+            "prop": "lossQuantity",
+            "label": "盘亏数量",
+            "dataType": "decimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1547195353000_44439",
+            "model": "input_1547195353000_44439",
+            "formatter": "0.##",
+            "tagColorList": []
+          },
+          {
+            "prop": "checkDiff",
+            "label": "初盘差异",
+            "dataType": "bigDecimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1547195386000_48505",
+            "model": "input_1547195386000_48505",
+            "formatter": "0.##",
+            "tagColorList": []
+          },
+          {
+            "prop": "reCheckQuantity",
+            "label": "复盘数量",
+            "dataType": "decimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1547195409000_72590",
+            "model": "input_1547195409000_72590",
+            "formatter": "0.##",
+            "tagColorList": []
+          },
+          {
+            "prop": "reCheckDiff",
+            "label": "复盘差异",
+            "dataType": "bigDecimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1547195415000_31909",
+            "model": "input_1547195415000_31909",
+            "tagColorList": [],
+            "formatter": "0.##"
+          },
+          {
+            "prop": "profitAmount",
+            "label": "盘盈金额",
+            "dataType": "decimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1547195343000_68976",
+            "model": "input_1547195343000_68976",
+            "formatter": "0.##",
+            "tagColorList": []
+          },
+          {
+            "prop": "lossAmount",
+            "label": "盘亏金额",
+            "dataType": "decimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1547195361000_82276",
+            "model": "input_1547195361000_82276",
+            "formatter": "0.##",
+            "tagColorList": []
+          },
+          {
+            "prop": "totalWeight",
+            "label": "账面毛重合计",
+            "dataType": "decimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1570602825000_52850",
+            "headerAlign": "center",
+            "align": "left",
+            "width": 140,
+            "formatter": "0.#######",
+            "tagColorList": []
+          },
+          {
+            "prop": "weight",
+            "label": "单位毛重",
+            "dataType": "decimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1570602828000_26333",
+            "headerAlign": "center",
+            "align": "left",
+            "formatter": "0.########",
+            "tagColorList": []
+          },
+          {
+            "prop": "profitWeight",
+            "label": "盘盈重量",
+            "dataType": "decimal",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1593758307000_63521",
+            "headerAlign": "center",
+            "align": "left",
+            "formatter": "0.#######",
+            "tagColorList": []
+          },
+          {
+            "prop": "relationCode",
+            "label": "关联码",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1547195290000_32863",
+            "model": "input_1547195290000_32863",
+            "tagColorList": []
+          },
+          {
+            "prop": "projectCode",
+            "label": "项目号",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1725617859637_72404",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "type": "input",
+            "options": {
+              "width": "100%",
+              "defaultValue": "",
+              "required": false,
+              "readonly": false,
+              "disabled": false,
+              "dataType": "string",
+              "pattern": "",
+              "placeholder": "",
+              "noLabel": false
+            }
+          },
+          {
+            "prop": "caseNumber",
+            "label": "箱号",
+            "dataType": "string",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1725617862266_48931",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": [],
+            "type": "input",
+            "options": {
+              "width": "100%",
+              "defaultValue": "",
+              "required": false,
+              "readonly": false,
+              "disabled": false,
+              "dataType": "string",
+              "pattern": "",
+              "placeholder": "",
+              "noLabel": false
+            }
+          }
+        ],
+        "options": {
+          "border": true,
+          "size": "mini",
+          "pageIndex": 1,
+          "pageSize": 50,
+          "detailSelections": [],
+          "idField": "profitLossDetailId",
+          "remoteFunc": "func_1547194862000_99080",
+          "prefixRouter": "/inventory/operation/profitLossDetail",
+          "title": "盈亏单明细"
+        },
+        "buttons": [
+          {
+            "type": "button-group",
+            "label": "按钮组",
+            "buttons": [
+              {
+                "type": "button",
+                "label": "导出盈亏明细",
+                "options": {
+                  "authNode": "detailExport",
+                  "icon": "yrt-daochu",
+                  "type": "primary",
+                  "exportInfo_Id": 22,
+                  "exportId": 22
+                },
+                "key": "1550644231000_22187"
+              },
+              {
+                "type": "button",
+                "label": "导出货位明细",
+                "options": {
+                  "authNode": "exportPositionName",
+                  "icon": "yrt-daochu",
+                  "type": "primary",
+                  "exportInfo_Id": 23,
+                  "exportId": 23
+                },
+                "key": "1550630065000_11170"
+              }
+            ],
+            "options": {
+              "icon": "yrt-anniuzu"
+            },
+            "key": "1550630029000_64462"
+          }
+        ],
+        "key": "1547194862000_99080",
+        "model": "detail-grid_1547194862000_99080",
+        "subTableView": "vStorage_ProfitLossList",
+        "subTableName": "storage_profit_loss_detail"
+      }
+    ],
+    "config": {
+      "labelWidth": "100px",
+      "labelPosition": "right",
+      "top": "3vh",
+      "width": "1200px",
+      "visible": false,
+      "disabled": false,
+      "title": "盈亏单",
+      "action": "add",
+      "formInline": false,
+      "saveButtonText": "保存"
+    }
+  }
+}

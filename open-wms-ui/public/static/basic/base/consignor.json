@@ -1,0 +1,1583 @@
+{
+  "dataOptions": {
+    "tableName": "base_consignor",
+    "idField": "consignorId",
+    "router": "/basic/base/consignor",
+    "idValue": 0,
+    "codeRegular": "consignorCode",
+    "linkColumn": "consignorId",
+    "prefixRouter": "/basic/base/consignor",
+    "menuId": 1508,
+    "pageIndex": 1,
+    "pageSize": 15,
+    "total": 0,
+    "orderBy": {
+      "consignorId": "DESC"
+    },
+    "showActionField": false,
+    "tableId": 28,
+    "tableTenantId": 0,
+    "tableTenantName": "货主信息",
+    "editorType": "dialog",
+    "webRouter": "/basic/base/consignor",
+    "openTabGroup": true
+  },
+  "dataListOptions": {
+    "data": [],
+    "fields": [
+      {
+        "type": "input",
+        "label": "货主ID",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "consignorId",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": true,
+        "key": "1701336035506_13544",
+        "tagColorList": []
+      },
+      {
+        "type": "input",
+        "label": "货主编号",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "consignorCode",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": true,
+        "key": "1693231256103_15037",
+        "tagColorList": []
+      },
+      {
+        "type": "input",
+        "label": "货主名称",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "consignorName",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": true,
+        "key": "1693231257464_34538",
+        "tagColorList": []
+      },
+      {
+        "type": "select",
+        "label": "货主类型",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "width": "100%",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "下拉框1"
+            },
+            {
+              "value": "下拉框2"
+            },
+            {
+              "value": "下拉框3"
+            }
+          ],
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "dropdownId": 908,
+          "props": {
+            "value": "value",
+            "label": "label"
+          }
+        },
+        "prop": "consignorType",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1693231297345_67706",
+        "tagColorList": [],
+        "isExpandField": true
+      },
+      {
+        "type": "input",
+        "label": "联系地址",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "address",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1693231262493_65092",
+        "tagColorList": []
+      },
+      {
+        "type": "input",
+        "label": "手机号",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "mobile",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1693231266560_86712",
+        "tagColorList": []
+      },
+      {
+        "type": "input",
+        "label": "电子邮箱",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "email",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1693231263920_62814",
+        "tagColorList": []
+      },
+      {
+        "type": "input",
+        "label": "联系人",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "linker",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1693231260912_68444",
+        "tagColorList": []
+      },
+      {
+        "type": "select",
+        "label": "是否启用",
+        "dataType": "integer",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "width": "100%",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "下拉框1"
+            },
+            {
+              "value": "下拉框2"
+            },
+            {
+              "value": "下拉框3"
+            }
+          ],
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "dropdownId": 20,
+          "props": {
+            "value": "value",
+            "label": "label"
+          }
+        },
+        "prop": "enable",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1693231278432_20288",
+        "tagColorList": [
+          {
+            "operator": "=",
+            "value": "1",
+            "color": "rgba(255, 255, 255, 1)",
+            "backgroudColor": "rgba(5, 200, 5, 1)"
+          },
+          {
+            "operator": "=",
+            "value": "0",
+            "color": "rgba(255, 255, 255, 1)",
+            "backgroudColor": "rgba(255, 0, 0, 1)"
+          }
+        ]
+      },
+      {
+        "type": "input",
+        "label": "创建时间",
+        "dataType": "datetime",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "createTime",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1693231281006_39930",
+        "tagColorList": [],
+        "width": 135
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+            {
+            "type": "button",
+            "label": "新建",
+            "options": {
+              "icon": "yrt-addplus",
+              "type": "primary",
+              "authNode": "add"
+            },
+            "key": "btn-add"
+          },
+          {
+            "type": "button",
+            "label": "删除",
+            "options": {
+              "icon": "yrt-shanchu2",
+              "type": "danger",
+              "authNode": "delete"
+            },
+            "key": "btn-delete"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group01"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "刷新",
+            "options": {
+              "icon": "yrt-shuaxin",
+              "type": "default",
+              "authNode": "refresh"
+            },
+            "key": "btn-refresh"
+          },
+          {
+            "type": "button",
+            "label": "导入",
+            "options": {
+              "authNode": "import",
+              "icon": "yrt-import",
+              "type": "default",
+              "defaultValue": null,
+              "importInfo_Id": 28,
+              "importId": 28
+            },
+            "key": "1697201982000_50623"
+          },
+          {
+            "type": "button",
+            "label": "导出",
+            "options": {
+              "icon": "yrt-daochu1",
+              "type": "default",
+              "authNode": "export"
+            },
+            "key": "btn-export"
+          },
+          {
+            "type": "button",
+            "label": "打印",
+            "options": {
+              "icon": "yrt-dayin3",
+              "type": "default",
+              "authNode": "print"
+            },
+            "key": "btn-print"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu",
+          "defaultValue": null
+        },
+        "key": "btn-group03"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "销售等级设置",
+            "options": {
+              "authNode": "salesLevel",
+              "icon": "yrt-anniu",
+              "type": "primary"
+            },
+            "key": "1735281888000_35332"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "1735274306000_25773"
+      }
+    ]
+  },
+  "editorOptions": {
+    "fields": [
+      {
+        "type": "splitter-group",
+        "label": "基础信息",
+        "icon": "yrt-biaoti",
+        "options": {},
+        "key": "1699929986690_32616",
+        "tabGroupName": "基础信息"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "货主编号",
+                "dataType": "string",
+                "options": {
+                  "prop": "consignorCode",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "系统自动编码",
+                  "readonly": true
+                },
+                "key": "1693487433282_83394",
+                "model": "input_1693487433282_83394"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "货主名称",
+                "dataType": "string",
+                "options": {
+                  "prop": "consignorName",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": true,
+                  "pattern": "",
+                  "placeholder": "",
+                  "dataType": "string"
+                },
+                "key": "1693487436857_71663",
+                "model": "input_1693487436857_71663",
+                "rules": [
+                  {
+                    "required": true,
+                    "message": "货主名称必须填写"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "手机",
+                "dataType": "string",
+                "options": {
+                  "prop": "mobile",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "dataType": "string"
+                },
+                "key": "1693621368270_97243",
+                "model": "input_1693621368270_97243"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1693487412936_32449",
+        "tabGroupName": "基础信息"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "联系地址",
+                "dataType": "string",
+                "options": {
+                  "dataType": "string",
+                  "prop": "address",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": ""
+                },
+                "key": "1699931441634_90350",
+                "model": "input_1699931441634_90350"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "联系人",
+                "dataType": "string",
+                "options": {
+                  "dataType": "string",
+                  "prop": "linker",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": ""
+                },
+                "key": "1699931443093_38927",
+                "model": "input_1699931443093_38927"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "电话",
+                "dataType": "string",
+                "options": {
+                  "dataType": "string",
+                  "prop": "tel",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": ""
+                },
+                "key": "1699930174712_90282",
+                "model": "input_1699930174712_90282"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1693487414319_21244",
+        "tabGroupName": "基础信息"
+      },
+      {
+        "type": "inline-group",
+        "label": "省市区",
+        "icon": "yrt-ai-list",
+        "fields": [
+          {
+            "type": "select",
+            "label": "省",
+            "dataType": "string",
+            "options": {
+              "width": "100px",
+              "defaultValue": "",
+              "multiple": false,
+              "disabled": false,
+              "clearable": false,
+              "placeholder": "",
+              "required": false,
+              "showLabel": true,
+              "noLabel": false,
+              "options": [
+                {
+                  "value": "下拉框1"
+                },
+                {
+                  "value": "下拉框2"
+                },
+                {
+                  "value": "下拉框3"
+                }
+              ],
+              "remote": "bindDropdown",
+              "remoteOptions": [],
+              "dropdownId": 613,
+              "props": {
+                "value": "value",
+                "label": "label"
+              },
+              "prop": "provinceName",
+              "popoverWidth": "300px",
+              "dataType": "string",
+              "keyProp": "provinceId"
+            },
+            "key": "1699931189163_96362",
+            "model": "input_1693621500680_21348"
+          },
+          {
+            "type": "select",
+            "label": "市",
+            "dataType": "string",
+            "options": {
+              "width": "100px",
+              "defaultValue": "",
+              "multiple": false,
+              "disabled": false,
+              "clearable": false,
+              "placeholder": "",
+              "required": false,
+              "showLabel": true,
+              "noLabel": false,
+              "options": [
+                {
+                  "value": "下拉框1"
+                },
+                {
+                  "value": "下拉框2"
+                },
+                {
+                  "value": "下拉框3"
+                }
+              ],
+              "remote": "bindDropdown",
+              "remoteOptions": [],
+              "dropdownId": 614,
+              "props": {
+                "value": "value",
+                "label": "label"
+              },
+              "prop": "cityName",
+              "popoverWidth": "300px",
+              "dataType": "string",
+              "keyProp": "cityId"
+            },
+            "key": "1699931191622_2199",
+            "model": "input_1693621503150_65193"
+          },
+          {
+            "type": "select",
+            "label": "区",
+            "dataType": "string",
+            "options": {
+              "width": "100px",
+              "defaultValue": "",
+              "multiple": false,
+              "disabled": false,
+              "clearable": false,
+              "placeholder": "",
+              "required": false,
+              "showLabel": true,
+              "noLabel": false,
+              "options": [
+                {
+                  "value": "下拉框1"
+                },
+                {
+                  "value": "下拉框2"
+                },
+                {
+                  "value": "下拉框3"
+                }
+              ],
+              "remote": "bindDropdown",
+              "remoteOptions": [],
+              "dropdownId": 615,
+              "props": {
+                "value": "value",
+                "label": "label"
+              },
+              "prop": "regionName",
+              "popoverWidth": "300px",
+              "dataType": "string",
+              "keyProp": "regionId"
+            },
+            "key": "1699931193863_15095",
+            "model": "input_1693621504894_90065"
+          }
+        ],
+        "options": {},
+        "key": "1699931170945_10154",
+        "tabGroupName": "基础信息"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "邮政编码",
+                "dataType": "string",
+                "options": {
+                  "dataType": "string",
+                  "prop": "zip",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": ""
+                },
+                "key": "1699930173081_11656",
+                "model": "input_1699930173081_11656"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "货主英文名",
+                "dataType": "string",
+                "options": {
+                  "prop": "consignorEnName",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "dataType": "string"
+                },
+                "key": "1693621380406_63336",
+                "model": "input_1693621380406_63336"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "QQ",
+                "dataType": "string",
+                "options": {
+                  "prop": "qq",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "dataType": "string"
+                },
+                "key": "1693621382285_23453",
+                "model": "input_1693621382285_23453"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1693621373400_88830",
+        "tabGroupName": "基础信息"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "select",
+                "label": "货主类型",
+                "dataType": "string",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "options": [
+                    {
+                      "value": "下拉框1"
+                    },
+                    {
+                      "value": "下拉框2"
+                    },
+                    {
+                      "value": "下拉框3"
+                    }
+                  ],
+                  "remote": "bindDropdown",
+                  "remoteOptions": [],
+                  "dropdownId": 908,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "prop": "consignorType",
+                  "popoverWidth": "300px",
+                  "dataType": "string"
+                },
+                "key": "1699930119195_79401",
+                "model": "input_1699930119195_79401"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "公司所在区域",
+                "dataType": "string",
+                "options": {
+                  "dataType": "string",
+                  "prop": "areaName",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": ""
+                },
+                "key": "1699930121810_56189",
+                "model": "input_1699930121810_56189"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "运单规则",
+                "dataType": "string",
+                "options": {
+                  "dataType": "string",
+                  "prop": "wayBillRule",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": ""
+                },
+                "key": "1699930191359_69242",
+                "model": "input_1699930191359_69242"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top"
+        },
+        "key": "1699930111771_19625",
+        "tabGroupName": "基础信息"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "经度",
+                "dataType": "string",
+                "options": {
+                  "dataType": "string",
+                  "prop": "lng",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": ""
+                },
+                "key": "1699930194592_61617",
+                "model": "input_1699930194592_61617"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "纬度",
+                "dataType": "string",
+                "options": {
+                  "dataType": "string",
+                  "prop": "lat",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": ""
+                },
+                "key": "1699930196216_50984",
+                "model": "input_1699930196216_50984"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "switch",
+                "label": "是否可用",
+                "dataType": "byte",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "defaultValue": 1,
+                  "required": false,
+                  "disabled": false,
+                  "noLabel": false,
+                  "prop": "enable",
+                  "popoverWidth": "300px",
+                  "dataType": "byte",
+                  "active-value": 1,
+                  "inactive-value": 0
+                },
+                "key": "1699930209587_81769",
+                "model": "input_1699930209587_81769"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1693621510612_25602",
+        "tabGroupName": "基础信息"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "备注",
+                "dataType": "string",
+                "options": {
+                  "dataType": "string",
+                  "prop": "remark",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": ""
+                },
+                "key": "1699930267785_86717",
+                "model": "input_1699930267785_86717"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "别名",
+                "dataType": "string",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "dataType": "string",
+                  "prop": "aliasName",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": ""
+                },
+                "key": "1712625218632_55950",
+                "model": "input_1712625218632_55950"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": []
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top"
+        },
+        "key": "1699930264318_35654",
+        "tabGroupName": "基础信息"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "icon": "yrt-saomiaoerweima",
+        "columns": [
+          {
+            "span": 8,
+            "fields": []
+          },
+          {
+            "span": 8,
+            "fields": []
+          },
+          {
+            "span": 8,
+            "fields": []
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top"
+        },
+        "key": "1735271018657_42821",
+        "tabGroupName": "基础信息"
+      },
+      {
+        "type": "splitter-group",
+        "label": "商务信息",
+        "icon": "yrt-biaoti",
+        "options": {},
+        "key": "1699930010425_60268",
+        "tabGroupName": "商务信息"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "开户行",
+                "dataType": "string",
+                "options": {
+                  "prop": "bank",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "dataType": "string"
+                },
+                "key": "1693621392150_52164",
+                "model": "input_1693621392150_52164"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "银行行号",
+                "dataType": "string",
+                "options": {
+                  "prop": "bankCode",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "dataType": "string"
+                },
+                "key": "1693621393229_27054",
+                "model": "input_1693621393229_27054"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "纳税号",
+                "dataType": "string",
+                "options": {
+                  "prop": "raxCode",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "dataType": "string"
+                },
+                "key": "1693621394805_75133",
+                "model": "input_1693621394805_75133"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1693621385319_10359",
+        "tabGroupName": "商务信息"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "公司法人",
+                "dataType": "string",
+                "options": {
+                  "dataType": "string",
+                  "prop": "artificiaPerson",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": ""
+                },
+                "key": "1699930284705_28607",
+                "model": "input_1699930284705_28607"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "保险费率",
+                "dataType": "long",
+                "options": {
+                  "dataType": "long",
+                  "prop": "premiumRate",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": ""
+                },
+                "key": "1699930291918_47581",
+                "model": "input_1699930291918_47581"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "信用额度",
+                "dataType": "string",
+                "options": {
+                  "dataType": "string",
+                  "prop": "creditLine",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": ""
+                },
+                "key": "1699930293910_60316",
+                "model": "input_1699930293910_60316"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1693621512035_418",
+        "tabGroupName": "商务信息"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "质检比例",
+                "dataType": "bigDecimal",
+                "options": {
+                  "dataType": "bigDecimal",
+                  "prop": "qualityProportion",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": ""
+                },
+                "key": "1699930438804_76915",
+                "model": "input_1699930438804_76915"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "质检方案",
+                "dataType": "string",
+                "options": {
+                  "dataType": "string",
+                  "prop": "qualityPlan",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": ""
+                },
+                "key": "1699930440757_53758",
+                "model": "input_1699930440757_53758"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "超收百分比",
+                "dataType": "bigDecimal",
+                "options": {
+                  "dataType": "bigDecimal",
+                  "prop": "overcharges",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": ""
+                },
+                "key": "1699930442580_22245",
+                "model": "input_1699930442580_22245"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1693621387680_79250",
+        "tabGroupName": "商务信息"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "switch",
+                "label": "需效期管理",
+                "dataType": "long",
+                "options": {
+                  "defaultValue": 0,
+                  "required": false,
+                  "disabled": false,
+                  "noLabel": false,
+                  "prop": "isNeedPeriod",
+                  "popoverWidth": "300px",
+                  "dataType": "byte",
+                  "active-value": 1,
+                  "inactive-value": 0
+                },
+                "key": "1699930447884_76515",
+                "model": "input_1699930447884_76515"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "保质期天数",
+                "dataType": "bigDecimal",
+                "options": {
+                  "dataType": "integer",
+                  "prop": "shelfLifeDay",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": ""
+                },
+                "key": "1699930450302_79307",
+                "model": "input_1699930450302_79307"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "创建人",
+                "dataType": "string",
+                "options": {
+                  "dataType": "string",
+                  "prop": "createByName",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "readonly": true
+                },
+                "key": "1699930467152_24457",
+                "model": "input_1699930467152_24457"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1693621404577_38215",
+        "tabGroupName": "商务信息"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "停售提前时长（天）",
+                "dataType": "long",
+                "options": {
+                  "dataType": "long",
+                  "prop": "stopSaleday",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "label-width": 140
+                },
+                "key": "1699930456507_60877",
+                "model": "input_1699930456507_60877"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "禁收效期系数%",
+                "dataType": "bigDecimal",
+                "options": {
+                  "dataType": "integer",
+                  "prop": "noReceivingRate",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "label-width": 120
+                },
+                "key": "1699930465564_44673",
+                "model": "input_1699930465564_44673"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "创建时间",
+                "dataType": "datetime",
+                "options": {
+                  "dataType": "datetime",
+                  "prop": "createTime",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "pattern": "",
+                  "placeholder": "",
+                  "readonly": true
+                },
+                "key": "1699930460076_80963",
+                "model": "input_1699930460076_80963"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1693621405899_10144",
+        "tabGroupName": "商务信息"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "select",
+                "label": "本位币",
+                "dataType": "string",
+                "icon": "yrt-danhangshurukuang",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "options": [
+                    {
+                      "value": "下拉框1"
+                    },
+                    {
+                      "value": "下拉框2"
+                    },
+                    {
+                      "value": "下拉框3"
+                    }
+                  ],
+                  "remote": "bindDropdown",
+                  "remoteOptions": [],
+                  "dropdownId": 626,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "prop": "baseCurrency",
+                  "popoverWidth": "300px",
+                  "dataType": "string"
+                },
+                "key": "1718940466003_54500",
+                "model": "input_1718940466003_54500"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": []
+          },
+          {
+            "span": 8,
+            "fields": []
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "defaultValue": null
+        },
+        "key": "1693621407528_74336",
+        "tabGroupName": "商务信息"
+      }
+    ],
+    "config": {
+      "labelWidth": "100px",
+      "labelPosition": "right",
+      "top": "3vh",
+      "width": "1200px",
+      "visible": false,
+      "disabled": false,
+      "title": "货主信息",
+      "action": "add",
+      "formInline": false,
+      "saveButtonText": "保存"
+    }
+  }
+}

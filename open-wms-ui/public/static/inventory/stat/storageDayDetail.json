@@ -1,0 +1,425 @@
+{
+  "dataOptions": {
+    "tableName": "stat_storage_day_detail",
+    "idField": "storageDayDetailId",
+    "idValue": 0,
+    "codeRegular": "consignorCode",
+    "linkColumn": "consignorCode",
+    "prefixRouter": "/inventory/stat/storageDayDetail",
+    "webRouter": "/inventory/stat/storageDayDetail",
+    "menuId": 2103,
+    "pageIndex": 1,
+    "pageSize": 15,
+    "total": 0,
+    "orderBy": {
+      "storageDayDetailId": "DESC"
+    },
+    "showActionField": false,
+    "editorType": "dialog",
+    "tableId": 238,
+    "tableTenantId": 0,
+    "tableTenantName": "每日库存快照明细"
+  },
+  "dataListOptions": {
+    "data": [],
+    "fields": [
+      {
+        "prop": "storageName",
+        "label": "仓库名称",
+        "dataType": "string",
+        "sortable": false,
+        "type": "select",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1552964353000_39406",
+        "model": "input_1552964353000_39406",
+        "dropdown_Id": 31,
+        "keyProp": "storage_Id",
+        "searchRowNo": "200",
+        "tagColorList": [],
+        "options": {
+          "width": "100%",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "下拉框1"
+            },
+            {
+              "value": "下拉框2"
+            },
+            {
+              "value": "下拉框3"
+            }
+          ],
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "dropdownId": 31,
+          "props": {
+            "value": "value",
+            "label": "label"
+          }
+        }
+      },
+      {
+        "prop": "consignorName",
+        "label": "货主名称",
+        "dataType": "string",
+        "sortable": false,
+        "type": "select",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1552964365000_2978",
+        "model": "input_1552964365000_2978",
+        "width": 100,
+        "searchRowNo": 200,
+        "dropdown_Id": 797,
+        "keyProp": "consignor_Id",
+        "tagColorList": [],
+        "options": {
+          "width": "100%",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "下拉框1"
+            },
+            {
+              "value": "下拉框2"
+            },
+            {
+              "value": "下拉框3"
+            }
+          ],
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "dropdownId": 797,
+          "props": {
+            "value": "value",
+            "label": "label"
+          }
+        }
+      },
+      {
+        "prop": "storageDay",
+        "label": "库存日期",
+        "dataType": "date",
+        "sortable": false,
+        "type": "date",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1552964352000_3125",
+        "model": "input_1552964352000_3125",
+        "formatter": "YYYY-MM-DD",
+        "width": 90,
+        "searchRowNo": 200,
+        "tagColorList": [],
+        "options": {
+          "width": "100%",
+          "defaultValue": "",
+          "readonly": false,
+          "disabled": false,
+          "editable": true,
+          "clearable": true,
+          "placeholder": "",
+          "startPlaceholder": "",
+          "endPlaceholder": "",
+          "type": "date",
+          "format": "YYYY-MM-DD",
+          "timestamp": false,
+          "required": false,
+          "noLabel": false
+        }
+      },
+      {
+        "prop": "positionName",
+        "label": "货位名称",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1552964367000_41149",
+        "model": "input_1552964367000_41149",
+        "searchRowNo": "1"
+      },
+      {
+        "prop": "productCode",
+        "label": "产品编号",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": true,
+        "key": "1552964371000_21235",
+        "model": "input_1552964371000_21235",
+        "searchRowNo": "1",
+        "width": 120
+      },
+      {
+        "prop": "productName",
+        "label": "产品名称",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1552964374000_48126",
+        "model": "input_1552964374000_48126",
+        "searchRowNo": "1",
+        "width": "220",
+        "tagColorList": []
+      },
+      {
+        "prop": "productModel",
+        "label": "条形码",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": true,
+        "key": "1552964378000_50628",
+        "model": "input_1552964378000_50628",
+        "searchRowNo": "1",
+        "width": 120
+      },
+      {
+        "prop": "productSpec",
+        "label": "产品规格",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1552964381000_53459",
+        "model": "input_1552964381000_53459",
+        "searchRowNo": "1"
+      },
+      {
+        "prop": "providerCode",
+        "label": "供应商编号",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1552964386000_23448",
+        "model": "input_1552964386000_23448",
+        "searchRowNo": "1"
+      },
+      {
+        "prop": "providerShortName",
+        "label": "供应商",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1552964390000_74822",
+        "model": "input_1552964390000_74822",
+        "searchRowNo": "1"
+      },
+      {
+        "prop": "productStorage",
+        "label": "库存量",
+        "dataType": "decimal",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1552964392000_23461",
+        "model": "input_1552964392000_23461",
+        "formatter": "#.####",
+        "tagColorList": []
+      },
+      {
+        "prop": "validStorage",
+        "label": "有效库存",
+        "dataType": "decimal",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1552964394000_72430",
+        "model": "input_1552964394000_72430",
+        "formatter": "#.####",
+        "tagColorList": []
+      },
+      {
+        "prop": "originStorage",
+        "label": "原始库存量",
+        "dataType": "decimal",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1552964396000_37388",
+        "model": "input_1552964396000_37388",
+        "formatter": "#.####",
+        "tagColorList": []
+      },
+      {
+        "prop": "purchasePrice",
+        "label": "成本价",
+        "dataType": "decimal",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1552964398000_7682",
+        "model": "input_1552964398000_7682"
+      },
+      {
+        "prop": "purchaseAmount",
+        "label": "成本额",
+        "dataType": "decimal",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1552964402000_54435",
+        "model": "input_1552964402000_54435",
+        "tagColorList": []
+      },
+      {
+        "prop": "productAttribute",
+        "label": "库存属性",
+        "dataType": "string",
+        "sortable": false,
+        "type": "select",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1552964405000_29851",
+        "model": "input_1552964405000_29851",
+        "dropdown_Id": 834
+      },
+      {
+        "prop": "rowWeight",
+        "label": "库存重量",
+        "dataType": "decimal",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1601171178000_20611",
+        "tagColorList": []
+      },
+      {
+        "prop": "validWeight",
+        "label": "有效重量",
+        "dataType": "decimal",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1601171184000_6735",
+        "tagColorList": []
+      },
+      {
+        "prop": "rowWeightOrigin",
+        "label": "原始重量",
+        "dataType": "decimal",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1601171191000_71745",
+        "tagColorList": []
+      },
+      {
+        "prop": "produceDate",
+        "label": "生产日期",
+        "dataType": "date",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1601171268000_55588",
+        "tagColorList": [],
+        "formatter": "YYYY-MM-DD"
+      },
+      {
+        "prop": "shelfLife",
+        "label": "保质期",
+        "dataType": "date",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1601171286000_99585",
+        "tagColorList": []
+      },
+      {
+        "prop": "limitDate",
+        "label": "有效期至",
+        "dataType": "date",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1603959023000_5362",
+        "tagColorList": [],
+        "formatter": "YYYY-MM-DD"
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "刷新",
+            "options": {
+              "icon": "yrt-shuaxin",
+              "type": "default",
+              "authNode": "refresh"
+            },
+            "key": "btn-refresh"
+          },
+          {
+            "type": "button",
+            "label": "导出",
+            "options": {
+              "icon": "yrt-daochu1",
+              "type": "default",
+              "authNode": "export"
+            },
+            "key": "btn-export"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group03"
+      }
+    ]
+  },
+  "editorOptions": {
+    "fields": [],
+    "config": {
+      "labelWidth": "100px",
+      "labelPosition": "right",
+      "top": "3vh",
+      "width": "1200px",
+      "visible": false,
+      "disabled": false,
+      "title": "每日库存快照明细",
+      "action": "add",
+      "formInline": false,
+      "saveButtonText": "保存"
+    }
+  }
+}

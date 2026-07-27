@@ -1,0 +1,501 @@
+{
+  "dataOptions": {
+    "tableName": "base_platform",
+    "idField": "platformId",
+    "idValue": 0,
+    "codeRegular": "platformCode",
+    "linkColumn": "platformCode",
+    "prefixRouter": "/basic/storage/platform",
+    "webRouter": "/basic/storage/platform",
+    "menuId": 1857,
+    "pageIndex": 1,
+    "pageSize": 15,
+    "total": 0,
+    "orderBy": {
+      "platformId": "DESC"
+    },
+    "showActionField": true,
+    "editorType": "dialog",
+    "tableId": 220,
+    "tableTenantId": 0,
+    "tableTenantName": "月台管理"
+  },
+  "dataListOptions": {
+    "data": [],
+    "fields": [
+      {
+        "type": "input",
+        "label": "月台编号",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "platformCode",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1715229338472_20402",
+        "tagColorList": []
+      },
+      {
+        "prop": "siteName",
+        "label": "网点名称",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1595228647000_18450",
+        "tagColorList": []
+      },
+      {
+        "prop": "platformName",
+        "label": "月台名称",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": true,
+        "key": "1588923700000_50734",
+        "searchRowNo": "",
+        "tagColorList": []
+      },
+      {
+        "prop": "storageName",
+        "label": "所属仓库",
+        "dataType": "string",
+        "sortable": false,
+        "type": "select",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1588923702000_57374",
+        "dropdown_Id": 31,
+        "keyProp": "storage_Id",
+        "tagColorList": []
+      },
+      {
+        "type": "input",
+        "label": "月台状态",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "platStatus",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1716261389175_1823",
+        "tagColorList": []
+      },
+      {
+        "prop": "remark",
+        "label": "备注",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1588923706000_78822",
+        "tagColorList": []
+      },
+      {
+        "type": "input",
+        "label": "创建人",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "createByName",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1715591675291_31609"
+      },
+      {
+        "type": "input",
+        "label": "创建时间",
+        "dataType": "datetime",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "createTime",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1715591681236_37634",
+        "tagColorList": [],
+        "width": ""
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "新建",
+            "options": {
+              "icon": "yrt-addplus",
+              "type": "primary",
+              "authNode": "add"
+            },
+            "key": "btn-add"
+          },
+          {
+            "type": "button",
+            "label": "删除",
+            "options": {
+              "icon": "yrt-shanchu2",
+              "type": "primary",
+              "authNode": "delete"
+            },
+            "key": "btn-delete"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group01"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "审核",
+            "options": {
+              "icon": "yrt-shenpi6",
+              "type": "success",
+              "authNode": "auditing"
+            },
+            "key": "btn-confirm"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group02"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "刷新",
+            "options": {
+              "icon": "yrt-shuaxin",
+              "type": "default",
+              "authNode": "refresh"
+            },
+            "key": "btn-refresh"
+          },
+          {
+            "type": "button",
+            "label": "导出",
+            "options": {
+              "icon": "yrt-daochu1",
+              "type": "default",
+              "authNode": "export"
+            },
+            "key": "btn-export"
+          },
+          {
+            "type": "button",
+            "label": "打印",
+            "options": {
+              "icon": "yrt-dayin3",
+              "type": "default",
+              "authNode": "print"
+            },
+            "key": "btn-print"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group03"
+      }
+    ]
+  },
+  "editorOptions": {
+    "fields": [
+      {
+        "type": "input",
+        "label": "月台编号",
+        "options": {
+          "prop": "platformCode",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "dataType": "string",
+          "pattern": "",
+          "placeholder": "",
+          "remoteFunc": "func_1590391139000_3246",
+          "readonly": true
+        },
+        "key": "1590391139000_3246",
+        "model": "input_1588923719000_8369"
+      },
+      {
+        "type": "select",
+        "label": "网点名称",
+        "options": {
+          "width": "280px",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": true,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "下拉框1"
+            },
+            {
+              "value": "下拉框2"
+            },
+            {
+              "value": "下拉框3"
+            }
+          ],
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "dropdown_Id": 1008,
+          "props": {
+            "value": "value",
+            "label": "label"
+          },
+          "remoteFunc": "",
+          "prop": "siteName",
+          "dataType": "string",
+          "dropdownId": 1147,
+          "keyProp": ""
+        },
+        "key": "1595228683000_47047",
+        "rules": [
+          {
+            "required": true,
+            "message": "网点名称必须填写"
+          }
+        ]
+      },
+      {
+        "type": "input",
+        "label": "月台名称",
+        "options": {
+          "prop": "platformName",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": true,
+          "dataType": "string",
+          "pattern": "",
+          "placeholder": "",
+          "remoteFunc": "func_1590391142000_38814"
+        },
+        "key": "1590391142000_38814",
+        "model": "input_1588923721000_13165",
+        "rules": [
+          {
+            "required": true,
+            "message": "月台名称必须填写"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "label": "月台状态",
+        "options": {
+          "width": "280px",
+          "defaultValue": "空闲",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "空闲",
+              "label": "空闲"
+            },
+            {
+              "value": "使用中",
+              "label": "使用中"
+            },
+            {
+              "value": "已排班",
+              "label": "已排班"
+            }
+          ],
+          "remote": false,
+          "remoteOptions": [],
+          "dropdown_Id": 0,
+          "props": {
+            "value": "value",
+            "label": "label"
+          },
+          "remoteFunc": "",
+          "prop": "platStatus",
+          "dataType": "string"
+        },
+        "key": "1607591156000_49560"
+      },
+      {
+        "type": "table-select",
+        "label": "所属仓库",
+        "options": {
+          "width": "280px",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "columns": [
+            {
+              "prop": "storageCode",
+              "label": "仓库编号",
+              "width": 100
+            },
+            {
+              "prop": "storageName",
+              "label": "仓库名称",
+              "width": 150
+            }
+          ],
+          "url": "/basic/storage/storage/getList",
+          "searchFields": "storageId,storageCode,storageName",
+          "prop": "storageName",
+          "popoverWidth": "300px",
+          "dataType": "string"
+        },
+        "key": "1590391164000_58912",
+        "model": "input_1588923723000_76321"
+      },
+      {
+        "type": "date",
+        "label": "创建时间",
+        "dataType": "datetime",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "width": "280px",
+          "defaultValue": "",
+          "readonly": true,
+          "disabled": false,
+          "editable": true,
+          "clearable": true,
+          "placeholder": "",
+          "startPlaceholder": "",
+          "endPlaceholder": "",
+          "type": "date",
+          "format": "YYYY-MM-DD",
+          "timestamp": false,
+          "required": false,
+          "noLabel": false,
+          "prop": "createTime",
+          "popoverWidth": "300px",
+          "dataType": "date"
+        },
+        "key": "1715591694228_71980"
+      },
+      {
+        "type": "input",
+        "label": "创建人",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "dataType": "string",
+          "prop": "createByName",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": "",
+          "readonly": true
+        },
+        "key": "1715591697602_52157"
+      },
+      {
+        "type": "textarea",
+        "label": "备注",
+        "options": {
+          "width": "380px",
+          "defaultValue": "",
+          "required": false,
+          "readonly": false,
+          "disabled": false,
+          "pattern": "",
+          "placeholder": "",
+          "noLabel": false,
+          "prop": "remark",
+          "remoteFunc": "func_1590391173000_21164",
+          "dataType": "string"
+        },
+        "key": "1590391173000_21164",
+        "model": "input_1588923739000_64420"
+      }
+    ],
+    "config": {
+      "labelWidth": "100px",
+      "labelPosition": "right",
+      "top": "3vh",
+      "width": "900px",
+      "visible": false,
+      "disabled": false,
+      "title": "月台管理",
+      "action": "add",
+      "formInline": false,
+      "saveButtonText": "保存"
+    }
+  }
+}

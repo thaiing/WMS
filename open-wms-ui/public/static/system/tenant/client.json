@@ -1,0 +1,758 @@
+{
+  "dataOptions": {
+    "tableName": "sys_client",
+    "idField": "id",
+    "idValue": 0,
+    "prefixRouter": "/system/tenant/client",
+    "webRouter": "/system/tenant/client",
+    "menuId": 1031,
+    "pageIndex": 1,
+    "pageSize": 15,
+    "total": 0,
+    "orderBy": {
+      "id": "DESC"
+    },
+    "showActionField": true,
+    "editorType": "dialog",
+    "tableId": 49,
+    "tableTenantId": 0,
+    "tableTenantName": "客户端授权",
+    "linkColumn": "id"
+  },
+  "dataListOptions": {
+    "data": [],
+    "fields": [
+      {
+        "type": "input",
+        "label": "id",
+        "dataType": "long",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "id",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697353302697_56316",
+        "tagColorList": [],
+        "width": 40
+      },
+      {
+        "type": "input",
+        "label": "客户端id",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "clientId",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": true,
+        "key": "1697353301042_7304",
+        "tagColorList": [],
+        "width": 150
+      },
+      {
+        "type": "select",
+        "label": "客户端key",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "width": "100%",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "pc",
+              "label": "电脑端"
+            },
+            {
+              "value": "app",
+              "label": "移动端"
+            },
+            {
+              "value": "consignor",
+              "label": "货主端"
+            },
+            {
+              "value": "driver",
+              "label": "司机端"
+            },
+            {
+              "value": "api",
+              "label": "接口端"
+            }
+          ],
+          "remote": false,
+          "remoteOptions": [],
+          "dropdownId": 0,
+          "props": {
+            "value": "value",
+            "label": "label"
+          }
+        },
+        "prop": "clientKey",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697353303913_54105",
+        "tagColorList": [],
+        "width": 80,
+        "align": "center",
+        "headerAlign": "center"
+      },
+      {
+        "type": "input",
+        "label": "客户端秘钥",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "clientSecret",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697353305109_5428",
+        "tagColorList": [],
+        "width": 140
+      },
+      {
+        "type": "input",
+        "label": "授权类型",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "grantType",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697353306697_25374",
+        "tagColorList": [],
+        "width": 140
+      },
+      {
+        "type": "input",
+        "label": "设备类型",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "deviceType",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697353308084_25583"
+      },
+      {
+        "type": "input",
+        "label": "token活跃超时时间",
+        "dataType": "long",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "activeTimeout",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697353310455_14729",
+        "tagColorList": []
+      },
+      {
+        "type": "input",
+        "label": "token固定超时",
+        "dataType": "long",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "timeout",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697353312843_55636",
+        "tagColorList": []
+      },
+      {
+        "type": "select",
+        "label": "授权状态",
+        "dataType": "byte",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "width": "100%",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "11111"
+            },
+            {
+              "value": "下拉框2"
+            },
+            {
+              "value": "下拉框3"
+            }
+          ],
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "dropdownId": 20,
+          "props": {
+            "value": "value",
+            "label": "label"
+          }
+        },
+        "prop": "status",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697353314957_63104",
+        "tagColorList": [
+          {
+            "operator": "=",
+            "value": "1",
+            "color": "rgba(255, 255, 255, 1)",
+            "backgroudColor": "rgba(5, 200, 5, 1)"
+          },
+          {
+            "operator": "=",
+            "value": "0",
+            "color": "rgba(255, 255, 255, 1)",
+            "backgroudColor": "rgba(255, 0, 0, 1)"
+          }
+        ]
+      },
+      {
+        "type": "input",
+        "label": "创建人",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "createByName",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697353339800_62922"
+      },
+      {
+        "type": "input",
+        "label": "创建时间",
+        "dataType": "datetime",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "createTime",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697353341813_12312",
+        "tagColorList": [],
+        "width": 140
+      },
+      {
+        "type": "input",
+        "label": "修改人",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "updateByName",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697353343974_80155"
+      },
+      {
+        "type": "input",
+        "label": "更新时间",
+        "dataType": "datetime",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "updateTime",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1697353346677_27950",
+        "tagColorList": [],
+        "width": 140
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "新建",
+            "options": {
+              "icon": "yrt-addplus",
+              "type": "primary",
+              "authNode": "add"
+            },
+            "key": "btn-add"
+          },
+          {
+            "type": "button",
+            "label": "删除",
+            "options": {
+              "icon": "yrt-shanchu2",
+              "type": "primary",
+              "authNode": "delete"
+            },
+            "key": "btn-delete"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group01"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "审核",
+            "options": {
+              "icon": "yrt-shenpi6",
+              "type": "success",
+              "authNode": "auditing"
+            },
+            "key": "btn-confirm"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group02"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "刷新",
+            "options": {
+              "icon": "yrt-shuaxin",
+              "type": "default",
+              "authNode": "refresh"
+            },
+            "key": "btn-refresh"
+          },
+          {
+            "type": "button",
+            "label": "导出",
+            "options": {
+              "icon": "yrt-daochu1",
+              "type": "default",
+              "authNode": "export"
+            },
+            "key": "btn-export"
+          },
+          {
+            "type": "button",
+            "label": "打印",
+            "options": {
+              "icon": "yrt-dayin3",
+              "type": "default",
+              "authNode": "print"
+            },
+            "key": "btn-print"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group03"
+      }
+    ]
+  },
+  "editorOptions": {
+    "fields": [
+      {
+        "type": "input",
+        "label": "id",
+        "dataType": "long",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "dataType": "long",
+          "prop": "id",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "pattern": "",
+          "placeholder": "",
+          "readonly": true
+        },
+        "key": "1697370161224_38319"
+      },
+      {
+        "type": "input",
+        "label": "客户端id",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "dataType": "string",
+          "prop": "clientId",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "pattern": "",
+          "placeholder": "",
+          "readonly": true
+        },
+        "key": "1697370162833_62342"
+      },
+      {
+        "type": "select",
+        "label": "客户端key",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "width": "280px",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "pc",
+              "label": "电脑端"
+            },
+            {
+              "value": "app",
+              "label": "移动端"
+            },
+            {
+              "value": "consignor",
+              "label": "货主端"
+            },
+            {
+              "value": "driver",
+              "label": "司机端"
+            },
+            {
+              "value": "api",
+              "label": "接口端"
+            }
+          ],
+          "remote": false,
+          "remoteOptions": [],
+          "dropdownId": 0,
+          "props": {
+            "value": "value",
+            "label": "label"
+          },
+          "prop": "clientKey",
+          "popoverWidth": "300px",
+          "dataType": "string"
+        },
+        "key": "1697370166192_68486"
+      },
+      {
+        "type": "input",
+        "label": "客户端秘钥",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "dataType": "string",
+          "prop": "clientSecret",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "pattern": "",
+          "placeholder": "请输入16位以上密钥",
+          "remark": "请输入16位以上密钥"
+        },
+        "key": "1697370150322_9367"
+      },
+      {
+        "type": "select",
+        "label": "授权类型",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "width": "280px",
+          "defaultValue": ["password"],
+          "multiple": true,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "password",
+              "label": "密码认证"
+            },
+            {
+              "value": "sms",
+              "label": "短信认证"
+            },
+            {
+              "value": "social",
+              "label": "三方登录认证"
+            },
+            {
+              "value": "email",
+              "label": "邮件认证"
+            },
+            {
+              "value": "xcx",
+              "label": "小程序认证"
+            },
+            {
+              "value": "consignor",
+              "label": "货主认证"
+            },
+            {
+              "value": "driver",
+              "label": "司机认证"
+            }
+          ],
+          "remote": false,
+          "remoteOptions": [],
+          "dropdownId": 0,
+          "props": {
+            "value": "value",
+            "label": "label"
+          },
+          "prop": "grantType",
+          "dataType": "string"
+        },
+        "key": "1697370169551_32591"
+      },
+      {
+        "type": "input",
+        "label": "设备类型",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "dataType": "string",
+          "prop": "deviceType",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "key": "1697370171678_15289"
+      },
+      {
+        "type": "input",
+        "label": "token活跃超时时间(S)",
+        "dataType": "long",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "dataType": "long",
+          "prop": "activeTimeout",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": 18000,
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "key": "1697370173850_81769"
+      },
+      {
+        "type": "input",
+        "label": "token固定超时(S)",
+        "dataType": "long",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "dataType": "long",
+          "prop": "timeout",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": 604800,
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "key": "1697370175807_4679"
+      },
+      {
+        "type": "switch",
+        "label": "授权状态",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "defaultValue": 1,
+          "required": false,
+          "disabled": false,
+          "noLabel": false,
+          "prop": "status",
+          "popoverWidth": "300px",
+          "dataType": "byte",
+          "active-value": 1,
+          "inactive-value": 0
+        },
+        "key": "1697370180674_12897"
+      },
+      {
+        "type": "input",
+        "label": "创建人",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "dataType": "string",
+          "prop": "createByName",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "pattern": "",
+          "placeholder": "",
+          "readonly": true
+        },
+        "key": "1697370199850_25486"
+      },
+      {
+        "type": "datetime",
+        "label": "创建时间",
+        "dataType": "datetime",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "width": "280px",
+          "defaultValue": "",
+          "readonly": false,
+          "disabled": false,
+          "editable": true,
+          "clearable": true,
+          "placeholder": "",
+          "startPlaceholder": "",
+          "endPlaceholder": "",
+          "type": "datetime",
+          "format": "yyyy-MM-dd HH:mm:ss",
+          "timestamp": false,
+          "required": false,
+          "noLabel": false,
+          "prop": "createTime",
+          "dataType": "datetime"
+        },
+        "key": "1697370202169_33606"
+      }
+    ],
+    "config": {
+      "labelWidth": "150px",
+      "labelPosition": "right",
+      "top": "3vh",
+      "width": "1200px",
+      "visible": false,
+      "disabled": false,
+      "title": "客户端授权",
+      "action": "add",
+      "formInline": false,
+      "saveButtonText": "保存"
+    }
+  }
+}

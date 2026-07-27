@@ -1,0 +1,331 @@
+{
+  "dataOptions": {
+    "tableName": "sys_dropdown",
+    "idField": "dropdownId",
+    "router": "/system/dataHandler/dropdown",
+    "idValue": 0,
+    "linkColumn": "cnName",
+    "menuId": 1636,
+    "pageIndex": 1,
+    "pageSize": 15,
+    "total": 0,
+    "showActionField": true,
+    "tableId": "1683090175134818306",
+    "tableTenantId": 0,
+    "tableTenantName": "下拉框设置",
+    "prefixRouter": "/system/dataHandler/dropdown",
+    "orderBy": {},
+    "editorType": "single",
+    "webRouter": "/system/dataHandler/dropdown"
+  },
+  "dataListOptions": {
+    "data": [],
+    "fields": [],
+    "buttons": [
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "新建",
+            "options": {
+              "icon": "el-yrt-plus",
+              "type": "primary",
+              "authNode": "add"
+            },
+            "key": "btn-add"
+          },
+          {
+            "type": "button",
+            "label": "删除",
+            "options": {
+              "icon": "yrt-shanchu2",
+              "type": "primary",
+              "authNode": "delete"
+            },
+            "key": "btn-delete"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group01"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "审核",
+            "options": {
+              "icon": "yrt-shenpi6",
+              "type": "success",
+              "authNode": "auditing"
+            },
+            "key": "btn-confirm"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group02"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "刷新",
+            "options": {
+              "icon": "yrt-shuaxin",
+              "type": "default",
+              "authNode": "refresh"
+            },
+            "key": "btn-refresh"
+          },
+          {
+            "type": "button",
+            "label": "导出",
+            "options": {
+              "icon": "yrt-daochu1",
+              "type": "default",
+              "authNode": "export"
+            },
+            "key": "btn-export"
+          },
+          {
+            "type": "button",
+            "label": "打印",
+            "options": {
+              "icon": "yrt-dayin3",
+              "type": "default",
+              "authNode": "print"
+            },
+            "key": "btn-print"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group03"
+      }
+    ]
+  },
+  "editorOptions": {
+    "fields": [
+      {
+        "type": "input",
+        "label": "下拉框ID",
+        "options": {
+          "prop": "dropdownId",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "dataType": "long",
+          "pattern": "",
+          "placeholder": "",
+          "remoteFunc": "func_1690115499329_77033",
+          "readonly": true
+        },
+        "key": "1690115499329_77033"
+      },
+      {
+        "type": "input",
+        "label": "父级ID",
+        "options": {
+          "prop": "parentId",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": true,
+          "dataType": "long",
+          "pattern": "",
+          "placeholder": "",
+          "remoteFunc": "func_1690115500517_43119"
+        },
+        "key": "1690115500517_43119",
+        "rules": [
+          {
+            "required": true,
+            "message": "父级ID必须填写"
+          }
+        ]
+      },
+      {
+        "type": "input",
+        "label": "下拉框名称",
+        "options": {
+          "prop": "cnName",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": true,
+          "dataType": "string",
+          "pattern": "",
+          "placeholder": "",
+          "remoteFunc": "func_1690460797290_1554"
+        },
+        "key": "1690460797290_1554",
+        "rules": [
+          {
+            "required": true,
+            "message": "下拉框名称必须填写"
+          }
+        ]
+      },
+      {
+        "type": "textarea",
+        "label": "sql语句",
+        "options": {
+          "width": "100%",
+          "defaultValue": null,
+          "required": false,
+          "readonly": false,
+          "disabled": false,
+          "pattern": "",
+          "placeholder": "",
+          "noLabel": false,
+          "prop": "sqlScript",
+          "dataType": "string"
+        },
+        "key": "1690115510489_52019"
+      },
+      {
+        "type": "input",
+        "label": "排序号",
+        "options": {
+          "prop": "orderNum",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "dataType": "long",
+          "pattern": "",
+          "placeholder": "",
+          "remoteFunc": "func_1690115511906_22292"
+        },
+        "key": "1690115511906_22292"
+      },
+      {
+        "type": "input",
+        "label": "备注",
+        "options": {
+          "prop": "remark",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "dataType": "string",
+          "pattern": "",
+          "placeholder": "",
+          "remoteFunc": "func_1690115513175_20265"
+        },
+        "key": "1690115513175_20265"
+      },
+      {
+        "type": "input",
+        "label": "创建人",
+        "options": {
+          "prop": "createByName",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "dataType": "string",
+          "pattern": "",
+          "placeholder": "",
+          "remoteFunc": "func_1690115517556_83597",
+          "readonly": true
+        },
+        "key": "1690115517556_83597"
+      },
+      {
+        "type": "datetime",
+        "label": "创建时间",
+        "options": {
+          "width": "280px",
+          "defaultValue": null,
+          "readonly": true,
+          "disabled": false,
+          "editable": true,
+          "clearable": true,
+          "placeholder": "",
+          "startPlaceholder": "",
+          "endPlaceholder": "",
+          "type": "datetime",
+          "format": "yyyy-MM-dd HH:mm:ss",
+          "timestamp": false,
+          "required": false,
+          "noLabel": false,
+          "prop": "createTime",
+          "dataType": "datetime"
+        },
+        "key": "1690115514688_16614"
+      },
+      {
+        "type": "input",
+        "label": "修改人",
+        "options": {
+          "prop": "updateByName",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": null,
+          "required": false,
+          "dataType": "string",
+          "pattern": "",
+          "placeholder": "",
+          "remoteFunc": "func_1690115518904_92620",
+          "readonly": true
+        },
+        "key": "1690115518904_92620"
+      },
+      {
+        "type": "datetime",
+        "label": "修改时间",
+        "options": {
+          "width": "280px",
+          "defaultValue": null,
+          "readonly": true,
+          "disabled": false,
+          "editable": true,
+          "clearable": true,
+          "placeholder": "",
+          "startPlaceholder": "",
+          "endPlaceholder": "",
+          "type": "datetime",
+          "format": "yyyy-MM-dd HH:mm:ss",
+          "timestamp": false,
+          "required": false,
+          "noLabel": false,
+          "prop": "updateTime",
+          "dataType": "datetime",
+          "formatter": "YYYY-MM-DD HH:mm:ss"
+        },
+        "key": "1690115524069_25580"
+      }
+    ],
+    "config": {
+      "labelWidth": "100px",
+      "labelPosition": "right",
+      "top": "3vh",
+      "width": "1200px",
+      "visible": false,
+      "disabled": false,
+      "title": "下拉框设置",
+      "action": "add",
+      "formInline": false,
+      "saveButtonText": "保存"
+    }
+  }
+}

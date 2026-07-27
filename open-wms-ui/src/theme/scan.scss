@@ -1,0 +1,156 @@
+.scan-container {
+  padding: 10px;
+  .scan-card {
+    position: relative;
+  }
+
+  .scan-form {
+    .input-300 {
+      width: 300px;
+    }
+
+    .input-325 {
+      width: 325px;
+    }
+
+    .input-150 {
+      width: 150px !important;
+    }
+
+    .input-120 {
+      width: 120px !important;
+    }
+
+    .input-105 {
+      width: 105px;
+    }
+
+    .input-100 {
+      width: 100px !important;
+    }
+
+    .sub-item {
+      margin-left: 0px;
+
+      .sub-label {
+        width: 80px;
+        display: inline-block;
+        text-align: right;
+      }
+    }
+    :deep(.el-form-item__label) {
+      justify-content: flex-end;
+    }
+  }
+  .scan-sn-form {
+    :deep(.el-form-item__label) {
+      justify-content: flex-start;
+    }
+  }
+
+  &.body-no-padding {
+    ::v-deep .el-card__body {
+      padding: 0px;
+    }
+  }
+
+  .scan-table {
+    margin-bottom: 20px;
+
+    ::v-deep .el-input__inner {
+      padding: 0 5px;
+    }
+
+    ::v-deep .el-input-number.is-controls-right .el-input__inner {
+      padding-left: 5px;
+      padding-right: 0px;
+    }
+
+    ::v-deep .el-input--suffix .el-input__inner {
+      padding: 0 0px 0 5px;
+    }
+
+    ::v-deep .el-input--suffix.el-date-editor--date .el-input__inner {
+      padding: 0 2px 0 2px;
+    }
+
+    ::v-deep .el-input__prefix {
+      left: 0;
+    }
+
+    ::v-deep .el-input__suffix {
+      right: 0;
+    }
+  }
+
+  ::v-deep .row-active {
+    &.el-table__row td {
+      background-color: #12e0f5 !important;
+      transition: all 2s;
+      -moz-transition: all 2s;
+      /* Firefox 4 */
+      -webkit-transition: all 2s;
+      /* Safari 和 Chrome */
+      -o-transition: all 2s;
+      /* Opera */
+    }
+  }
+
+  ::v-deep .multi-row-active {
+    &.el-table__row td {
+      background-color: #ff9933 !important;
+      transition: all 2s;
+      -moz-transition: all 2s;
+      /* Firefox 4 */
+      -webkit-transition: all 2s;
+      /* Safari 和 Chrome */
+      -o-transition: all 2s;
+      /* Opera */
+    }
+  }
+
+  ::v-deep .row-finished {
+    &.el-table__row td {
+      background-color: #92f7a3 !important;
+      transition: all 2s;
+      -moz-transition: all 2s;
+      /* Firefox 4 */
+      -webkit-transition: all 2s;
+      /* Safari 和 Chrome */
+      -o-transition: all 2s;
+      /* Opera */
+    }
+  }
+
+  ::v-deep .row-scanning {
+    &.el-table__row td {
+      background-color: #ffcc33 !important;
+      transition: all 2s;
+      -moz-transition: all 2s;
+      /* Firefox 4 */
+      -webkit-transition: all 2s;
+      /* Safari 和 Chrome */
+      -o-transition: all 2s;
+      /* Opera */
+    }
+  }
+
+  .product-img {
+    position: absolute;
+    top: 80px;
+    left: 760px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .sn-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+
+  ::v-deep .el-input__wrapper {
+    padding: 1px 5px 1px 3px;
+  }
+}

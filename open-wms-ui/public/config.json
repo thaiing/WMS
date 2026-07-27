@@ -1,0 +1,8 @@
+{
+  "goBack": {
+    "enable": false,
+    "title": "返回平台",
+    "icon": "yrt-undo",
+    "url": "https://sso.etchlj.com:30918/#/welcome"
+  }
+}

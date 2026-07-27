@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="易软通仓配一体化系统，vue-prev-admin，vue-admin-wonderful，后台管理系统一站式平台模板，希望可以帮你完成快速开发。vue2.x，vue2.0，vue2，vue3，vue3.x，vue3.0，CompositionAPI，typescript，element plus，element，plus，admin，wonderful，wonderful-next，易软通仓配一体化系统，vite，vite-admin，快速，高效，后台模板，后台系统，管理系统" />
+    <meta name="description" content="易软通仓配一体化系统，基于 vue3 + CompositionAPI + typescript + vite + element plus，适配手机、平板、pc 的后台开源免费管理系统模板！vue-prev-admin，基于 vue2 +  element ui，适配手机、平板、pc 的后台开源免费管理系统模板！" />
+    <link rel="icon" href="/favicon.ico" />
+    <title>首页</title>
+  </head>
+
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+    <!-- GPS 视频引用的js -->
+    <script type="module" src="/src/utils/gps/flv.min.js"></script>
+
+    <!-- 天地图 引用的js  tk=key -->
+    <script>
+      let tkList = ['6013d88d23ea49c2b83bbfac8a9761e2'];
+
+      // Randomly select a token from the list
+      const randomToken = tkList[Math.floor(Math.random() * tkList.length)];
+
+      // Create the script element with the random token
+      const script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = `http://api.tianditu.gov.cn/api?v=4.0&tk=${randomToken}`;
+      script.async = true;
+
+      // Append the script to the document
+      document.head.appendChild(script);
+    </script>
+  </body>
+</html>

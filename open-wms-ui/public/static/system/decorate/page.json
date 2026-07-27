@@ -1,0 +1,660 @@
+{
+  "dataOptions": {
+    "tableName": "sys_page",
+    "idField": "pageId",
+    "idValue": 0,
+    "codeRegular": null,
+    "linkColumn": "pageName",
+    "prefixRouter": "/system/decorate/page",
+    "webRouter": "/system/decorate/page",
+    "menuId": 2083,
+    "pageIndex": 1,
+    "pageSize": 15,
+    "total": 0,
+    "orderBy": {
+      "pageId": "DESC"
+    },
+    "showActionField": true,
+    "editorType": "dialog",
+    "tableId": 202,
+    "tableTenantId": 0,
+    "tableTenantName": "页面装修"
+  },
+  "dataListOptions": {
+    "data": [],
+    "fields": [
+      {
+        "type": "input",
+        "label": "id",
+        "dataType": "long",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "pageId",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1725172399300_11202",
+        "tagColorList": [],
+        "width": 45
+      },
+      {
+        "type": "input",
+        "label": "页面名称",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "pageName",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": true,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1706163227839_35340",
+        "tagColorList": [],
+        "width": "",
+        "minWidth": 120
+      },
+      {
+        "type": "input",
+        "label": "页面编码",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "pageCode",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": true,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1711874563313_31727",
+        "tagColorList": [],
+        "width": "",
+        "minWidth": 120
+      },
+      {
+        "type": "input",
+        "label": "父级名称",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "fullName",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1725164418103_69212",
+        "tagColorList": [],
+        "width": 200
+      },
+      {
+        "type": "input",
+        "label": "页面类型",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "pageType",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1706163229166_18551",
+        "tagColorList": [],
+        "width": 80
+      },
+      {
+        "type": "select",
+        "label": "是否启用",
+        "dataType": "integer",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "width": "100%",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "下拉框1"
+            },
+            {
+              "value": "下拉框2"
+            },
+            {
+              "value": "下拉框3"
+            }
+          ],
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "dropdownId": 20,
+          "props": {
+            "value": "value",
+            "label": "label"
+          }
+        },
+        "prop": "enable",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1706163226462_95213",
+        "tagColorList": [],
+        "width": 80
+      },
+      {
+        "type": "input",
+        "label": "排序号",
+        "dataType": "long",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "orderNum",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1725171574419_69903",
+        "tagColorList": [],
+        "width": 60
+      },
+      {
+        "type": "input",
+        "label": "创建人",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "createByName",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1706163234862_61122",
+        "tagColorList": [],
+        "width": 80
+      },
+      {
+        "type": "input",
+        "label": "创建时间",
+        "dataType": "datetime",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "createTime",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1706163232207_24872",
+        "tagColorList": [],
+        "width": 140
+      },
+      {
+        "type": "input",
+        "label": "更新时间",
+        "dataType": "datetime",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "updateTime",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1706163233560_31527",
+        "tagColorList": [],
+        "width": 140
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "新建",
+            "options": {
+              "icon": "yrt-addplus",
+              "type": "primary",
+              "authNode": "add"
+            },
+            "key": "btn-add"
+          },
+          {
+            "type": "button",
+            "label": "删除",
+            "options": {
+              "icon": "yrt-shanchu2",
+              "type": "primary",
+              "authNode": "delete"
+            },
+            "key": "btn-delete"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group01"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "审核",
+            "options": {
+              "icon": "yrt-shenpi6",
+              "type": "success",
+              "authNode": "auditing"
+            },
+            "key": "btn-confirm"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group02"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "刷新",
+            "options": {
+              "icon": "yrt-shuaxin",
+              "type": "default",
+              "authNode": "refresh"
+            },
+            "key": "btn-refresh"
+          },
+          {
+            "type": "button",
+            "label": "导出",
+            "options": {
+              "icon": "yrt-daochu1",
+              "type": "default",
+              "authNode": "export"
+            },
+            "key": "btn-export"
+          },
+          {
+            "type": "button",
+            "label": "打印",
+            "options": {
+              "icon": "yrt-dayin3",
+              "type": "default",
+              "authNode": "print"
+            },
+            "key": "btn-print"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group03"
+      }
+    ]
+  },
+  "editorOptions": {
+    "fields": [
+      {
+        "type": "input",
+        "label": "页面名称",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "dataType": "string",
+          "prop": "pageName",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": true,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "key": "1706163242046_67297",
+        "rules": [
+          {
+            "required": true,
+            "message": "页面名称必须填写"
+          }
+        ]
+      },
+      {
+        "type": "input",
+        "label": "页面编码",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "dataType": "string",
+          "prop": "pageCode",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": true,
+          "pattern": "",
+          "placeholder": "",
+          "label-width": null
+        },
+        "key": "1711874566758_63868"
+      },
+      {
+        "type": "cascader",
+        "label": "父级名称",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "width": "280px",
+          "defaultValue": [],
+          "showLabel": false,
+          "noLabel": false,
+          "options": [
+            {
+              "value": 0,
+              "label": "[根级]",
+              "chlidren": []
+            }
+          ],
+          "required": false,
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "props": {
+            "value": "value",
+            "label": "label"
+          },
+          "prop": "fullId",
+          "popoverWidth": "300px",
+          "dataType": "long"
+        },
+        "key": "1725164430630_1411"
+      },
+      {
+        "type": "input",
+        "label": "父级id",
+        "dataType": "long",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "dataType": "long",
+          "prop": "parentId",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "key": "1726021090620_4324"
+      },
+      {
+        "type": "select",
+        "label": "页面类型",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "width": "280px",
+          "defaultValue": "PC",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": true,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "APP",
+              "label": "APP"
+            },
+            {
+              "value": "PC",
+              "label": "PC"
+            }
+          ],
+          "remote": false,
+          "remoteOptions": [],
+          "dropdownId": 0,
+          "props": {
+            "value": "value",
+            "label": "label"
+          },
+          "prop": "pageType",
+          "popoverWidth": "300px",
+          "dataType": "string"
+        },
+        "key": "1706163243439_54446",
+        "rules": [
+          {
+            "required": true,
+            "message": "页面类型必须填写"
+          }
+        ]
+      },
+      {
+        "type": "switch",
+        "label": "是否启用",
+        "dataType": "integer",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "defaultValue": 1,
+          "required": false,
+          "disabled": false,
+          "noLabel": false,
+          "prop": "enable",
+          "popoverWidth": "300px",
+          "dataType": "byte",
+          "active-value": 1,
+          "inactive-value": 0
+        },
+        "key": "1706163245253_31481"
+      },
+      {
+        "type": "input",
+        "label": "排序号",
+        "dataType": "long",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "dataType": "long",
+          "prop": "orderNum",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "key": "1725172667557_45555"
+      },
+      {
+        "type": "input",
+        "label": "创建人",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "dataType": "string",
+          "prop": "createByName",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": "",
+          "readonly": true
+        },
+        "key": "1706163247729_39679"
+      },
+      {
+        "type": "datetime",
+        "label": "创建时间",
+        "dataType": "datetime",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "width": "280px",
+          "defaultValue": "",
+          "readonly": true,
+          "disabled": false,
+          "editable": true,
+          "clearable": true,
+          "placeholder": "",
+          "startPlaceholder": "",
+          "endPlaceholder": "",
+          "type": "datetime",
+          "format": "YYYY-MM-DD HH:mm:ss",
+          "timestamp": false,
+          "required": false,
+          "noLabel": false,
+          "prop": "createTime",
+          "popoverWidth": "300px",
+          "dataType": "datetime"
+        },
+        "key": "1706163248656_475"
+      },
+      {
+        "type": "input",
+        "label": "修改人",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "dataType": "string",
+          "prop": "updateByName",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": "",
+          "readonly": true
+        },
+        "key": "1706163255927_75548"
+      },
+      {
+        "type": "datetime",
+        "label": "更新时间",
+        "dataType": "datetime",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "width": "280px",
+          "defaultValue": "",
+          "readonly": true,
+          "disabled": false,
+          "editable": true,
+          "clearable": true,
+          "placeholder": "",
+          "startPlaceholder": "",
+          "endPlaceholder": "",
+          "type": "datetime",
+          "format": "YYYY-MM-DD HH:mm:ss",
+          "timestamp": false,
+          "required": false,
+          "noLabel": false,
+          "prop": "updateTime",
+          "popoverWidth": "300px",
+          "dataType": "datetime"
+        },
+        "key": "1706163253456_58748"
+      }
+    ],
+    "config": {
+      "labelWidth": "100px",
+      "labelPosition": "right",
+      "top": "3vh",
+      "width": "1200px",
+      "visible": false,
+      "disabled": false,
+      "title": "页面装修",
+      "action": "add",
+      "formInline": false,
+      "saveButtonText": "保存",
+      "formWidth": null
+    }
+  }
+}

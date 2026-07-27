@@ -1,0 +1,1850 @@
+{
+  "dataOptions": {
+    "tableName": "core_inventory",
+    "idField": "inventoryId",
+    "idValue": 0,
+    "codeRegular": "productCode",
+    "linkColumn": "",
+    "prefixRouter": "/inventory/core/inventory",
+    "webRouter": "/inventory/stat/lower",
+    "menuId": 2075,
+    "pageIndex": 1,
+    "pageSize": 15,
+    "total": 0,
+    "orderBy": {
+      "inventoryId": "DESC"
+    },
+    "showActionField": false,
+    "editorType": "dialog",
+    "tableId": 89,
+    "tableTenantId": 31,
+    "tableTenantName": "货位最低库存预警",
+    "listMethod": "selectInventoryLowerComposeList",
+    "showSumField": true,
+    "searchOnlyLine": true,
+    "fixedWhere": {}
+  },
+  "dataListOptions": {
+    "data": [],
+    "fields": [
+      {
+        "prop": "productCode",
+        "label": "商品编号",
+        "dataType": "string",
+        "sortable": true,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": true,
+        "key": "1547015313000_55801",
+        "model": "input_1547015313000_55801",
+        "width": 120,
+        "searchRowNo": 200,
+        "tagColorList": []
+      },
+      {
+        "prop": "productName",
+        "label": "商品名称",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1547015314000_4511",
+        "model": "input_1547015314000_4511",
+        "width": "160",
+        "searchRowNo": "",
+        "tagColorList": []
+      },
+      {
+        "type": "input",
+        "label": "商品条码",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "productModel",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": true,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1703750708052_2811",
+        "tagColorList": [],
+        "width": "130"
+      },
+      {
+        "type": "input",
+        "label": "货位名称",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "positionName",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1703750725108_77860"
+      },
+      {
+        "prop": "diffStorage",
+        "label": "低于量",
+        "dataType": "bigDecimal",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1547015296000_37471",
+        "model": "input_1547015296000_37471",
+        "width": "",
+        "dropdown_Id": 797,
+        "keyProp": "consignorId",
+        "searchRowNo": "",
+        "tagColorList": [
+          {
+            "operator": ">",
+            "value": "0",
+            "color": "rgba(255, 0, 0, 1)",
+            "backgroudColor": "rgba(228, 231, 237, 1)"
+          }
+        ],
+        "options": {
+          "width": "100%",
+          "defaultValue": "",
+          "required": false,
+          "readonly": false,
+          "disabled": false,
+          "pattern": "",
+          "placeholder": "",
+          "noLabel": false
+        },
+        "formatter": "0.##",
+        "isSum": true
+      },
+      {
+        "prop": "minCapacity",
+        "label": "库存下限",
+        "dataType": "bigDecimal",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1547115502000_72990",
+        "model": "input_1547115502000_72990",
+        "width": "",
+        "searchRowNo": "",
+        "tagColorList": [],
+        "minWidth": "",
+        "formatter": "0.##"
+      },
+      {
+        "type": "input",
+        "label": "高于量",
+        "dataType": "bigDecimal",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "aboveQuantity",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1709014739806_2951",
+        "tagColorList": [],
+        "formatter": "0.##",
+        "isSum": true
+      },
+      {
+        "type": "input",
+        "label": "库存上限",
+        "dataType": "bigDecimal",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "maxCapacity",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1709014741512_24786",
+        "tagColorList": [],
+        "formatter": "0.##",
+        "isSum": false
+      },
+      {
+        "type": "input",
+        "label": "库存量",
+        "dataType": "bigDecimal",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "productStorage",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1699792676974_79014",
+        "tagColorList": [
+          {
+            "operator": "=",
+            "value": null,
+            "color": null,
+            "backgroudColor": null
+          }
+        ],
+        "width": "",
+        "formatter": "0.##"
+      },
+      {
+        "type": "input",
+        "label": "库区",
+        "dataType": "string",
+        "icon": "el-yrt-yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "areaCode",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1698740150972_12239",
+        "tagColorList": [],
+        "width": ""
+      },
+      {
+        "prop": "storageName",
+        "label": "仓库名称",
+        "dataType": "string",
+        "sortable": false,
+        "type": "select",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1547015307000_74529",
+        "model": "input_1547015307000_74529",
+        "dropdown_Id": 31,
+        "keyProp": "storageId",
+        "searchRowNo": 200,
+        "tagColorList": [],
+        "options": {
+          "width": "100%",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "下拉框1"
+            },
+            {
+              "value": "下拉框2"
+            },
+            {
+              "value": "下拉框3"
+            }
+          ],
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "dropdownId": 31,
+          "props": {
+            "value": "value",
+            "label": "label"
+          }
+        }
+      },
+      {
+        "prop": "consignorName",
+        "label": "货主名称",
+        "dataType": "string",
+        "sortable": false,
+        "type": "select",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1547115513000_46213",
+        "model": "input_1547115513000_46213",
+        "dropdown_Id": 501,
+        "searchRowNo": "200",
+        "multiple": true,
+        "tagColorList": [],
+        "options": {
+          "width": "100%",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "下拉框1"
+            },
+            {
+              "value": "下拉框2"
+            },
+            {
+              "value": "下拉框3"
+            }
+          ],
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "dropdownId": 501,
+          "props": {
+            "value": "value",
+            "label": "label"
+          }
+        }
+      },
+      {
+        "type": "input",
+        "label": "供应商简称",
+        "dataType": "string",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "providerShortName",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1704957837587_5812"
+      },
+      {
+        "type": "input",
+        "label": "小计毛重",
+        "dataType": "bigDecimal",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "rowWeight",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1704958941419_86588",
+        "tagColorList": [],
+        "formatter": "0.#######"
+      },
+      {
+        "type": "input",
+        "label": "生产日期",
+        "dataType": "date",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "produceDate",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1704957890884_72652",
+        "tagColorList": [],
+        "formatter": "YYYY-MM-DD"
+      },
+      {
+        "type": "input",
+        "label": "入库时间",
+        "dataType": "datetime",
+        "icon": "yrt-danhangshurukuang",
+        "options": {
+          "searchRowNo": 0,
+          "width": "100%",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "pattern": "",
+          "placeholder": ""
+        },
+        "prop": "inStorageDate",
+        "sortable": false,
+        "hidden": false,
+        "isQuickSearch": false,
+        "align": "center",
+        "headerAlign": "center",
+        "key": "1704957817773_99424",
+        "tagColorList": [],
+        "width": "140"
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "刷新",
+            "options": {
+              "icon": "yrt-shuaxin",
+              "type": "default",
+              "authNode": "refresh"
+            },
+            "key": "btn-refresh"
+          },
+          {
+            "type": "button",
+            "label": "导出",
+            "options": {
+              "icon": "icon-yrt yrt-daochu",
+              "type": "default",
+              "authNode": "export",
+              "exportId": 68
+            },
+            "key": "btn-export"
+          }
+        ],
+        "options": {
+          "icon": "el-yrt-yrt-anniuzu"
+        },
+        "key": "btn-group03"
+      }
+    ]
+  },
+  "editorOptions": {
+    "fields": [
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "table-select",
+                "label": "货主名称",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "columns": [
+                    {
+                      "prop": "consignorCode",
+                      "label": "货主编号",
+                      "width": 100
+                    },
+                    {
+                      "prop": "consignorName",
+                      "label": "货主名称",
+                      "width": 150
+                    }
+                  ],
+                  "url": "/basic/base/consignor/getList",
+                  "searchFields": "consignorId,consignorCode,consignorName",
+                  "prop": "consignorName",
+                  "popoverWidth": "300px",
+                  "dataType": "string"
+                },
+                "key": "1608695640000_94947",
+                "model": "input_1608695640000_94947"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "来源单号",
+                "options": {
+                  "prop": "billCode",
+                  "searchRowNo": 1,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608695886000_54020",
+                  "readonly": true
+                },
+                "key": "1608695886000_54020",
+                "model": "input_1608695886000_54020"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "货主编号",
+                "options": {
+                  "prop": "consignorCode",
+                  "searchRowNo": null,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608695955000_87095",
+                  "readonly": true
+                },
+                "key": "1608695955000_87095",
+                "model": "input_1608695955000_87095"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1608695630000_89853"
+        },
+        "key": "1608695630000_89853"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "库存ID",
+                "options": {
+                  "prop": "productPosition_Id",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "dataType": "integer",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608696164000_57861",
+                  "readonly": true
+                },
+                "key": "1608696164000_57861",
+                "model": "input_1608696164000_57861"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "拍数",
+                "options": {
+                  "prop": "paiQty",
+                  "searchRowNo": null,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608696234000_57587",
+                  "readonly": true
+                },
+                "key": "1608696234000_57587",
+                "model": "input_1608696234000_57587"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "table-select",
+                "label": "仓库名称",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "columns": [
+                    {
+                      "prop": "storageCode",
+                      "label": "仓库编号",
+                      "width": 100
+                    },
+                    {
+                      "prop": "storageName",
+                      "label": "仓库名称",
+                      "width": 150
+                    }
+                  ],
+                  "url": "/basic/storage/storage/getList",
+                  "searchFields": "storageId,storageCode,storageName",
+                  "prop": "storageName",
+                  "popoverWidth": "300px",
+                  "dataType": "string"
+                },
+                "key": "1608696323000_19229",
+                "model": "input_1608696323000_19229"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1608695981000_9825"
+        },
+        "key": "1608695981000_9825"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "库区",
+                "options": {
+                  "prop": "areaCode",
+                  "searchRowNo": null,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608703519000_84176",
+                  "readonly": true
+                },
+                "key": "1608703519000_84176",
+                "model": "input_1608703519000_84176",
+                "rules": []
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "货位类型",
+                "options": {
+                  "prop": "positionType",
+                  "searchRowNo": 1,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "dataType": "tinyinteger",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608703559000_14192",
+                  "readonly": true
+                },
+                "key": "1608703559000_14192",
+                "model": "input_1608703559000_14192"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "货位名称",
+                "options": {
+                  "prop": "positionName",
+                  "searchRowNo": 1,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608703580000_15406",
+                  "readonly": true
+                },
+                "key": "1608703580000_15406",
+                "model": "input_1608703580000_15406"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1608695982000_29738"
+        },
+        "key": "1608695982000_29738"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "库存量",
+                "options": {
+                  "prop": "productStorage",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "integer",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608703627000_61155",
+                  "readonly": true
+                },
+                "key": "1608703627000_61155",
+                "model": "input_1608703627000_61155",
+                "rules": []
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "原始量",
+                "options": {
+                  "prop": "orignStorage",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "dataType": "integer",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608703651000_41815",
+                  "readonly": true
+                },
+                "key": "1608703651000_41815",
+                "model": "input_1608703651000_41815"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "占位量",
+                "options": {
+                  "prop": "placeholderStorage",
+                  "searchRowNo": null,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "dataType": "integer",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608703665000_31534",
+                  "readonly": true
+                },
+                "key": "1608703665000_31534",
+                "model": "input_1608703665000_31534"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1608695984000_26090"
+        },
+        "key": "1608695984000_26090"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "有效库存",
+                "options": {
+                  "prop": "validStorage",
+                  "searchRowNo": null,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "dataType": "integer",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608703690000_78407",
+                  "readonly": true
+                },
+                "key": "1608703690000_78407",
+                "model": "input_1608703690000_78407"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "集装箱号",
+                "options": {
+                  "prop": "containerNo",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608703717000_40369",
+                  "readonly": true
+                },
+                "key": "1608703717000_40369",
+                "model": "input_1608703717000_40369"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "原产地",
+                "options": {
+                  "prop": "originPlace",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608703742000_4790",
+                  "readonly": true
+                },
+                "key": "1608703742000_4790",
+                "model": "input_1608703742000_4790"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1608695985000_47103"
+        },
+        "key": "1608695985000_47103"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "库存重量",
+                "options": {
+                  "prop": "totalWeight",
+                  "searchRowNo": null,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "double",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608703780000_24718",
+                  "readonly": true
+                },
+                "key": "1608703780000_24718",
+                "model": "input_1608703780000_24718",
+                "rules": []
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "原始重量",
+                "options": {
+                  "prop": "totalWeightOrign",
+                  "searchRowNo": null,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "dataType": "double",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608703781000_71311",
+                  "readonly": true
+                },
+                "key": "1608703781000_71311",
+                "model": "input_1608703781000_71311"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "库存状态",
+                "options": {
+                  "prop": "storageStatus",
+                  "searchRowNo": 1,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608703965000_54234",
+                  "readonly": true
+                },
+                "key": "1608703965000_54234",
+                "model": "input_1608703965000_54234"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1608695986000_86715"
+        },
+        "key": "1608695986000_86715"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "商品属性",
+                "options": {
+                  "prop": "productAttribute",
+                  "searchRowNo": 1,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608703999000_78844",
+                  "readonly": true
+                },
+                "key": "1608703999000_78844",
+                "rules": [],
+                "model": "input_1608703999000_78844"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "商品名称",
+                "options": {
+                  "prop": "productName",
+                  "searchRowNo": 1,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608704004000_6691",
+                  "readonly": true
+                },
+                "key": "1608704004000_6691",
+                "model": "input_1608704004000_6691",
+                "rules": []
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "条形码",
+                "options": {
+                  "prop": "productModel",
+                  "searchRowNo": 1,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608704025000_42722",
+                  "readonly": true
+                },
+                "key": "1608704025000_42722",
+                "model": "input_1608704025000_42722",
+                "rules": []
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1608703898000_76645"
+        },
+        "key": "1608703898000_76645"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "规格",
+                "options": {
+                  "prop": "productSpec",
+                  "searchRowNo": 1,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608704053000_7468",
+                  "readonly": true
+                },
+                "key": "1608704053000_7468",
+                "model": "input_1608704053000_7468",
+                "rules": []
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "date",
+                "label": "入库时间",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": null,
+                  "readonly": true,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "date",
+                  "format": "yyyy-MM-dd",
+                  "timestamp": false,
+                  "required": false,
+                  "noLabel": false,
+                  "prop": "inStorageDate",
+                  "dataType": "date"
+                },
+                "key": "1608704056000_60134",
+                "model": "input_1608704056000_60134"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "date",
+                "label": "生产日期",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "readonly": true,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "date",
+                  "format": "yyyy-MM-dd",
+                  "timestamp": false,
+                  "required": false,
+                  "noLabel": false,
+                  "prop": "produceDate",
+                  "dataType": "date"
+                },
+                "key": "1608704086000_50702",
+                "model": "input_1608704086000_50702"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1608703900000_42349"
+        },
+        "key": "1608703900000_42349"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "保质期天数",
+                "options": {
+                  "prop": "shelfLifeDay",
+                  "searchRowNo": null,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "integer",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608704115000_8356",
+                  "readonly": true
+                },
+                "key": "1608704115000_8356",
+                "model": "input_1608704115000_8356",
+                "rules": []
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "date",
+                "label": "到期日期",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "readonly": true,
+                  "disabled": false,
+                  "editable": true,
+                  "clearable": true,
+                  "placeholder": "",
+                  "startPlaceholder": "",
+                  "endPlaceholder": "",
+                  "type": "date",
+                  "format": "yyyy-MM-dd",
+                  "timestamp": false,
+                  "required": false,
+                  "noLabel": false,
+                  "prop": "limitDate",
+                  "dataType": "date"
+                },
+                "key": "1608704120000_71364",
+                "model": "input_1608704120000_71364"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "小单位",
+                "options": {
+                  "prop": "smallUnit",
+                  "searchRowNo": null,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608704137000_55751",
+                  "readonly": true
+                },
+                "key": "1608704137000_55751",
+                "model": "input_1608704137000_55751",
+                "rules": []
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1608703902000_30645"
+        },
+        "key": "1608703902000_30645"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "中单位",
+                "options": {
+                  "prop": "middleUnit",
+                  "searchRowNo": null,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608704141000_65791",
+                  "readonly": true
+                },
+                "key": "1608704141000_65791",
+                "model": "input_1608704141000_65791",
+                "rules": []
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "大单位",
+                "options": {
+                  "prop": "bigUnit",
+                  "searchRowNo": null,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608704145000_33442",
+                  "readonly": true
+                },
+                "key": "1608704145000_33442",
+                "model": "input_1608704145000_33442",
+                "rules": []
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "供应商编号",
+                "options": {
+                  "prop": "providerCode",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608704231000_42349",
+                  "readonly": true
+                },
+                "key": "1608704231000_42349",
+                "model": "input_1608704231000_42349",
+                "rules": []
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1608703904000_61355"
+        },
+        "key": "1608703904000_61355"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "table-select",
+                "label": "供应商",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "columns": [
+                    {
+                      "prop": "providerCode",
+                      "label": "供应商编号",
+                      "width": 100
+                    },
+                    {
+                      "prop": "providerName",
+                      "label": "供应商名称",
+                      "width": 150
+                    }
+                  ],
+                  "url": "/basic/product/provider/getList",
+                  "searchFields": "providerId,providerCode,providerShortName,providerName",
+                  "prop": "providerShortName",
+                  "popoverWidth": "300px",
+                  "dataType": "string"
+                },
+                "key": "1608704334000_65186",
+                "model": "input_1608704334000_65186"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "拍号",
+                "options": {
+                  "prop": "plateCode",
+                  "searchRowNo": 1,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608704367000_29994",
+                  "readonly": true
+                },
+                "key": "1608704367000_29994",
+                "model": "input_1608704367000_29994",
+                "rules": []
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "进货价",
+                "options": {
+                  "prop": "purchasePrice",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "dataType": "double",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608704412000_33916",
+                  "readonly": true
+                },
+                "key": "1608704412000_33916",
+                "model": "input_1608704412000_33916"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1608704282000_33641"
+        },
+        "key": "1608704282000_33641"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "进货总额",
+                "options": {
+                  "prop": "purchaseMoney",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "dataType": "double",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608704415000_11255",
+                  "readonly": true
+                },
+                "key": "1608704415000_11255",
+                "model": "input_1608704415000_11255"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "关联号",
+                "options": {
+                  "prop": "relationCode",
+                  "searchRowNo": null,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608704452000_57963",
+                  "readonly": true
+                },
+                "key": "1608704452000_57963",
+                "model": "input_1608704452000_57963",
+                "rules": []
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "批次号",
+                "options": {
+                  "prop": "batchNumber",
+                  "searchRowNo": 1,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608704456000_23698",
+                  "readonly": true
+                },
+                "key": "1608704456000_23698",
+                "model": "input_1608704456000_23698",
+                "rules": []
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1608704287000_76257"
+        },
+        "key": "1608704287000_76257"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "报检单号",
+                "options": {
+                  "prop": "declareNo",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608704485000_53867",
+                  "readonly": true
+                },
+                "key": "1608704485000_53867",
+                "model": "input_1608704485000_53867",
+                "rules": []
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "品牌",
+                "options": {
+                  "prop": "brandName",
+                  "searchRowNo": null,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608704519000_50832",
+                  "readonly": true
+                },
+                "key": "1608704519000_50832",
+                "model": "input_1608704519000_50832",
+                "rules": []
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "类别",
+                "options": {
+                  "prop": "typeName",
+                  "searchRowNo": null,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608704535000_69092",
+                  "readonly": true
+                },
+                "key": "1608704535000_69092",
+                "model": "input_1608704535000_69092",
+                "rules": []
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1608704280000_5502"
+        },
+        "key": "1608704280000_5502"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "库区分拣权重",
+                "options": {
+                  "prop": "areaOrderNo",
+                  "searchRowNo": null,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "integer",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608704552000_51432",
+                  "readonly": true
+                },
+                "key": "1608704552000_51432",
+                "model": "input_1608704552000_51432",
+                "rules": []
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "税率",
+                "options": {
+                  "prop": "rate",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "dataType": "double",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608704611000_63104",
+                  "readonly": true
+                },
+                "key": "1608704611000_63104",
+                "model": "input_1608704611000_63104"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "税价",
+                "options": {
+                  "prop": "ratePrice",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "dataType": "money",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608704615000_15858",
+                  "readonly": true
+                },
+                "key": "1608704615000_15858",
+                "model": "input_1608704615000_15858"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1608704285000_38569"
+        },
+        "key": "1608704285000_38569"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "价税合计",
+                "options": {
+                  "prop": "rateMoney",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": null,
+                  "required": false,
+                  "dataType": "double",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608704618000_54515",
+                  "readonly": true
+                },
+                "key": "1608704618000_54515",
+                "model": "input_1608704618000_54515"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "定制唯一码",
+                "options": {
+                  "prop": "singleSignCode",
+                  "searchRowNo": null,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608704627000_46983",
+                  "readonly": true
+                },
+                "key": "1608704627000_46983",
+                "model": "input_1608704627000_46983",
+                "rules": []
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "input",
+                "label": "备注",
+                "options": {
+                  "prop": "remark",
+                  "searchRowNo": 0,
+                  "width": "100%",
+                  "noLabel": false,
+                  "defaultValue": "",
+                  "required": false,
+                  "dataType": "string",
+                  "pattern": "",
+                  "placeholder": "",
+                  "remoteFunc": "func_1608704630000_74898",
+                  "readonly": true
+                },
+                "key": "1608704630000_74898",
+                "model": "input_1608704630000_74898",
+                "rules": []
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1608704563000_60805"
+        },
+        "key": "1608704563000_60805"
+      }
+    ],
+    "config": {
+      "labelWidth": "100px",
+      "labelPosition": "right",
+      "top": "3vh",
+      "width": "1200px",
+      "visible": false,
+      "disabled": false,
+      "title": "库存明细查询",
+      "action": "add",
+      "formInline": false,
+      "saveButtonText": "保存"
+    }
+  }
+}

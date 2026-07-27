@@ -1,0 +1,764 @@
+{
+  "dataOptions": {
+    "tableName": "tms_client_line",
+    "idField": "clientLineId",
+    "idValue": 0,
+    "codeRegular": "lineCode",
+    "linkColumn": "clientLineName",
+    "prefixRouter": "/basic/tms/clientLine",
+    "webRouter": "/basic/tms/clientLine",
+    "menuId": 1845,
+    "pageIndex": 1,
+    "pageSize": 15,
+    "total": 0,
+    "orderBy": {
+      "clientLineId": "DESC"
+    },
+    "showActionField": true,
+    "editorType": "dialog",
+    "tableId": 215,
+    "tableTenantId": 0,
+    "tableTenantName": "客户线路规则"
+  },
+  "dataListOptions": {
+    "data": [],
+    "fields": [
+      {
+        "prop": "clientLineName",
+        "label": "客户线路关系名称",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1603342743000_97140",
+        "tagColorList": []
+      },
+      {
+        "prop": "lineName",
+        "label": "线路名称",
+        "dataType": "nvarchar",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1603342746000_46052",
+        "tagColorList": []
+      },
+      {
+        "prop": "truckNo",
+        "label": "车牌号",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": true,
+        "key": "1603342754000_6797",
+        "tagColorList": []
+      },
+      {
+        "prop": "driverName",
+        "label": "司机名称",
+        "dataType": "string",
+        "sortable": false,
+        "type": "input",
+        "hidden": false,
+        "isQuickSearch": false,
+        "key": "1603342758000_12226",
+        "tagColorList": []
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "新建",
+            "options": {
+              "icon": "yrt-addplus",
+              "type": "primary",
+              "authNode": "add"
+            },
+            "key": "btn-add"
+          },
+          {
+            "type": "button",
+            "label": "删除",
+            "options": {
+              "icon": "yrt-shanchu2",
+              "type": "primary",
+              "authNode": "delete"
+            },
+            "key": "btn-delete"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group01"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "审核",
+            "options": {
+              "icon": "yrt-shenpi6",
+              "type": "success",
+              "authNode": "auditing"
+            },
+            "key": "btn-confirm"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group02"
+      },
+      {
+        "type": "button-group",
+        "label": "按钮组",
+        "buttons": [
+          {
+            "type": "button",
+            "label": "刷新",
+            "options": {
+              "icon": "yrt-shuaxin",
+              "type": "default",
+              "authNode": "refresh"
+            },
+            "key": "btn-refresh"
+          },
+          {
+            "type": "button",
+            "label": "导出",
+            "options": {
+              "icon": "yrt-daochu1",
+              "type": "default",
+              "authNode": "export"
+            },
+            "key": "btn-export"
+          },
+          {
+            "type": "button",
+            "label": "打印",
+            "options": {
+              "icon": "yrt-dayin3",
+              "type": "default",
+              "authNode": "print"
+            },
+            "key": "btn-print"
+          }
+        ],
+        "options": {
+          "icon": "yrt-anniuzu"
+        },
+        "key": "btn-group03"
+      }
+    ]
+  },
+  "editorOptions": {
+    "fields": [
+      {
+        "type": "input",
+        "label": "客户线路关系名称",
+        "options": {
+          "prop": "clientLineName",
+          "searchRowNo": 0,
+          "width": "280px",
+          "noLabel": false,
+          "defaultValue": "",
+          "required": false,
+          "dataType": "nvarchar",
+          "pattern": "",
+          "placeholder": "",
+          "remoteFunc": "func_1603342771000_69767",
+          "label-width": 125
+        },
+        "key": "1603342771000_69767"
+      },
+      {
+        "type": "select",
+        "label": "司机名称",
+        "options": {
+          "width": "280px",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "下拉框1"
+            },
+            {
+              "value": "下拉框2"
+            },
+            {
+              "value": "下拉框3"
+            }
+          ],
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "dropdown_Id": 1009,
+          "props": {
+            "value": "value",
+            "label": "label"
+          },
+          "remoteFunc": "",
+          "prop": "driverName",
+          "dataType": "string",
+          "label-width": 125,
+          "dropdownId": 1009,
+          "keyProp": "driverId"
+        },
+        "key": "1603342771000_87878"
+      },
+      {
+        "type": "select",
+        "label": "线路名称",
+        "options": {
+          "width": "280px",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "下拉框1"
+            },
+            {
+              "value": "下拉框2"
+            },
+            {
+              "value": "下拉框3"
+            }
+          ],
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "dropdown_Id": 1025,
+          "props": {
+            "value": "value",
+            "label": "label"
+          },
+          "remoteFunc": "",
+          "prop": "lineName",
+          "dataType": "string",
+          "label-width": 125,
+          "dropdownId": 1025,
+          "keyProp": "lineId"
+        },
+        "key": "1603342771000_86796"
+      },
+      {
+        "type": "select",
+        "label": "车牌号",
+        "options": {
+          "width": "280px",
+          "defaultValue": "",
+          "multiple": false,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "下拉框1"
+            },
+            {
+              "value": "下拉框2"
+            },
+            {
+              "value": "下拉框3"
+            }
+          ],
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "dropdown_Id": 1010,
+          "props": {
+            "value": "value",
+            "label": "label"
+          },
+          "remoteFunc": "",
+          "prop": "truckNo",
+          "dataType": "string",
+          "keyProp": "vehicleId",
+          "label-width": 125,
+          "dropdownId": 1010
+        },
+        "key": "1603342771000_34294"
+      },
+      {
+        "type": "select",
+        "label": "线路规则",
+        "options": {
+          "width": "280px",
+          "defaultValue": [],
+          "multiple": true,
+          "disabled": false,
+          "clearable": false,
+          "placeholder": "",
+          "required": false,
+          "showLabel": true,
+          "noLabel": false,
+          "options": [
+            {
+              "value": "下拉框1"
+            },
+            {
+              "value": "下拉框2"
+            },
+            {
+              "value": "下拉框3"
+            }
+          ],
+          "remote": "bindDropdown",
+          "remoteOptions": [],
+          "dropdown_Id": 1033,
+          "props": {
+            "value": "value",
+            "label": "label"
+          },
+          "remoteFunc": "",
+          "prop": "lineRule",
+          "dataType": "string",
+          "keyProp": "lineRule",
+          "label-width": 125,
+          "dropdownId": 1033
+        },
+        "key": "1603342771000_31958"
+      },
+      {
+        "type": "date",
+        "label": "线路假期",
+        "options": {
+          "width": "280px",
+          "defaultValue": "",
+          "readonly": false,
+          "disabled": false,
+          "editable": true,
+          "clearable": true,
+          "placeholder": "",
+          "startPlaceholder": "",
+          "endPlaceholder": "",
+          "type": "dates",
+          "format": "yyyy-MM-dd",
+          "timestamp": false,
+          "required": false,
+          "noLabel": false,
+          "prop": "lineVacation",
+          "dataType": "date",
+          "label-width": 125
+        },
+        "key": "1607407380000_96814"
+      },
+      {
+        "type": "splitter-group",
+        "label": "模板设置",
+        "options": {
+          "remoteFunc": "func_1607333494000_54190"
+        },
+        "key": "1607333494000_54190",
+        "rules": []
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "select",
+                "label": "出库详情模板",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "options": [
+                    {
+                      "value": "下拉框1"
+                    },
+                    {
+                      "value": "下拉框2"
+                    },
+                    {
+                      "value": "下拉框3"
+                    }
+                  ],
+                  "remote": "bindDropdown",
+                  "remoteOptions": [],
+                  "dropdown_Id": 925,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "remoteFunc": "",
+                  "prop": "orderDetailTemplate",
+                  "dataType": "string",
+                  "keyProp": "orderDetailTemplateId",
+                  "dropdownId": 925
+                },
+                "key": "1607333543000_48671",
+                "model": "input_1607333543000_48671"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "select",
+                "label": "部分出库详情模板",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "options": [
+                    {
+                      "value": "下拉框1"
+                    },
+                    {
+                      "value": "下拉框2"
+                    },
+                    {
+                      "value": "下拉框3"
+                    }
+                  ],
+                  "remote": "bindDropdown",
+                  "remoteOptions": [],
+                  "dropdown_Id": 925,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "remoteFunc": "",
+                  "prop": "orderPartialDetailTemplate",
+                  "dataType": "string",
+                  "label-width": 140,
+                  "keyProp": "orderPartialDetailTemplateId",
+                  "dropdownId": 961
+                },
+                "key": "1607333584000_12469",
+                "model": "input_1607333584000_12469"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "select",
+                "label": "装箱清单模板",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "options": [
+                    {
+                      "value": "下拉框1"
+                    },
+                    {
+                      "value": "下拉框2"
+                    },
+                    {
+                      "value": "下拉框3"
+                    }
+                  ],
+                  "remote": "bindDropdown",
+                  "remoteOptions": [],
+                  "dropdown_Id": 961,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "remoteFunc": "",
+                  "prop": "packingDetailTemplate",
+                  "dataType": "string",
+                  "keyProp": "packingDetailTemplateId",
+                  "dropdownId": 961
+                },
+                "key": "1607333642000_22754",
+                "model": "input_1607333642000_22754"
+              }
+            ]
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1607333497000_65330"
+        },
+        "key": "1607333497000_65330"
+      },
+      {
+        "type": "grid",
+        "label": "栅格布局",
+        "columns": [
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "select",
+                "label": "面单A面模板",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "options": [
+                    {
+                      "value": "下拉框1"
+                    },
+                    {
+                      "value": "下拉框2"
+                    },
+                    {
+                      "value": "下拉框3"
+                    }
+                  ],
+                  "remote": "bindDropdown",
+                  "remoteOptions": [],
+                  "dropdown_Id": 924,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "remoteFunc": "",
+                  "prop": "faceBillTemplate",
+                  "dataType": "string",
+                  "keyProp": "faceBillTemplateId",
+                  "dropdownId": 924
+                },
+                "key": "1607333673000_18506",
+                "model": "input_1607333673000_18506"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": [
+              {
+                "type": "select",
+                "label": "面单B面模板",
+                "options": {
+                  "width": "100%",
+                  "defaultValue": "",
+                  "multiple": false,
+                  "disabled": false,
+                  "clearable": false,
+                  "placeholder": "",
+                  "required": false,
+                  "showLabel": true,
+                  "noLabel": false,
+                  "options": [
+                    {
+                      "value": "下拉框1"
+                    },
+                    {
+                      "value": "下拉框2"
+                    },
+                    {
+                      "value": "下拉框3"
+                    }
+                  ],
+                  "remote": "bindDropdown",
+                  "remoteOptions": [],
+                  "dropdown_Id": 946,
+                  "props": {
+                    "value": "value",
+                    "label": "label"
+                  },
+                  "remoteFunc": "",
+                  "prop": "subFaceBillTemplate",
+                  "dataType": "string",
+                  "keyProp": "subFaceBillTemplateId",
+                  "label-width": 140,
+                  "dropdownId": 946
+                },
+                "key": "1607333705000_60991",
+                "model": "input_1607333705000_60991"
+              }
+            ]
+          },
+          {
+            "span": 8,
+            "fields": []
+          }
+        ],
+        "options": {
+          "gutter": 0,
+          "justify": "start",
+          "align": "top",
+          "remoteFunc": "func_1607333499000_62402"
+        },
+        "key": "1607333499000_62402"
+      },
+      {
+        "type": "detail-grid",
+        "label": "明细布局",
+        "fields": [
+          {
+            "prop": "clientCode",
+            "label": "客户编号",
+            "dataType": "nvarchar",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1603342926000_78728",
+            "headerAlign": "center",
+            "align": "left",
+            "readonly": true
+          },
+          {
+            "prop": "clientShortName",
+            "label": "客户简称",
+            "dataType": "nvarchar",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1603342922000_43672",
+            "headerAlign": "center",
+            "align": "left",
+            "type": "table-select",
+            "options": {
+              "width": "100%",
+              "defaultValue": "",
+              "multiple": false,
+              "disabled": false,
+              "clearable": false,
+              "placeholder": "",
+              "required": false,
+              "showLabel": true,
+              "noLabel": false,
+              "columns": [
+                {
+                  "prop": "clientCode",
+                  "label": "客户编号",
+                  "width": 100
+                },
+                {
+                  "width": 150,
+                  "prop": "clientShortName",
+                  "label": "客户名称"
+                }
+              ],
+              "url": "/basic/client/client/getList",
+              "searchFields": "clientId,clientCode,clientShortName,clientFullName"
+            },
+            "keyProp": "",
+            "tagColorList": []
+          },
+          {
+            "prop": "orderNum",
+            "label": "客户优先级",
+            "dataType": "long",
+            "sortable": false,
+            "hidden": false,
+            "isQuickSearch": false,
+            "key": "1715307548214_38281",
+            "headerAlign": "center",
+            "align": "left",
+            "tagColorList": []
+          }
+        ],
+        "options": {
+          "border": true,
+          "size": "mini",
+          "pageIndex": 1,
+          "pageSize": 15,
+          "detailSelections": [],
+          "idField": "clientLineDetailId",
+          "remoteFunc": "func_1603342852000_92826",
+          "orderBy": {
+            "orderNum": "desc"
+          },
+          "prefixRouter": "/basic/tms/clientLineDetail"
+        },
+        "buttons": [
+          {
+            "type": "button-group",
+            "label": "按钮组",
+            "buttons": [
+              {
+                "type": "button",
+                "label": "新建",
+                "options": {
+                  "icon": "icon-yrt yrt-addplus",
+                  "type": "primary",
+                  "authNode": "detailAdd"
+                },
+                "key": "detail_add"
+              },
+              {
+                "type": "button",
+                "label": "删除",
+                "options": {
+                  "icon": "icon-yrt yrt-shanchu2",
+                  "type": "danger",
+                  "authNode": "detailDelete"
+                },
+                "key": "detail_delete"
+              }
+            ],
+            "options": {
+              "icon": "el-yrt-yrt-anniuzu"
+            }
+          }
+        ],
+        "key": "1603342852000_92826",
+        "subTableView": "TMS_ClientLineList",
+        "subTableName": "tms_client_line_detail"
+      }
+    ],
+    "config": {
+      "labelWidth": "100px",
+      "labelPosition": "right",
+      "top": "3vh",
+      "width": "1200px",
+      "visible": false,
+      "disabled": false,
+      "title": "客户线路规则",
+      "action": "add",
+      "formInline": false,
+      "saveButtonText": "保存"
+    }
+  }
+}
