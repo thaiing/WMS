@@ -2,10 +2,10 @@
 	<div class="module-container" :style="{ 'background-color': config.style?.bgColor, padding: config.style.bgMargin || 0 }">
 		<div :class="['inner']" :style="{ 'background-color': config.style?.innerBgColor, 'border-radius': config.style?.borderRadius ? config.style.borderRadius + 'px' : 0, padding: config.style.bgPadding || 0, 'border-width': config.style.innerBorderWidth + 'px' || 0, 'border-color': config.style.innerBorderColor || 'transparent', 'border-style': config.style.innerBorderStyle, height: config.style.height || 'auto' }">
 			<pc-header :config="config" :is-viewer="isViewer" @on-search="onSearch"></pc-header>
-			<el-table :data="state.tableData" style="width: 100%" :max-height="config.style.maxHeight || undefined" :stripe="config.style.stripe" :height="config.style.tableHeight || undefined">
+			<el-table :class="{ 'workflow-table': isWorkflowTable }" :data="state.tableData" style="width: 100%" :max-height="config.style.maxHeight || undefined" :stripe="config.style.stripe" :height="config.style.tableHeight || undefined">
 				<template v-for="(col, index) in config.columns">
-					<el-table-column v-if="col.type == 'index'" prop="index" :align="col.align" :header-align="col.headerAlign" :label="col.label" :width="col.width" />
-					<el-table-column v-else :prop="col.prop" :align="col.align" :header-align="col.headerAlign" :label="col.label" :width="col.width || undefined">
+					<el-table-column v-if="col.type == 'index'" prop="index" :align="col.align" :header-align="col.headerAlign" :label="col.label" :width="getColumnWidth(col, index)" />
+					<el-table-column v-else :prop="col.prop" :align="col.align" :header-align="col.headerAlign" :label="col.label" :width="getColumnWidth(col, index)">
 						<template #default="{ row }">
 							<!--通用列插槽-->
 							<slot :row="row" :col="col" name="common-column-slot">
@@ -66,6 +66,19 @@ const props = defineProps({
 const state = reactive({
 	tableData: [],
 });
+
+const isWorkflowTable = computed(() => {
+	const title = String(props.config.header?.text || '').toLowerCase();
+	return title.includes('待审核') || title.includes('chờ duyệt');
+});
+
+const workflowColumnWidths = [50, 150, 150, 150, 140];
+const getColumnWidth = (column: any, index: number) => {
+	if (isWorkflowTable.value) {
+		return workflowColumnWidths[index];
+	}
+	return column.width || undefined;
+};
 //#endregion
 
 // 监听
@@ -131,6 +144,30 @@ const onSearch = async () => {
 		:deep(.el-table) {
 			flex: 1 1 auto;
 			min-height: 0;
+		}
+
+		:deep(.workflow-table) {
+			.el-table__cell {
+				padding: 11px 0;
+			}
+
+			.cell {
+				line-height: 1.4;
+				white-space: normal;
+				word-break: normal;
+				overflow-wrap: break-word;
+			}
+
+			th.el-table__cell .cell {
+				color: var(--el-text-color-primary);
+				font-weight: 600;
+				text-align: left;
+			}
+
+			th.el-table__cell:first-child .cell,
+			td.el-table__cell:first-child .cell {
+				text-align: center;
+			}
 		}
 	}
 	.box-shadow {

@@ -459,6 +459,7 @@ const exact: Record<string, string> = {
   未入库单据: 'Chứng từ chưa nhập kho',
   已出库单据: 'Chứng từ đã xuất kho',
   未出库单据: 'Chứng từ chưa xuất kho',
+  入库待审核: 'Nhập kho đang chờ duyệt',
   按单入库: 'Nhập kho theo phiếu',
   入库待处理: 'Nghiệp vụ nhập kho chờ xử lý',
   出库待处理: 'Nghiệp vụ xuất kho chờ xử lý',
