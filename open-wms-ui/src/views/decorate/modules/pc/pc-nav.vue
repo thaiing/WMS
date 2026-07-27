@@ -27,10 +27,13 @@
 		</div>
 		<div v-else class="items-2" :style="{ 'background-color': config.style?.bgColor, 'border-radius': config.style?.bgBorderRadius ? config.style.bgBorderRadius + 'px' : 0, margin: config.style?.bgMargin ? config.style.bgMargin + 'px' : 0, padding: config.style?.bgPadding ? config.style.bgPadding + 'px' : 0, '--indicator-olor': config.style.indicatorColor }">
 			<div v-if="pageCount === 1" class="items items-static">
-				<div v-for="(item, index) in config.items" :key="index" class="item" :style="{ 'margin-bottom': config.style.iconMargin + 'px' }" @click="goUrl(item.url)">
-					<div>
-						<svg-icon :name="item.icon" :size="config.style.iconSize" :color="item.iconColor"></svg-icon>
-					</div>
+					<div v-for="(item, index) in config.items" :key="index" class="item" :style="{ 'margin-bottom': config.style.iconMargin + 'px' }" @click="goUrl(item.url)">
+						<div>
+							<svg v-if="isOutboundTransferIcon(item)" class="nav-transfer-icon" :style="{ width: config.style.iconSize + 'px', height: config.style.iconSize + 'px', color: item.iconColor }" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+								<path d="M9 15h27m0 0-7-7m7 7-7 7M39 33H12m0 0 7 7m-7-7 7-7" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+							<svg-icon v-else :name="getNavIcon(item)" :size="config.style.iconSize" :color="item.iconColor"></svg-icon>
+						</div>
 					<div class="name" :style="{ 'font-size': (config.style?.fontSize === undefined ? 12 : config.style?.fontSize) + 'px', color: config.style?.fontColor, 'line-height': config.style.lineHeight + 'px' }">{{ formatNavName(item.name) }}</div>
 				</div>
 			</div>
@@ -40,7 +43,10 @@
 						<template v-for="(item, index2) in getCurrentPage(index)">
 							<div class="item" :style="{ width: 100 / config.style.showCount + '%', 'margin-bottom': config.style.iconMargin + 'px' }" @click="goUrl(item.url)">
 								<div style="{ width: (config.style?.iconSize === undefined ? 60 : config.style?.iconSize) + 'px', height: (config.style?.iconSize === undefined ? 60 : config.style?.iconSize) + 'px', 'border-radius': config.style?.iconStyle === '圆形' ? (config.style?.iconSize || 60) / 2 + 'px' : '' }">
-									<svg-icon :name="item.icon" :size="config.style.iconSize" :color="item.iconColor"></svg-icon>
+									<svg v-if="isOutboundTransferIcon(item)" class="nav-transfer-icon" :style="{ width: config.style.iconSize + 'px', height: config.style.iconSize + 'px', color: item.iconColor }" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+										<path d="M9 15h27m0 0-7-7m7 7-7 7M39 33H12m0 0 7 7m-7-7 7-7" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+									<svg-icon v-else :name="getNavIcon(item)" :size="config.style.iconSize" :color="item.iconColor"></svg-icon>
 								</div>
 								<div class="name" :style="{ 'font-size': (config.style?.fontSize === undefined ? 12 : config.style?.fontSize) + 'px', color: config.style?.fontColor, 'line-height': config.style.lineHeight + 'px' }">{{ formatNavName(item.name) }}</div>
 							</div>
@@ -65,6 +71,16 @@ const router = useRouter();
 const formatNavName = (value: unknown) => {
 	const text = String(value ?? '').trim();
 	return text ? text.charAt(0).toLocaleUpperCase('vi-VN') + text.slice(1) : '';
+};
+const getNavIcon = (item: any) => {
+	const name = String(item?.name || '').trim().toLocaleLowerCase('vi-VN');
+	if (name === 'điều chuyển xuất kho' || item?.icon === 'yrt-icon10') return 'yrt-yrt-transfer';
+	return item?.icon;
+};
+const isOutboundTransferIcon = (item: any) => {
+	const name = String(item?.name || '').trim().toLocaleLowerCase('vi-VN');
+	const icon = String(item?.icon || '');
+	return name === 'điều chuyển xuất kho' || name === '调拨出库' || icon.includes('yrt-icon10');
 };
 
 //#region 定义属性
