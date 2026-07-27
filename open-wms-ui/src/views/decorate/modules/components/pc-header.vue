@@ -1,6 +1,6 @@
 <template>
-  <div v-if="config.header.text">
-    <div :style="{ display: 'flex', 'text-align': config.header.textAlign, 'background-color': config.header.bgColor, 'font-size': config.header.fontSize, margin: config.header.margin, padding: config.header.padding, 'border-bottom': config.header.borderBottom }">
+  <div v-if="config.header.text" :class="['pc-section-header', { 'is-viewer': isViewer }]">
+    <div class="pc-section-header__inner" :style="{ display: 'flex', 'text-align': config.header.textAlign, 'background-color': config.header.bgColor, 'font-size': config.header.fontSize, margin: config.header.margin, padding: config.header.padding, 'border-bottom': config.header.borderBottom }">
       <div style="width: 100%">
         {{ config.header.text }}
       </div>
@@ -173,4 +173,30 @@ const search = () => {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.pc-section-header.is-viewer {
+  .pc-section-header__inner {
+    min-height: 52px;
+    align-items: center;
+    padding: 0 18px !important;
+    margin: 0 !important;
+    border-bottom: 1px solid #edf0f5 !important;
+    background: #fff !important;
+    color: #172033 !important;
+    font-size: 17px !important;
+    font-weight: 650;
+    line-height: 1.35;
+    text-align: left !important;
+  }
+
+  :deep(.svg-icon) {
+    width: 30px;
+    height: 30px;
+    padding: 7px;
+    border-radius: 8px;
+    color: #2563eb;
+    background: #eff6ff;
+    cursor: pointer;
+  }
+}
+</style>

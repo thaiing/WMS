@@ -408,14 +408,32 @@ export default {
   // background-color: var(--color-info-light-8);
   &.is-viewer-pc {
     position: static;
-    padding-top: 1px;
+    padding-top: 0;
     width: 100%;
     min-width: 0;
     overflow: visible;
+    background: #f4f7fb;
 
     .content {
       min-width: 0;
       overflow: visible;
+    }
+
+    .scroll-box2 {
+      padding: 16px !important;
+      background: #f4f7fb !important;
+    }
+
+    .draggable-main {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .drag-row:has(> .module-container:empty),
+    .drag-row:has(> .guide-blank),
+    .drag-row:has(> .guide-line) {
+      display: none;
     }
 
     :deep(.module-container) {
@@ -423,6 +441,10 @@ export default {
       width: 100%;
       min-width: 0;
       max-width: 100%;
+    }
+
+    :deep(.grid-container > .data-grid > .widget-grid) {
+      row-gap: 16px;
     }
   }
   &.is-viewer-app {
@@ -540,7 +562,7 @@ export default {
           width: 100%;
           max-width: 100%;
           min-height: auto;
-          padding-bottom: inherit;
+          padding-bottom: 0;
         }
         &.is-viewer-app {
           min-height: auto;
@@ -588,6 +610,18 @@ export default {
         bottom: -35px;
         z-index: 1009;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .center-container.is-viewer-pc {
+    .scroll-box2 {
+      padding: 10px !important;
+    }
+
+    .draggable-main {
+      gap: 10px;
     }
   }
 }

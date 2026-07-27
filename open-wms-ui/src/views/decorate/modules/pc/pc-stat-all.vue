@@ -1,5 +1,5 @@
 <template>
-	<div class="module-container" :style="{ 'background-color': config.style?.bgColor, padding: config.style.bgMargin || 0 }">
+	<div :class="['module-container', { 'is-viewer': isViewer }]" :style="{ 'background-color': config.style?.bgColor, padding: config.style.bgMargin || 0 }">
 		<div :class="['inner', config.style.boxShadow ? 'box-shadow' : '']" :style="{ 'background-color': config.style?.innerBgColor, 'border-radius': config.style?.borderRadius ? config.style.borderRadius + 'px' : 0, padding: config.style.bgPadding || 0, 'border-width': config.style.innerBorderWidth + 'px' || 0, 'border-color': config.style.innerBorderColor || 'transparent', 'border-style': config.style.innerBorderStyle, height: config.style.height || 'auto' }">
 			<pc-header :config="config" :is-viewer="isViewer" @on-search="onSearch"></pc-header>
 
@@ -117,7 +117,7 @@ const onSearch = async () => {
 <style lang="scss" scoped>
 .stat-row {
 	display: grid !important;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 	align-items: stretch;
 	gap: 12px;
 
@@ -155,6 +155,73 @@ const onSearch = async () => {
 			padding-top: 5px;
 			padding-bottom: 5px;
 		}
+	}
+}
+
+.module-container.is-viewer {
+	padding: 0 !important;
+	background: transparent !important;
+
+	> .inner {
+		height: auto !important;
+		padding: 0 !important;
+		border: 0 !important;
+		background: transparent !important;
+		box-shadow: none !important;
+	}
+
+	.stat-row {
+		gap: 14px;
+
+		.stat-col {
+			min-height: 124px;
+			padding: 17px 18px 16px !important;
+			overflow: hidden;
+			border: 1px solid #e4e9f2 !important;
+			border-radius: 10px;
+			background: #fff;
+			box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+			transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+			&:hover {
+				border-color: #cbd5e1 !important;
+				box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+			}
+
+			.flex-row-center-start > span:first-child {
+				color: #172033 !important;
+				font-size: 18px !important;
+				font-weight: 650;
+				line-height: 1.35;
+			}
+		}
+	}
+
+	.column-rows {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		margin-top: 10px;
+
+		.column-row {
+			color: #64748b;
+			font-size: 13px;
+			line-height: 1.45 !important;
+
+			.stat-title {
+				color: #64748b !important;
+			}
+
+			.stat-value {
+				color: #172033 !important;
+				font-weight: 650;
+			}
+		}
+	}
+
+	:deep(.el-tag) {
+		border: 0 !important;
+		border-radius: 7px;
 	}
 }
 .column-rows {

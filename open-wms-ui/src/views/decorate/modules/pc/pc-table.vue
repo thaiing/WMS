@@ -1,5 +1,5 @@
 <template>
-	<div class="module-container" :style="{ 'background-color': config.style?.bgColor, padding: config.style.bgMargin || 0 }">
+	<div :class="['module-container', { 'is-viewer': isViewer }]" :style="{ 'background-color': config.style?.bgColor, padding: config.style.bgMargin || 0 }">
 		<div :class="['inner']" :style="{ 'background-color': config.style?.innerBgColor, 'border-radius': config.style?.borderRadius ? config.style.borderRadius + 'px' : 0, padding: config.style.bgPadding || 0, 'border-width': config.style.innerBorderWidth + 'px' || 0, 'border-color': config.style.innerBorderColor || 'transparent', 'border-style': config.style.innerBorderStyle, height: config.style.height || 'auto' }">
 			<pc-header :config="config" :is-viewer="isViewer" @on-search="onSearch"></pc-header>
 			<el-table :class="{ 'workflow-table': isWorkflowTable }" :data="state.tableData" style="width: 100%" :max-height="config.style.maxHeight || undefined" :stripe="config.style.stripe" :height="config.style.tableHeight || undefined">
@@ -189,6 +189,40 @@ const onSearch = async () => {
 			font-size: 15px;
 			font-weight: bold;
 			height: 30px;
+		}
+	}
+}
+
+.module-container.is-viewer {
+	padding: 0 !important;
+	overflow: hidden;
+	border: 1px solid #e4e9f2;
+	border-radius: 10px;
+	background: #fff !important;
+	box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+
+	.inner {
+		padding: 0 !important;
+		border: 0 !important;
+		border-radius: 0 !important;
+		background: #fff !important;
+
+		:deep(.el-table) {
+			--el-table-header-bg-color: #f8fafc;
+			--el-table-row-hover-bg-color: #f4f8ff;
+			color: #475569;
+		}
+
+		:deep(th.el-table__cell) {
+			padding: 12px 0;
+			color: #475569;
+			font-weight: 650;
+			background: #f8fafc;
+		}
+
+		:deep(td.el-table__cell) {
+			padding: 12px 0;
+			border-bottom-color: #edf0f5;
 		}
 	}
 }

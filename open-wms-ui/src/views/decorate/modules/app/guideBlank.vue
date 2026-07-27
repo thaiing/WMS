@@ -1,5 +1,5 @@
 <template>
-  <div class="module-container" :style="{'background-color':config.style?.bgColor,'margin-top':config.style.maginTop?config.style.maginTop+'px':0,padding:config.style?.bgMargin?config.style.bgMargin+'px':0}">
+  <div class="module-container guide-blank" :style="{'background-color':config.style?.bgColor,'margin-top':config.style.maginTop?config.style.maginTop+'px':0,padding:config.style?.bgMargin?config.style.bgMargin+'px':0}">
     <div class="inner" :style="{'background-color':config.style?.innerBgColor,'border-radius':config.style?.borderRadius?config.style.borderRadius+'px':0,padding:config.style?.bgPadding?config.style.bgPadding+'px':0,height:config.style.height+'px'}">
     </div>
   </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="module-container" :style="{'--el-border-color-base':config.style?.lineColor,'background-color':config.style?.bgColor,'margin-top':config.style.maginTop?config.style.maginTop+'px':0,'padding-left':config.style?.bgMargin?config.style.bgMargin+'px':0,'padding-right':config.style?.bgMargin?config.style.bgMargin+'px':0,height:config.style.height===undefined?0:config.style.height+'px'}">
+  <div class="module-container guide-line" :style="{'--el-border-color-base':config.style?.lineColor,'background-color':config.style?.bgColor,'margin-top':config.style.maginTop?config.style.maginTop+'px':0,'padding-left':config.style?.bgMargin?config.style.bgMargin+'px':0,'padding-right':config.style?.bgMargin?config.style.bgMargin+'px':0,height:config.style.height===undefined?0:config.style.height+'px'}">
     <el-divider :border-style="config.style.borderStyle" class="guide-divider">{{config.desc}}</el-divider>
   </div>
 </template>

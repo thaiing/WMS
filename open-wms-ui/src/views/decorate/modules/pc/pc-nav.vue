@@ -1,6 +1,6 @@
 <!--导航组-->
 <template>
-	<div :class="['module-container', config.style.boxShadow ? 'box-shadow' : '']" :style="{ 'background-color': config.style?.moduleBgColor, 'border-radius': config.style.moduleBorderRadius + 'px', 'margin-top': config.style.moduleMarginTop + 'px', 'margin-bottom': config.style.moduleMarginBottom + 'px', 'margin-left': config.style.moduleMarginLeft + 'px', 'margin-right': config.style.moduleMarginRight + 'px', 'padding-top': config.style.modulePaddingTop + 'px', 'padding-bottom': config.style.modulePaddingBottom + 'px', 'padding-left': config.style.modulePaddingLeft + 'px', 'padding-right': config.style.modulePaddingRight + 'px', border: config.style.moduleBorderStyle + ' ' + (config.style.moduleBorderWidth + 'px') + ' ' + config.style.moduleBorderColor }">
+	<div :class="['module-container', config.style.boxShadow ? 'box-shadow' : '', { 'is-viewer': isViewer }]" :style="{ 'background-color': config.style?.moduleBgColor, 'border-radius': config.style.moduleBorderRadius + 'px', 'margin-top': config.style.moduleMarginTop + 'px', 'margin-bottom': config.style.moduleMarginBottom + 'px', 'margin-left': config.style.moduleMarginLeft + 'px', 'margin-right': config.style.moduleMarginRight + 'px', 'padding-top': config.style.modulePaddingTop + 'px', 'padding-bottom': config.style.modulePaddingBottom + 'px', 'padding-left': config.style.modulePaddingLeft + 'px', 'padding-right': config.style.modulePaddingRight + 'px', border: config.style.moduleBorderStyle + ' ' + (config.style.moduleBorderWidth + 'px') + ' ' + config.style.moduleBorderColor }">
 		<div v-if="config.header?.showHeader" class="header-box" :style="{ 'background-color': config.header?.bgColor, 'padding-left': config.header?.bgMargin ? config.header.bgMargin + 'px' : 0, 'padding-right': config.header?.bgMargin ? config.header.bgMargin + 'px' : 0 }">
 			<div class="inner" :style="{ 'background-color': config.header?.innerBgColor, 'border-radius': config.header?.borderRadius ? config.header.borderRadius + 'px' : 0, padding: config.header?.bgPadding ? config.header.bgPadding + 'px' : 0, 'line-height': config.header.lineHeight + 'px' }">
 				<div v-if="config.header.image" class="img" :style="{ width: (config.header.width || 24) + 'px', height: (config.header.height || 24) + 'px' }">
@@ -20,7 +20,7 @@
 				<div class="scroll-content">
 					<div v-for="(item, index) in config.items" :key="index" class="item" :style="{ 'margin-right': (config.style?.iconMargin === undefined ? 10 : config.style?.iconMargin) + 'px' }">
 						<el-image :src="item.image" fit="fill" class="img" :style="{ width: (config.style?.iconSize === undefined ? 60 : config.style?.iconSize) + 'px', height: (config.style?.iconSize === undefined ? 60 : config.style?.iconSize) + 'px', 'border-radius': config.style?.iconStyle === '圆形' ? (config.style?.iconSize || 60) / 2 + 'px' : '' }"></el-image>
-						<div class="name" :style="{ 'font-size': (config.style?.fontSize === undefined ? 12 : config.style?.fontSize) + 'px', color: config.style?.fontColor }">{{ item.name }}</div>
+					<div class="name" :style="{ 'font-size': (config.style?.fontSize === undefined ? 12 : config.style?.fontSize) + 'px', color: config.style?.fontColor }">{{ formatNavName(item.name) }}</div>
 					</div>
 				</div>
 			</div>
@@ -31,7 +31,7 @@
 					<div>
 						<svg-icon :name="item.icon" :size="config.style.iconSize" :color="item.iconColor"></svg-icon>
 					</div>
-					<div class="name" :style="{ 'font-size': (config.style?.fontSize === undefined ? 12 : config.style?.fontSize) + 'px', color: config.style?.fontColor, 'line-height': config.style.lineHeight + 'px' }">{{ item.name }}</div>
+					<div class="name" :style="{ 'font-size': (config.style?.fontSize === undefined ? 12 : config.style?.fontSize) + 'px', color: config.style?.fontColor, 'line-height': config.style.lineHeight + 'px' }">{{ formatNavName(item.name) }}</div>
 				</div>
 			</div>
 			<el-carousel v-else arrow="never" :autoplay="false" :height="(config.style.contentHeight || 160) + 'px'" :indicator-position="config.style.indicatorStyle == 'none' ? 'none' : 'outside'" :class="[config.style.indicatorStyle == 'circle' ? 'carousel-circle' : '']">
@@ -42,7 +42,7 @@
 								<div style="{ width: (config.style?.iconSize === undefined ? 60 : config.style?.iconSize) + 'px', height: (config.style?.iconSize === undefined ? 60 : config.style?.iconSize) + 'px', 'border-radius': config.style?.iconStyle === '圆形' ? (config.style?.iconSize || 60) / 2 + 'px' : '' }">
 									<svg-icon :name="item.icon" :size="config.style.iconSize" :color="item.iconColor"></svg-icon>
 								</div>
-								<div class="name" :style="{ 'font-size': (config.style?.fontSize === undefined ? 12 : config.style?.fontSize) + 'px', color: config.style?.fontColor, 'line-height': config.style.lineHeight + 'px' }">{{ item.name }}</div>
+								<div class="name" :style="{ 'font-size': (config.style?.fontSize === undefined ? 12 : config.style?.fontSize) + 'px', color: config.style?.fontColor, 'line-height': config.style.lineHeight + 'px' }">{{ formatNavName(item.name) }}</div>
 							</div>
 						</template>
 						<div v-for="index in blankItems" itemid="item-empty" :style="{ width: 100 / config.style.showCount + '%' }"></div>
@@ -62,6 +62,10 @@ import { useRouter } from 'vue-router';
 let ins = getCurrentInstance() as ComponentInternalInstance;
 let proxy = ins.proxy as BaseProperties;
 const router = useRouter();
+const formatNavName = (value: unknown) => {
+	const text = String(value ?? '').trim();
+	return text ? text.charAt(0).toLocaleUpperCase('vi-VN') + text.slice(1) : '';
+};
 
 //#region 定义属性
 const props = defineProps({
@@ -285,6 +289,79 @@ onMounted(() => {
 	.items-static {
 		position: static;
 		height: auto;
+	}
+}
+
+.module-container.is-viewer {
+	margin: 0 !important;
+	padding: 0 !important;
+	overflow: hidden;
+	border: 1px solid #e4e9f2 !important;
+	border-radius: 10px !important;
+	background: #fff !important;
+	box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+
+	.header-box {
+		background: #fff !important;
+
+		.inner {
+			min-height: 52px;
+			padding: 0 18px !important;
+			border-radius: 0 !important;
+			border-bottom: 1px solid #edf0f5;
+			background: #fff !important;
+			line-height: 1.35 !important;
+		}
+
+		.title-box {
+			padding: 0 !important;
+			color: #172033 !important;
+			font-size: 17px !important;
+			font-weight: 650;
+		}
+	}
+
+	.items-2 {
+		margin: 0 !important;
+		padding: 14px !important;
+		border-radius: 0 !important;
+		background: #fff !important;
+
+		.items {
+			gap: 8px;
+		}
+
+		.item {
+			min-height: 94px;
+			justify-content: center;
+			gap: 9px;
+			padding: 12px 8px;
+			border: 1px solid transparent;
+			border-radius: 8px;
+			cursor: pointer;
+			transition: border-color 0.2s ease, background 0.2s ease;
+
+			> div:first-child {
+				display: flex;
+				width: 48px;
+				height: 48px;
+				align-items: center;
+				justify-content: center;
+				border-radius: 8px;
+				background: #f3f7ff;
+			}
+
+			&:hover {
+				border-color: #bfdbfe;
+				background: #f8fbff;
+			}
+
+			.name {
+				color: #475569 !important;
+				font-size: 13px !important;
+				font-weight: 550;
+			}
+		}
 	}
 }
 
