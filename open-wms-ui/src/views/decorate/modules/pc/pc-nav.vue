@@ -147,6 +147,11 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
+.module-container {
+	min-width: 0;
+	container-type: inline-size;
+}
+
 .header-box {
 	.inner {
 		display: flex;
@@ -226,6 +231,11 @@ onMounted(() => {
 }
 
 .items-2 {
+	:deep(.el-carousel__container) {
+		height: auto !important;
+		min-height: 240px;
+	}
+
 	.carousel-circle {
 		:deep(.el-carousel__button) {
 			width: 8px;
@@ -270,27 +280,26 @@ onMounted(() => {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@container (max-width: 520px) {
 	.items-2 {
 		.items {
 			grid-template-columns: repeat(3, minmax(0, 1fr));
 		}
 
 		:deep(.el-carousel__container) {
-			height: auto !important;
-			min-height: 320px;
+			min-height: 420px;
 		}
 	}
 }
 
-@media screen and (max-width: 600px) {
+@container (max-width: 340px) {
 	.items-2 {
 		.items {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
 		}
 
 		:deep(.el-carousel__container) {
-			min-height: 440px;
+			min-height: 560px;
 		}
 	}
 }

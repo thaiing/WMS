@@ -199,6 +199,7 @@ export default {
 .grid-container {
   min-width: 0;
   max-width: 100%;
+  container-type: inline-size;
 
   .widget-view {
     position: relative;
@@ -249,6 +250,19 @@ export default {
       right: 20px;
       bottom: -35px;
       z-index: 1009;
+    }
+  }
+}
+
+@container (max-width: 1200px) {
+  .grid-container .data-grid {
+    :deep(.widget-grid) {
+      row-gap: 12px;
+    }
+
+    :deep(.widget-grid > .el-col) {
+      flex: 0 0 100%;
+      max-width: 100%;
     }
   }
 }

@@ -135,7 +135,8 @@ watch(
 <style scoped lang="scss">
 $homeNavLengh: 8;
 .home-container {
-	overflow: hidden;
+	min-width: 0;
+	overflow: visible;
 	.home-card-one,
 	.home-card-two,
 	.home-card-three {

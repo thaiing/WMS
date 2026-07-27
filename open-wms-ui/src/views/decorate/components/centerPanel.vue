@@ -1,5 +1,5 @@
 <template>
-  <div :class="[isViewer ? (appConfig.global.isPC ? 'is-viewer-pc' : 'is-viewer-app') : 'center-container']" :style="{ '--page-width': appConfig.global.isPC ? (isViewer ? 'auto' : '1100px') : '379px' }">
+  <div :class="['center-container', isViewer ? (appConfig.global.isPC ? 'is-viewer-pc' : 'is-viewer-app') : '']" :style="{ '--page-width': appConfig.global.isPC ? (isViewer ? 'auto' : '1100px') : '379px' }">
     <div class="content">
       <!--头部-->
       <top v-if="!isViewer" v-model:selectModule="currentSelectModule" :app-config="appConfig"></top>
@@ -409,6 +409,21 @@ export default {
   &.is-viewer-pc {
     position: static;
     padding-top: 1px;
+    width: 100%;
+    min-width: 0;
+    overflow: visible;
+
+    .content {
+      min-width: 0;
+      overflow: visible;
+    }
+
+    :deep(.module-container) {
+      box-sizing: border-box;
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
+    }
   }
   &.is-viewer-app {
     position: static;
@@ -426,7 +441,7 @@ export default {
       min-height: 500px;
       &.is-viewer-pc {
         width: 100%;
-        overflow-x: hidden;
+        overflow: visible;
         height: auto;
         max-height: auto;
         min-height: auto;
@@ -516,6 +531,7 @@ export default {
       width: var(--page-width);
       margin: 0px auto;
       padding-top: 1px;
+      box-sizing: border-box;
       .draggable-main {
         min-width: 0;
         min-height: 100px;
