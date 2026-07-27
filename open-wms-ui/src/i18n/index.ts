@@ -15,14 +15,17 @@ import { useThemeConfig } from '/@/stores/themeConfig';
 
 // element plus 自带国际化
 import enLocale from 'element-plus/es/locale/lang/en';
+import viLocale from 'element-plus/es/locale/lang/vi';
 import zhcnLocale from 'element-plus/es/locale/lang/zh-cn';
 import zhtwLocale from 'element-plus/es/locale/lang/zh-tw';
 
 // 定义变量内容
 const messages: any = {};
-const element: any = { en: enLocale, 'zh-cn': zhcnLocale, 'zh-tw': zhtwLocale };
-const itemize: any = { en: [], 'zh-cn': [], 'zh-tw': [] };
-const modules: Record<string, any> = import.meta.glob('./**/*.ts', { eager: true });
+const element: any = { en: enLocale, vi: viLocale, 'zh-cn': zhcnLocale, 'zh-tw': zhtwLocale };
+const itemize: any = { en: [], vi: [], 'zh-cn': [], 'zh-tw': [] };
+// Chỉ nạp các gói vue-i18n. business.vi.ts là bộ dịch lớp hiển thị,
+// không có cấu trúc locale của Element Plus nên không được đưa vào đây.
+const modules: Record<string, any> = import.meta.glob(['./lang/*.ts', './pages/**/*.ts'], { eager: true });
 
 // 对自动引入的 modules 进行分类 en、zh-cn、zh-tw
 // https://vitejs.cn/vite3-cn/guide/features.html#glob-import
@@ -63,18 +66,20 @@ export const i18n = createI18n({
 	silentFallbackWarn: true,
 	fallbackWarn: false,
 	locale: themeConfig.value.globalI18n,
-	fallbackLocale: zhcnLocale.name,
+	fallbackLocale: 'vi',
 	messages,
 });
 
 /**
  * 获取当前语言
- * @returns zh-cn|en ...
+ * @returns vi|zh-cn|en ...
  */
 export const getLanguage = () => {
-	const language = useStorage('language', 'zh_CN');
-	if (language.value) {
-		return language.value;
-	}
-	return 'zh_CN';
+	const localeMap: Record<string, string> = {
+		vi: 'vi_VN',
+		en: 'en_US',
+		'zh-cn': 'zh_CN',
+		'zh-tw': 'zh_TW',
+	};
+	return localeMap[themeConfig.value.globalI18n] || 'vi_VN';
 };

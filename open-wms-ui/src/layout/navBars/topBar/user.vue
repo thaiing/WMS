@@ -20,8 +20,9 @@
       <div class="layout-navbars-breadcrumb-user-icon">
         <i :class="state.disabledI18n === 'en' ? 'yrt2-fuhao-yingwen' : 'yrt2-fuhao-zhongwen'" :title="$t('message.user.title1')"></i>
       </div>
-      <template #dropdown>
-        <el-dropdown-menu>
+        <template #dropdown>
+          <el-dropdown-menu>
+          <el-dropdown-item command="vi" :disabled="state.disabledI18n === 'vi'">Tiếng Việt</el-dropdown-item>
           <el-dropdown-item command="zh-cn" :disabled="state.disabledI18n === 'zh-cn'">简体中文</el-dropdown-item>
           <el-dropdown-item command="en" :disabled="state.disabledI18n === 'en'">English</el-dropdown-item>
           <el-dropdown-item command="zh-tw" :disabled="state.disabledI18n === 'zh-tw'">繁體中文</el-dropdown-item>
@@ -119,7 +120,7 @@ const { themeConfig } = storeToRefs(storesThemeConfig);
 const searchRef = ref();
 const state = reactive({
   isScreenfull: false,
-  disabledI18n: 'zh-cn',
+  disabledI18n: 'vi',
   disabledSize: 'large',
   modifyPwdVisible: false,
   goBack: {
@@ -221,6 +222,8 @@ const onLanguageChange = (lang: string) => {
   locale.value = lang;
   other.useTitle();
   initI18nOrSize('globalI18n', 'disabledI18n');
+  // Tải lại để khôi phục chính xác nội dung gốc khi chuyển qua lại giữa các ngôn ngữ.
+  window.location.reload();
 };
 // 初始化组件大小/i18n
 const initI18nOrSize = (value: string, attr: string) => {

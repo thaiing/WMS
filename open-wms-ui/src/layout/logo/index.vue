@@ -1,6 +1,6 @@
 <template>
 	<div :class="['layout-logo', themeConfig.layout === 'tile' ? 'tile' : '']" v-if="setShowLogo" @click="onThemeConfigChange">
-		<img id="leftSideLogoRef" :src="logoMini" :class="themeConfig.layout === 'tile' ? 'layout-logo-tile-img' : 'layout-logo-medium-img'" crossorigin="anonymous" />
+		<img id="leftSideLogoRef" :src="logoMini" :class="themeConfig.layout === 'tile' ? 'layout-logo-tile-img' : 'layout-logo-medium-img'" alt="DTI" />
 		<!-- <span>{{ themeConfig.layout === 'tile' ? userStore.tenantInfo.sysShortName : userStore.tenantInfo.sysFullName }}</span> -->
 	</div>
 	<div class="layout-logo-size" v-else @click="onThemeConfigChange">
@@ -12,18 +12,11 @@
 import { computed } from 'vue';
 import { storeToRefs } from 'pinia';
 import { useThemeConfig } from '/@/stores/themeConfig';
-import { useUserStore } from '/@/stores/modules/user';
 
 // 定义变量内容
-const userStore = useUserStore();
-const logoMini = ref<string>('');
+const logoMini = '/dti-logo-white.png';
 const storesThemeConfig = useThemeConfig();
 const { themeConfig } = storeToRefs(storesThemeConfig);
-
-onMounted(async () => {
-	await userStore.getTenantInfo();
-	logoMini.value = userStore.tenantInfo.logoLong;
-});
 
 // 设置 logo 的显示。classic 经典布局默认显示 logo
 const setShowLogo = computed(() => {
@@ -62,13 +55,15 @@ const onThemeConfigChange = () => {
 		}
 	}
 	&-medium-img {
-		width: 99%;
-		margin-right: 0px;
-		padding: 0 10px;
+		width: calc(100% - 20px);
+		height: 44px;
+		object-fit: contain;
+		padding: 2px 10px;
 	}
 	&-tile-img {
-		width: 99%;
-		margin-right: 0px;
+		width: calc(100% - 8px);
+		height: 44px;
+		object-fit: contain;
 	}
 }
 .layout-logo-size {
@@ -78,7 +73,9 @@ const onThemeConfigChange = () => {
 	cursor: pointer;
 	animation: logoAnimation 0.3s ease-in-out;
 	&-img {
-		width: 99%;
+		width: calc(100% - 8px);
+		height: 44px;
+		object-fit: contain;
 		margin: auto;
 	}
 	&:hover {

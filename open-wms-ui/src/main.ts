@@ -35,6 +35,7 @@ import { parseTime, addDateRange, handleTree, selectDictLabel, selectDictLabels 
 import mitt from 'mitt';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
+import { installVietnameseDisplayTranslator } from '/@/i18n/business.vi';
 
 // 通用方法加载
 import common from '/@/utils/common';
@@ -83,6 +84,10 @@ app
 
   // .use(VueGridLayout)
   .mount('#app');
+
+// Theo dõi toàn bộ tài liệu vì dialog/loading của Element Plus được teleport
+// ra ngoài #app và tiêu đề trang nằm trong <head>.
+installVietnameseDisplayTranslator(document.documentElement);
 
 // 四舍五入函数
 Math.Round = function (num: number, dec?: number) {

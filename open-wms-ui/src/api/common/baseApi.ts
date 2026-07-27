@@ -3,6 +3,7 @@ import { DeleteBo, DeleteVo, EditorVo, PageEditorBo, SaveEditorBo } from '../typ
 import { BaseObject, DataType, QueryType, QueryBo, PageListBo } from '/@/types/common';
 import request from '/@/utils/request';
 import axios, { RawAxiosRequestHeaders } from 'axios';
+import { translatePresentationData } from '/@/i18n/business.vi';
 
 /**
  * 通用POST方法
@@ -72,7 +73,10 @@ export function decryptApi(params: any) {
  * 获取静态页面参数配置
  */
 export function getPageConfig(url: string) {
-  return axios.get(url);
+  return axios.get(url).then((response) => {
+    translatePresentationData(response.data);
+    return response;
+  });
 }
 
 /**

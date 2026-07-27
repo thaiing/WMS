@@ -57,12 +57,12 @@ const initChart = () => {
 	const option = {
 		backgroundColor: state.charts.bgColor,
 		title: {
-			text: '组合图',
+			text: 'Biểu đồ kết hợp',
 			x: 'left',
 			textStyle: { fontSize: '15', color: state.charts.color },
 		},
 		tooltip: { trigger: 'axis' },
-		legend: { data: ['供温', '回温', '压力值(Mpa)'], right: 0 },
+		legend: { data: ['Nhiệt độ cấp', 'Nhiệt độ hồi', 'Áp suất (MPa)'], right: 0 },
 		grid: { top: 70, right: 80, bottom: 30, left: 80 },
 		xAxis: [
 			{
@@ -74,7 +74,7 @@ const initChart = () => {
 		],
 		yAxis: [
 			{
-				name: '供回温度(℃）',
+				name: 'Nhiệt độ cấp/hồi (°C)',
 				nameLocation: 'middle',
 				nameTextStyle: { padding: [3, 4, 50, 6] },
 				splitLine: { show: true, lineStyle: { type: 'dashed', color: '#f5f5f5' } },
@@ -83,7 +83,7 @@ const initChart = () => {
 				axisLabel: { color: state.charts.color, formatter: '{value} ' },
 			},
 			{
-				name: '压力值(Mpa)',
+				name: 'Áp suất (MPa)',
 				nameLocation: 'middle',
 				nameTextStyle: { padding: [50, 4, 5, 6] },
 				splitLine: { show: false },
@@ -94,7 +94,7 @@ const initChart = () => {
 		],
 		series: [
 			{
-				name: '供温',
+				name: 'Nhiệt độ cấp',
 				type: 'line',
 				smooth: true,
 				showSymbol: true,
@@ -122,7 +122,7 @@ const initChart = () => {
 				],
 			},
 			{
-				name: '回温',
+				name: 'Nhiệt độ hồi',
 				type: 'line',
 				smooth: true,
 				showSymbol: true,
@@ -155,7 +155,7 @@ const initChart = () => {
 				],
 			},
 			{
-				name: '压力值(Mpa)',
+				name: 'Áp suất (MPa)',
 				type: 'bar',
 				barWidth: 30,
 				yAxisIndex: 1,

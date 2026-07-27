@@ -13,6 +13,7 @@ import { encrypt } from '/@/utils/jsencrypt';
 import { getLanguage } from '/@/i18n';
 import { Session } from './storage';
 import { Constants } from './constants';
+import { isVietnameseLocale, translateViText } from '/@/i18n/business.vi';
 
 let requestLoadingInstance: LoadingInstance;
 let downloadLoadingInstance: LoadingInstance;
@@ -131,7 +132,8 @@ service.interceptors.response.use(
       res.data.msg = res.data.message;
     }
     // 获取错误信息
-    const msg = errorCode[code] || res.data.msg || errorCode['default'];
+    const originalMsg = errorCode[code] || res.data.msg || errorCode['default'];
+    const msg = (isVietnameseLocale() ? translateViText(originalMsg) : originalMsg) as string;
     // 数据处理
     const dataResult = () => {
       let { result, code, data, msg, rows, total, footer } = res.data;
@@ -199,6 +201,7 @@ service.interceptors.response.use(
     } else if (message.includes('Request failed with status code')) {
       message = '系统接口' + message.substr(message.length - 3) + '异常';
     }
+    if (isVietnameseLocale()) message = translateViText(message) as string;
     if (message && message.indexOf('重复提交') === -1 && !isShowErrorMessage) {
       ElMessage({ message: message, type: 'error', duration: 5 * 1000 });
       isShowErrorMessage = true;

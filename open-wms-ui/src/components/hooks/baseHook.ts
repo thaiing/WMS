@@ -604,7 +604,7 @@ export default function baseHook(baseParams?: BaseHookParams) {
     let subTableViews = state.editorOptions.fields.filter((item: any) => item.type === 'detail-grid');
 
     // 明细字段处理
-    const subUserJsons = res.subUserJsons;
+    const subUserJsons = res.subUserJsons || [];
     subUserJsons.forEach((item: any) => {
       const userJson = item.userJson;
       const subFields = subTableViews.find((row: any) => row.subTableName === item.subTableName).fields;

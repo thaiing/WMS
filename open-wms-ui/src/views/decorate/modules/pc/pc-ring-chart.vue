@@ -13,6 +13,7 @@ import { to } from 'await-to-js';
 import { ComponentInternalInstance } from 'vue';
 import { BaseProperties } from '/@/types/base-type';
 import * as echarts from 'echarts';
+import { translateViText } from '/@/i18n/business.vi';
 import { useThemeConfig } from '/@/stores/themeConfig';
 const storesThemeConfig = useThemeConfig();
 const { themeConfig } = storeToRefs(storesThemeConfig);
@@ -61,10 +62,10 @@ const initChart = () => {
 	let getname = '';
 	let getvalue = '';
 	if (state.legendData && state.seriesData) {
-		getname = state.legendData.split(','); // 后端返回图例标题
+		getname = state.legendData.split(',').map((item: string) => translateViText(item)); // 后端返回图例标题
 		getvalue = state.seriesData.split(','); // 后端返回图例数据
 	} else {
-		getname = props.config.legend.data.split(','); // 默认图例标题
+		getname = props.config.legend.data.split(',').map((item: string) => translateViText(item)); // 默认图例标题
 		getvalue = props.config.series.data.split(','); // 默认图例数据
 	}
 	let data = [];

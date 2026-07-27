@@ -14,6 +14,7 @@ import { ComponentInternalInstance } from 'vue';
 import { BaseProperties } from '/@/types/base-type';
 import * as echarts from 'echarts';
 import pcHeader from '../components/pc-header.vue';
+import { translateViText } from '/@/i18n/business.vi';
 
 let ins = getCurrentInstance() as ComponentInternalInstance;
 let proxy = ins.proxy as BaseProperties;
@@ -57,10 +58,10 @@ const state = reactive({
 const initChart = () => {
 	if (state.chartObj) state.chartObj.dispose();
 	state.chartObj = markRaw(echarts.init(chartRef.value, state.charts.theme));
-	let getname = props.config.series.map((item: any) => item.name); // 图例标题
+	let getname = props.config.series.map((item: any) => translateViText(item.name)); // 图例标题
 	let series = props.config.series.map((item: any) => {
 		return {
-			name: item.name,
+			name: translateViText(item.name),
 			type: 'bar',
 			barWidth: item.barWidth || null,
 			yAxisIndex: 0,
@@ -98,14 +99,14 @@ const initChart = () => {
 		},
 		xAxis: {
 			type: 'category',
-			data: props.config.xAxis.data.split(','),
+			data: props.config.xAxis.data.split(',').map((item: string) => translateViText(item)),
 			boundaryGap: true,
 			axisTick: { show: false },
 		},
 		yAxis: [
 			{
 				type: props.config.yAxis.type,
-				name: props.config.yAxis.name,
+				name: translateViText(props.config.yAxis.name),
 				nameLocation: 'middle',
 				nameTextStyle: { padding: [3, 4, 50, 6] },
 				splitLine: { show: true, lineStyle: { type: 'dashed', color: '#f5f5f5' } },
