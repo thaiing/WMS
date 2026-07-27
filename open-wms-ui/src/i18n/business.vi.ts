@@ -863,6 +863,13 @@ export function translateViText(input: unknown): unknown {
   const trailing = input.match(/\s*$/)?.[0] || '';
   const source = input.trim();
   if (!source) return input;
+  if (/^根\s*\//.test(source)) {
+    const segments = source.split(/\s*\/\s*/);
+    const translatedPath = segments
+      .map((segment, index) => (index === 0 && segment === '根' ? 'Gốc' : (translateViText(segment) as string)))
+      .join(' / ');
+    return `${leading}${translatedPath}${trailing}`;
+  }
   if (exact[source]) return `${leading}${exact[source]}${trailing}`;
   if (source.startsWith('易软通开源openWMS')) {
     return `${leading}${source.replace('易软通开源openWMS', 'DTI')}${trailing}`;
@@ -940,13 +947,116 @@ function fieldAction(field: string): 'nhập' | 'chọn' {
 const translationExcludedSelector = 'script, style, textarea, code, pre, [contenteditable="true"]';
 const legacyBrandPattern = /(易软通|open\s*wms|easy\s*soft|esoftone|esoftong|yiruantong|yisoft)/i;
 const legacyBrandReplacePattern = /(易软通开源openWMS|易软通|open\s*wms|easy\s*soft|esoftone|esoftong|yiruantong|yisoft)/gi;
+const productCategoryTerms: Record<string, string> = {
+  根: 'Danh mục gốc',
+  服装: 'Thời trang',
+  衣服: 'Quần áo',
+  裤子: 'Quần',
+  上衣: 'Áo',
+  衣着: 'Trang phục',
+  T恤: 'Áo thun',
+  包袋: 'Túi xách',
+  纺织品及其制成品: 'Hàng dệt may',
+  布: 'Vải may',
+  线: 'Chỉ may',
+  纽扣: 'Cúc áo',
+  饮料: 'Đồ uống',
+  数码产品: 'Thiết bị số',
+  电子产品: 'Đồ điện tử',
+  电动牙刷: 'Bàn chải điện',
+  扫地机配件: 'Phụ kiện robot hút bụi',
+  平衡车: 'Xe điện cân bằng',
+  手机: 'Điện thoại',
+  扫地机器人: 'Robot hút bụi',
+  行车记录仪: 'Camera hành trình',
+  摄像机: 'Máy quay phim',
+  吸尘器: 'Máy hút bụi',
+  蔬菜: 'Rau củ',
+  椒豆: 'Các loại đậu và ớt',
+  特菜类: 'Rau đặc sản',
+  葱姜蒜: 'Hành, gừng & tỏi',
+  水叶菜: 'Rau ăn lá',
+  根茎: 'Rau củ và thân rễ',
+  茄果: 'Rau ăn quả',
+  菌菇: 'Nấm',
+  散装: 'Hàng rời',
+  包装: 'Hàng đóng gói',
+  肉蛋: 'Thịt & trứng',
+  蛋类: 'Trứng',
+  肉类: 'Các loại thịt',
+  鸡肉: 'Thịt gà',
+  猪肉: 'Thịt heo',
+  猪产品: 'Sản phẩm từ thịt heo',
+  牛羊肉: 'Thịt bò & thịt cừu',
+  鸡鸭: 'Thịt gà & vịt',
+  水产: 'Thủy hải sản',
+  冻货: 'Thực phẩm đông lạnh',
+  干果: 'Đồ khô & các loại hạt',
+  干调: 'Gia vị & thực phẩm khô',
+  调料: 'Gia vị',
+  干货: 'Thực phẩm khô',
+  酱菜: 'Rau củ muối',
+  米面油: 'Gạo, mì & dầu ăn',
+  米: 'Gạo',
+  面: 'Mì và bột',
+  食用油: 'Dầu ăn',
+  杂粮: 'Ngũ cốc',
+  主食: 'Lương thực chính',
+  豆制品: 'Sản phẩm từ đậu',
+  牛肉: 'Thịt bò',
+  牛尾: 'Đuôi bò',
+  酒: 'Đồ uống có cồn',
+  酒水水: 'Đồ uống có cồn',
+  白酒: 'Rượu trắng',
+  啤酒: 'Bia',
+  红酒: 'Rượu vang đỏ',
+  配件: 'Phụ tùng & phụ kiện',
+  轮胎: 'Lốp xe',
+  五金配件: 'Phụ kiện kim khí',
+  大米: 'Gạo',
+  食品: 'Thực phẩm',
+  食品1: 'Thực phẩm',
+  '食品、饮料、药品': 'Thực phẩm, đồ uống & dược phẩm',
+  奶粉: 'Sữa bột',
+  其他食品: 'Thực phẩm khác',
+  调味品: 'Gia vị',
+  咖啡: 'Cà phê',
+  茶叶: 'Trà',
+  日用品: 'Hàng tiêu dùng thiết yếu',
+  美食: 'Thực phẩm chế biến',
+  冻肉: 'Thịt đông lạnh',
+  生鲜果蔬: 'Rau củ quả tươi',
+  大瓶水: 'Nước đóng bình',
+  功能饮料: 'Nước tăng lực',
+  酸牛奶: 'Sữa chua',
+  金枪鱼: 'Cá ngừ',
+  羊: 'Thịt cừu',
+  海鲜: 'Hải sản',
+  水果: 'Trái cây',
+  '[未使用节点]': '[Danh mục không sử dụng]',
+};
 
 function shouldNormalizeDisplayText(value: string): boolean {
   return /[\u3400-\u9fff]/.test(value) || legacyBrandPattern.test(value);
 }
 
+function translateProductCategoryText(value: string): string {
+  const leading = value.match(/^\s*/)?.[0] || '';
+  const trailing = value.match(/\s*$/)?.[0] || '';
+  const source = value.trim();
+  const segments = source.split(/\s*[/,]\s*/);
+
+  if (segments.length > 1 && segments.every((segment) => productCategoryTerms[segment] || segment)) {
+    return `${leading}${segments.map((segment) => productCategoryTerms[segment] || (translateViText(segment) as string)).join(' / ')}${trailing}`;
+  }
+  if (productCategoryTerms[source]) return `${leading}${productCategoryTerms[source]}${trailing}`;
+  return translateViText(value) as string;
+}
+
 function translateDisplayText(value: string): string {
-  return (translateViText(value) as string).replace(legacyBrandReplacePattern, 'DTI');
+  const isProductCategoryPage = typeof window !== 'undefined' && window.location.pathname === '/basic/product/productType';
+  const translated = isProductCategoryPage ? translateProductCategoryText(value) : (translateViText(value) as string);
+  return translated.replace(legacyBrandReplacePattern, 'DTI');
 }
 
 function isTranslationExcluded(node: Node): boolean {
