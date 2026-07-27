@@ -119,8 +119,19 @@ const onSearch = async () => {
 
 <style lang="scss" scoped>
 .module-container {
+	height: 100%;
+
 	.inner {
+		display: flex;
+		flex-direction: column;
+		height: 100% !important;
+		min-height: 0;
 		padding: 5px 0;
+
+		:deep(.el-table) {
+			flex: 1 1 auto;
+			min-height: 0;
+		}
 	}
 	.box-shadow {
 		width: 100%;

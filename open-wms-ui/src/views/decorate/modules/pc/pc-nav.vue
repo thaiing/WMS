@@ -26,7 +26,15 @@
 			</div>
 		</div>
 		<div v-else class="items-2" :style="{ 'background-color': config.style?.bgColor, 'border-radius': config.style?.bgBorderRadius ? config.style.bgBorderRadius + 'px' : 0, margin: config.style?.bgMargin ? config.style.bgMargin + 'px' : 0, padding: config.style?.bgPadding ? config.style.bgPadding + 'px' : 0, '--indicator-olor': config.style.indicatorColor }">
-			<el-carousel arrow="never" :autoplay="false" :height="(config.style.contentHeight || 160) + 'px'" :indicator-position="config.style.indicatorStyle == 'none' ? 'none' : 'outside'" :class="[config.style.indicatorStyle == 'circle' ? 'carousel-circle' : '']">
+			<div v-if="pageCount === 1" class="items items-static">
+				<div v-for="(item, index) in config.items" :key="index" class="item" :style="{ 'margin-bottom': config.style.iconMargin + 'px' }" @click="goUrl(item.url)">
+					<div>
+						<svg-icon :name="item.icon" :size="config.style.iconSize" :color="item.iconColor"></svg-icon>
+					</div>
+					<div class="name" :style="{ 'font-size': (config.style?.fontSize === undefined ? 12 : config.style?.fontSize) + 'px', color: config.style?.fontColor, 'line-height': config.style.lineHeight + 'px' }">{{ item.name }}</div>
+				</div>
+			</div>
+			<el-carousel v-else arrow="never" :autoplay="false" :height="(config.style.contentHeight || 160) + 'px'" :indicator-position="config.style.indicatorStyle == 'none' ? 'none' : 'outside'" :class="[config.style.indicatorStyle == 'circle' ? 'carousel-circle' : '']">
 				<el-carousel-item v-for="(item, index) in pageCount" :key="item">
 					<div class="items">
 						<template v-for="(item, index2) in getCurrentPage(index)">
@@ -231,11 +239,6 @@ onMounted(() => {
 }
 
 .items-2 {
-	:deep(.el-carousel__container) {
-		height: auto !important;
-		min-height: 240px;
-	}
-
 	.carousel-circle {
 		:deep(.el-carousel__button) {
 			width: 8px;
@@ -278,6 +281,11 @@ onMounted(() => {
 			height: 0;
 		}
 	}
+
+	.items-static {
+		position: static;
+		height: auto;
+	}
 }
 
 @container (max-width: 520px) {
@@ -286,9 +294,6 @@ onMounted(() => {
 			grid-template-columns: repeat(3, minmax(0, 1fr));
 		}
 
-		:deep(.el-carousel__container) {
-			min-height: 420px;
-		}
 	}
 }
 
@@ -298,11 +303,41 @@ onMounted(() => {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
 		}
 
-		:deep(.el-carousel__container) {
-			min-height: 560px;
-		}
 	}
 }
+
+:deep(.yrt-dian::before) {
+	content: '\e703';
+}
+
+:deep(.yrt-zhongduancanshuchaxun::before) {
+	content: '\e602';
+}
+
+:deep(.yrt-AIshiyanshi::before) {
+	content: '\e60e';
+}
+
+:deep(.yrt-xingqiu::before) {
+	content: '\e600';
+}
+
+:deep(.yrt-shibai::before) {
+	content: '\e602';
+}
+
+:deep(.yrt-zidingyibuju::before) {
+	content: '\e61e';
+}
+
+:deep(.yrt-shidu::before) {
+	content: '\e62e';
+}
+
+:deep(.yrt-siweidaotu::before) {
+	content: '\e60b';
+}
+
 .box-shadow {
 	width: 100%;
 	&:hover {

@@ -218,17 +218,45 @@ export default {
     min-width: 0;
     max-width: 100%;
 
+    :deep(.widget-grid) {
+      align-items: stretch !important;
+    }
+
+    :deep(.widget-grid > .el-col) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    :deep(.widget-grid > .el-col > div) {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      width: 100%;
+      min-height: 0;
+    }
+
     ::v-deep(.el-form .el-form-item:last-of-type) {
       margin-bottom: 5px !important;
     }
     .grid-column {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      width: 100%;
       min-width: 0;
       min-height: 40px;
+      height: 100%;
     }
     .drag-row {
+      flex: 1 1 auto;
+      min-height: 0;
       border: 0px dashed var(--color-whites);
       cursor: pointer;
       position: relative;
+
+      :deep(.module-container) {
+        height: 100%;
+      }
       &.select-item {
         border: 1px solid var(--color-primary);
       }
@@ -254,7 +282,7 @@ export default {
   }
 }
 
-@container (max-width: 1200px) {
+@container (max-width: 900px) {
   .grid-container .data-grid {
     :deep(.widget-grid) {
       row-gap: 12px;
