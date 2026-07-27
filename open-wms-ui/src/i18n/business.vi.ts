@@ -11,7 +11,7 @@ const exact: Record<string, string> = {
   ...(generated as Record<string, string>),
   首页: 'Trang chủ',
   登录: 'Đăng nhập',
-  易软通开源openWMS: 'OpenWMS mã nguồn mở',
+  易软通开源openWMS: 'DTI',
   收货: 'Nhận hàng',
   界面: 'Cấu hình giao diện',
   接口: 'Tích hợp API',
@@ -624,7 +624,7 @@ const exact: Record<string, string> = {
 };
 
 const terms: Array<[string, string]> = [
-  ['易软通开源openWMS', 'OpenWMS mã nguồn mở'],
+  ['易软通开源openWMS', 'DTI'],
   ['首页', 'trang chủ'],
   ['出库订单', 'đơn xuất kho'],
   ['库存明细查询', 'tra cứu chi tiết tồn kho'],
@@ -865,7 +865,7 @@ export function translateViText(input: unknown): unknown {
   if (!source) return input;
   if (exact[source]) return `${leading}${exact[source]}${trailing}`;
   if (source.startsWith('易软通开源openWMS')) {
-    return `${leading}${source.replace('易软通开源openWMS', 'OpenWMS mã nguồn mở')}${trailing}`;
+    return `${leading}${source.replace('易软通开源openWMS', 'DTI')}${trailing}`;
   }
 
   let match = source.match(/^请输入(.+?)[！!。]?$/);
@@ -938,6 +938,16 @@ function fieldAction(field: string): 'nhập' | 'chọn' {
 }
 
 const translationExcludedSelector = 'script, style, textarea, code, pre, [contenteditable="true"]';
+const legacyBrandPattern = /(易软通|open\s*wms|easy\s*soft|esoftone|esoftong|yiruantong|yisoft)/i;
+const legacyBrandReplacePattern = /(易软通开源openWMS|易软通|open\s*wms|easy\s*soft|esoftone|esoftong|yiruantong|yisoft)/gi;
+
+function shouldNormalizeDisplayText(value: string): boolean {
+  return /[\u3400-\u9fff]/.test(value) || legacyBrandPattern.test(value);
+}
+
+function translateDisplayText(value: string): string {
+  return (translateViText(value) as string).replace(legacyBrandReplacePattern, 'DTI');
+}
 
 function isTranslationExcluded(node: Node): boolean {
   const element = node.nodeType === Node.ELEMENT_NODE ? (node as Element) : node.parentElement;
@@ -949,15 +959,15 @@ function translateElement(element: Element): void {
 
   for (const attribute of ['placeholder', 'title', 'aria-label']) {
     const value = element.getAttribute(attribute);
-    if (value && /[\u3400-\u9fff]/.test(value)) {
-      const translated = translateViText(value) as string;
+    if (value && shouldNormalizeDisplayText(value)) {
+      const translated = translateDisplayText(value);
       if (translated !== value) element.setAttribute(attribute, translated);
     }
   }
 
   for (const child of Array.from(element.childNodes)) {
-    if (child.nodeType === Node.TEXT_NODE && child.textContent && /[\u3400-\u9fff]/.test(child.textContent)) {
-      const translated = translateViText(child.textContent) as string;
+    if (child.nodeType === Node.TEXT_NODE && child.textContent && shouldNormalizeDisplayText(child.textContent)) {
+      const translated = translateDisplayText(child.textContent);
       if (translated !== child.textContent) child.textContent = translated;
     } else if (child.nodeType === Node.ELEMENT_NODE) {
       translateElement(child as Element);
@@ -972,7 +982,7 @@ function translateElement(element: Element): void {
 export function installVietnameseDisplayTranslator(root: Element): MutationObserver | undefined {
   if (!isVietnameseLocale()) return undefined;
   document.documentElement.lang = 'vi';
-  document.title = translateViText(document.title) as string;
+  document.title = translateDisplayText(document.title);
   translateElement(root);
 
   const observer = new MutationObserver((mutations) => {
@@ -984,9 +994,9 @@ export function installVietnameseDisplayTranslator(root: Element): MutationObser
         mutation.type === 'characterData' &&
         !isTranslationExcluded(mutation.target) &&
         mutation.target.textContent &&
-        /[\u3400-\u9fff]/.test(mutation.target.textContent)
+        shouldNormalizeDisplayText(mutation.target.textContent)
       ) {
-        const translated = translateViText(mutation.target.textContent) as string;
+        const translated = translateDisplayText(mutation.target.textContent);
         if (translated !== mutation.target.textContent) mutation.target.textContent = translated;
       }
       for (const node of Array.from(mutation.addedNodes)) {
@@ -995,9 +1005,9 @@ export function installVietnameseDisplayTranslator(root: Element): MutationObser
           node.nodeType === Node.TEXT_NODE &&
           !isTranslationExcluded(node) &&
           node.textContent &&
-          /[\u3400-\u9fff]/.test(node.textContent)
+          shouldNormalizeDisplayText(node.textContent)
         ) {
-          const translated = translateViText(node.textContent) as string;
+          const translated = translateDisplayText(node.textContent);
           if (translated !== node.textContent) node.textContent = translated;
         }
       }

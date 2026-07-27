@@ -107,7 +107,7 @@ export const useThemeConfig = defineStore('themeConfig', {
       // 是否开启水印
       isWartermark: false,
       // 水印文案
-      wartermarkText: '易软通仓配一体化',
+      wartermarkText: 'DTI',
 
       /**
        * 其它设置

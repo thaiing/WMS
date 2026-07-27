@@ -101,13 +101,13 @@ const state = reactive({
   currentHref: '#part0',
   currentPackage: {
     packageId: 1,
-    packageName: '易软通仓配一体化系统',
+    packageName: 'DTI WMS',
     href: '#part0',
   } as { packageId: number; packageName: string; href: string } | undefined,
   packageList: [
     {
       packageId: 1,
-      packageName: '易软通仓配一体化系统',
+      packageName: 'DTI WMS',
       href: '#part0',
     },
   ],

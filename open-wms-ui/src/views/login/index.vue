@@ -2,7 +2,7 @@
   <div class="login-container flex">
     <div class="login-left" :style="{ 'background-color': getBgColor() }">
       <div class="login-left-logo">
-        <img :src="userStore.tenantInfo.logoLong" />
+        <img src="/dti-logo.png" alt="DTI" />
         <!-- <div class="login-left-logo-text">
 					<span>{{ userStore.tenantInfo.sysFullName }}</span>
 					<span class="login-left-logo-text-msg">{{ userStore.tenantInfo.sysShortName }}</span>
@@ -37,7 +37,7 @@
         <span class="login-right-warp-one"></span>
         <span class="login-right-warp-two"></span>
         <div class="login-right-warp-mian">
-          <div class="login-right-warp-main-title">{{ userStore.tenantInfo.sysFullName }}</div>
+          <div class="login-right-warp-main-title">DTI</div>
           <div class="login-right-warp-main-form">
             <div v-if="!state.isScan">
               <el-tabs v-model="state.tabsActiveName">

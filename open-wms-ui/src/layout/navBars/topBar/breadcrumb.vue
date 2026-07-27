@@ -15,7 +15,6 @@
         </transition-group>
       </el-breadcrumb>
     </div>
-    <div class="sys-full-name">{{ sysFullName }}</div>
   </div>
 </template>
 
@@ -27,13 +26,11 @@ import other from '/@/utils/other';
 import { storeToRefs } from 'pinia';
 import { useThemeConfig } from '/@/stores/themeConfig';
 import { useRoutesList } from '/@/stores/routesList';
-import { useUserStore } from '/@/stores/modules/user';
 import { BaseProperties } from '/@/types/base-type';
 let ins = getCurrentInstance() as ComponentInternalInstance;
 let proxy = ins.proxy as BaseProperties;
 
 // 定义变量内容
-const userStore = useUserStore();
 const stores = useRoutesList();
 const storesThemeConfig = useThemeConfig();
 const { themeConfig } = storeToRefs(storesThemeConfig);
@@ -53,10 +50,6 @@ const isShowBreadcrumb = computed(() => {
   const { layout, isBreadcrumb } = themeConfig.value;
   if (layout === 'transverse') return false;
   else return isBreadcrumb ? true : false;
-});
-
-const sysFullName = computed(() => {
-  return userStore.sysFullName + '(' + userStore.tenantId + ')';
 });
 
 // 面包屑点击时
@@ -151,28 +144,6 @@ onBeforeRouteUpdate((to) => {
     &:hover {
       color: var(--el-color-primary) !important;
     }
-  }
-}
-.sys-full-name {
-  min-width: 0;
-  max-width: min(38vw, 560px);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  height: 50px;
-  line-height: 50px;
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 3px;
-  animation: logoAnimation 0.3s ease;
-  animation-delay: 0.3s;
-  color: #949494;
-  margin-right: 20px;
-}
-
-@media screen and (max-width: 1400px) {
-  .sys-full-name {
-    display: none;
   }
 }
 

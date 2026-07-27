@@ -101,7 +101,7 @@ export default {
 					pageId: 0,
 					type: 'global',
 					title: '页面设置',
-					header: '易软通采购系统',
+					header: 'DTI WMS',
 					decorateName: '默认模板',
 					enable: 1,
 				},

@@ -8,11 +8,9 @@ import { useThemeConfig } from '/@/stores/themeConfig';
 import { i18n } from '/@/i18n/index';
 import { Local } from '/@/utils/storage';
 import { verifyUrl } from '/@/utils/toolsValidate';
-import useUserStore from '../stores/modules/user';
 
 // 引入组件
 const SvgIcon = defineAsyncComponent(() => import('/@/components/svgIcon/index.vue'));
-const userStore = useUserStore();
 
 /**
  * 导出全局注册 element plus svg 图标
@@ -32,11 +30,9 @@ export function elSvg(app: App) {
  * @method const title = useTitle(); ==> title()
  */
 export function useTitle() {
-  const stores = useThemeConfig(pinia);
-  const { themeConfig } = storeToRefs(stores);
   nextTick(() => {
     let webTitle = '';
-    let globalTitle: string = userStore.sysShortName;
+    const globalTitle = 'DTI';
     const { path, meta } = router.currentRoute.value;
     if (path === '/login') {
       webTitle = <string>meta.title;

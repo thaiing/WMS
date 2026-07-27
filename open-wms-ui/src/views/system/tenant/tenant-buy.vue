@@ -12,7 +12,7 @@
 
 				<el-form label-width="auto" style="max-width: 1000px">
 					<el-form-item label="产品名称">
-						<span class="content">易软通仓配一体化系统</span>
+						<span class="content">Hệ thống DTI WMS</span>
 					</el-form-item>
 					<el-form-item label="用户数">
 						<span class="content mr-20">10</span>
@@ -31,7 +31,7 @@
 				<el-divider />
 				<el-form label-width="auto" style="max-width: 1000px">
 					<el-form-item label="产品名称">
-						<span class="content">易软通标准WMS系统</span>
+						<span class="content">Hệ thống DTI WMS</span>
 					</el-form-item>
 					<el-form-item label="用户数">
 						<span class="content mr-20">10</span>
@@ -50,7 +50,7 @@
 				<el-divider />
 				<el-form label-width="auto" style="max-width: 1000px">
 					<el-form-item label="产品名称">
-						<span class="content">易软通标准TMS系统</span>
+						<span class="content">Hệ thống DTI TMS</span>
 					</el-form-item>
 					<el-form-item label="用户数">
 						<span class="content mr-20">10</span>
