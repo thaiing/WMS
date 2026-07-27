@@ -1,5 +1,15 @@
 <template>
-  <el-menu :router="false" :default-active="state.defaultActive" background-color="transparent" :collapse="state.isCollapse" :unique-opened="getThemeConfig.isUniqueOpened" :collapse-transition="false" @select="handleMenuSelect">
+  <el-menu
+    :router="false"
+    :default-active="state.defaultActive"
+    background-color="transparent"
+    :collapse="state.isCollapse"
+    :unique-opened="getThemeConfig.isUniqueOpened"
+    :collapse-transition="false"
+    :popper-offset="0"
+    popper-class="wms-sidebar-popper"
+    @select="handleMenuSelect"
+  >
     <template v-for="menuItem in menuLists">
       <el-sub-menu :index="getPath(menuItem)" v-if="menuItem.children && menuItem.children.length > 0" :key="getPath(menuItem)">
         <template #title>
