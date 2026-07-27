@@ -678,8 +678,10 @@ defineExpose({
   min-width: 0;
   max-width: 100%;
   background-color: white;
-  border-radius: 4px;
-  padding: 10px;
+  border: 1px solid var(--wms-border, #e5eaf2);
+  border-radius: var(--wms-radius-md, 12px);
+  padding: 14px;
+  box-shadow: var(--wms-shadow-sm, 0 4px 14px rgb(15 23 42 / 4%));
 
   .search-region {
     .tool-left {
@@ -776,8 +778,8 @@ defineExpose({
 
     :deep(.cell) {
       line-height: 20px;
-      padding-left: 5px;
-      padding-right: 0px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
 
     .el-button--mini {
@@ -789,7 +791,7 @@ defineExpose({
     }
 
     :deep(td) {
-      padding: 5px 0;
+      padding: 7px 0;
     }
   }
 }
@@ -846,9 +848,13 @@ defineExpose({
 }
 
 .pagination-container {
+  display: flex;
+  justify-content: flex-end;
   max-width: 100%;
   overflow-x: auto;
-  margin-top: 10px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--wms-border, #e5eaf2);
 }
 
 @media screen and (max-width: 600px) {
@@ -857,6 +863,8 @@ defineExpose({
   }
 
   .pagination-container {
+    justify-content: flex-start;
+
     :deep(.el-pagination) {
       flex-wrap: wrap;
       gap: 6px 0;

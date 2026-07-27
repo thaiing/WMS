@@ -882,11 +882,22 @@ const onMenuItem = (row: any) => {
 }
 
 .search-region {
+  margin-bottom: 2px;
+
+  :deep(.el-form-item) {
+    margin-bottom: 10px;
+  }
+
   .tool-left {
-    float: left;
+    display: flex;
+    flex: 1 1 420px;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
 
     .tool-group + .tool-group {
-      margin-left: 10px;
+      margin-left: 0;
     }
 
     .el-button--medium {
@@ -895,8 +906,15 @@ const onMenuItem = (row: any) => {
   }
 
   .tool-right {
+    display: flex;
+    flex: 1 1 460px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+    min-width: 0;
+    margin-left: auto;
     text-align: right;
-    min-width: 380px;
 
     &.search-only-line {
       text-align: left;
@@ -906,7 +924,7 @@ const onMenuItem = (row: any) => {
 
     .inline-block {
       margin-bottom: 0px;
-      margin-right: 5px;
+      margin-right: 0;
     }
 
     .search-texarea {
@@ -1028,7 +1046,11 @@ const onMenuItem = (row: any) => {
 
   :deep(.el-form-item__content) {
     position: static;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
   }
 
   :deep(.el-input__wrapper) {

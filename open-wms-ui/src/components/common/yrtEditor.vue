@@ -981,7 +981,41 @@ defineExpose({
 
 <style lang="scss" scoped>
 .editor-container {
-  padding-bottom: 10px;
+  padding-bottom: 6px;
+
+  .editor-master {
+    width: min(100%, 760px) !important;
+    margin-right: auto;
+    margin-left: auto;
+
+    :deep(.el-form-item) {
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+
+    :deep(.el-form-item__label) {
+      width: 160px !important;
+      min-width: 160px;
+      height: auto;
+      min-height: 32px;
+      padding-right: 14px;
+      line-height: 1.4;
+      white-space: normal;
+      word-break: normal;
+      overflow-wrap: break-word;
+    }
+
+    :deep(.el-form-item__content) {
+      min-width: 0;
+    }
+
+    :deep(.el-input),
+    :deep(.el-select),
+    :deep(.el-date-editor),
+    :deep(.el-input-number) {
+      max-width: 100%;
+    }
+  }
 
   .splitter-title {
     background-color: #f2f6fc;
@@ -1076,9 +1110,61 @@ defineExpose({
 
 .dialog-footer {
   display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   justify-content: space-between;
   :deep(.el-button) {
     padding: 10px 10px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .editor-container {
+    .editor-master {
+      width: 100% !important;
+
+      :deep(.el-row) {
+        row-gap: 0;
+      }
+
+      :deep(.el-col) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      :deep(.el-form-item) {
+        display: block;
+        margin-bottom: 14px;
+      }
+
+      :deep(.el-form-item__label) {
+        width: 100% !important;
+        min-width: 0;
+        min-height: 0;
+        margin-bottom: 6px;
+        padding: 0;
+      }
+
+      :deep(.el-form-item__content) {
+        margin-left: 0 !important;
+      }
+    }
+
+    .detail-tool {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+  }
+
+  .dialog-footer {
+    .left,
+    .right {
+      display: flex;
+      flex: 1 1 100%;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
   }
 }
 </style>
