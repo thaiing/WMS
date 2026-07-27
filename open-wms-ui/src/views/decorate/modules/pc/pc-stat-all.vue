@@ -124,6 +124,7 @@ const onSearch = async () => {
 	.stat-col {
 		width: auto !important;
 		min-width: 0;
+		text-align: left !important;
 		padding: 12px !important;
 		margin: 0 !important;
 		border: 1px solid var(--el-border-color-lighter, #ebeef5);
@@ -136,6 +137,8 @@ const onSearch = async () => {
 		.flex-row-center-start {
 			flex-wrap: wrap;
 			align-items: flex-start;
+			justify-content: flex-start !important;
+			text-align: left !important;
 			gap: 6px;
 		}
 
@@ -162,8 +165,9 @@ const onSearch = async () => {
 	.column-row {
 		width: 100%;
 		min-width: 0;
-		justify-content: flex-start;
+		justify-content: flex-start !important;
 		align-items: flex-start;
+		text-align: left !important;
 
 		.stat-title {
 			min-width: 0;
