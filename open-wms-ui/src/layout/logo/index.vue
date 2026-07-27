@@ -21,7 +21,7 @@ const { themeConfig } = storeToRefs(storesThemeConfig);
 // 设置 logo 的显示。classic 经典布局默认显示 logo
 const setShowLogo = computed(() => {
 	let { isCollapse, layout } = themeConfig.value;
-	return !isCollapse || layout === 'classic' || document.body.clientWidth < 1000;
+	return !isCollapse || layout === 'classic' || document.body.clientWidth <= 1200;
 });
 // logo 点击实现菜单展开/收起
 const onThemeConfigChange = () => {
@@ -32,7 +32,7 @@ const onThemeConfigChange = () => {
 
 <style scoped lang="scss">
 .layout-logo {
-	width: 220px;
+	width: 100%;
 	height: 50px;
 	display: flex;
 	align-items: center;

@@ -937,8 +937,15 @@ function fieldAction(field: string): 'nhập' | 'chọn' {
   return /(仓库|货主|客户|供应商|状态|类型|类别|日期|时间|部门|货位)/.test(field) ? 'chọn' : 'nhập';
 }
 
+const translationExcludedSelector = 'script, style, textarea, code, pre, [contenteditable="true"]';
+
+function isTranslationExcluded(node: Node): boolean {
+  const element = node.nodeType === Node.ELEMENT_NODE ? (node as Element) : node.parentElement;
+  return !!element?.closest(translationExcludedSelector);
+}
+
 function translateElement(element: Element): void {
-  if (element.matches('script, style, textarea, [contenteditable="true"]')) return;
+  if (isTranslationExcluded(element)) return;
 
   for (const attribute of ['placeholder', 'title', 'aria-label']) {
     const value = element.getAttribute(attribute);
@@ -975,6 +982,7 @@ export function installVietnameseDisplayTranslator(root: Element): MutationObser
       }
       if (
         mutation.type === 'characterData' &&
+        !isTranslationExcluded(mutation.target) &&
         mutation.target.textContent &&
         /[\u3400-\u9fff]/.test(mutation.target.textContent)
       ) {
@@ -983,7 +991,12 @@ export function installVietnameseDisplayTranslator(root: Element): MutationObser
       }
       for (const node of Array.from(mutation.addedNodes)) {
         if (node.nodeType === Node.ELEMENT_NODE) translateElement(node as Element);
-        if (node.nodeType === Node.TEXT_NODE && node.textContent && /[\u3400-\u9fff]/.test(node.textContent)) {
+        if (
+          node.nodeType === Node.TEXT_NODE &&
+          !isTranslationExcluded(node) &&
+          node.textContent &&
+          /[\u3400-\u9fff]/.test(node.textContent)
+        ) {
           const translated = translateViText(node.textContent) as string;
           if (translated !== node.textContent) node.textContent = translated;
         }

@@ -1,0 +1,66 @@
+@import './index.scss';
+
+/* Quy tắc responsive dùng chung cho các màn hình nghiệp vụ OpenWMS. */
+@media screen and (max-width: $lg) {
+	.layout-container {
+		.layout-main,
+		.layout-main-scroll,
+		.layout-parent,
+		.layout-padding,
+		.layout-padding-auto,
+		.layout-padding-view {
+			min-width: 0;
+			max-width: 100%;
+		}
+	}
+
+	.layout-main {
+		.el-card,
+		.el-form,
+		.el-tabs,
+		.el-table,
+		.datalist-container {
+			min-width: 0;
+			max-width: 100%;
+		}
+	}
+
+	.el-dialog {
+		max-width: calc(100vw - 24px);
+	}
+
+	.el-drawer {
+		max-width: min(92vw, 640px);
+	}
+}
+
+@media screen and (max-width: $sm) {
+	.layout-container {
+		.layout-padding-view {
+			overflow: auto;
+		}
+	}
+
+	.layout-main {
+		.el-card__body {
+			padding: 12px;
+		}
+
+		.el-table {
+			width: 100% !important;
+		}
+
+		.el-form--inline {
+			.el-form-item {
+				max-width: 100%;
+				margin-right: 0;
+			}
+		}
+
+		pre,
+		code {
+			max-width: 100%;
+			overflow-x: auto;
+		}
+	}
+}

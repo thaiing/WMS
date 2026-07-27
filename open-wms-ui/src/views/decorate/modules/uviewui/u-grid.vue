@@ -197,6 +197,9 @@ export default {
 
 <style lang="scss" scoped>
 .grid-container {
+  min-width: 0;
+  max-width: 100%;
+
   .widget-view {
     position: relative;
   }
@@ -211,10 +214,14 @@ export default {
     z-index: 1001;
   }
   .data-grid {
+    min-width: 0;
+    max-width: 100%;
+
     ::v-deep(.el-form .el-form-item:last-of-type) {
       margin-bottom: 5px !important;
     }
     .grid-column {
+      min-width: 0;
       min-height: 40px;
     }
     .drag-row {
@@ -242,6 +249,19 @@ export default {
       right: 20px;
       bottom: -35px;
       z-index: 1009;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .grid-container .data-grid {
+    :deep(.widget-grid) {
+      row-gap: 12px;
+    }
+
+    :deep(.widget-grid > .el-col) {
+      flex: 0 0 100%;
+      max-width: 100%;
     }
   }
 }

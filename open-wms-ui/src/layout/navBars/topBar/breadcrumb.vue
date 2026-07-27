@@ -116,6 +116,7 @@ onBeforeRouteUpdate((to) => {
 
 <style scoped lang="scss">
 .layout-navbars-breadcrumb {
+  min-width: 0;
   flex: 1;
   height: inherit;
   display: flex;
@@ -153,6 +154,11 @@ onBeforeRouteUpdate((to) => {
   }
 }
 .sys-full-name {
+  min-width: 0;
+  max-width: min(38vw, 560px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   height: 50px;
   line-height: 50px;
   font-size: 20px;
@@ -162,5 +168,21 @@ onBeforeRouteUpdate((to) => {
   animation-delay: 0.3s;
   color: #949494;
   margin-right: 20px;
+}
+
+@media screen and (max-width: 1400px) {
+  .sys-full-name {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .layout-navbars-breadcrumb {
+    flex: 0 0 40px;
+
+    .layout-navbars-breadcrumb-icon {
+      width: 40px;
+    }
+  }
 }
 </style>

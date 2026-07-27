@@ -90,4 +90,40 @@ const onSearch = async () => {
 
 <style lang="scss" scoped>
 @import '../scss/module.scss';
+
+.widget-grid {
+	row-gap: 12px;
+
+	:deep(.el-col) {
+		min-width: 0;
+	}
+}
+
+.col-content {
+	min-width: 0;
+
+	.flex-auto {
+		min-width: 0;
+		overflow: visible;
+		overflow-wrap: anywhere;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.widget-grid {
+		:deep(.el-col) {
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.widget-grid {
+		:deep(.el-col) {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+}
 </style>

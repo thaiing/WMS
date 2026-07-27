@@ -4,7 +4,7 @@
     <div v-if="state.goBack.enable" class="layout-navbars-breadcrumb-user-icon" @click="goBackUrl">
       <i :class="state.goBack.icon" :title="$t(state.goBack.title)"></i>
     </div>
-    <el-dropdown :show-timeout="70" :hide-timeout="50" trigger="click" @command="onComponentSizeChange">
+    <el-dropdown class="header-control-size" :show-timeout="70" :hide-timeout="50" trigger="click" @command="onComponentSizeChange">
       <div class="layout-navbars-breadcrumb-user-icon">
         <i class="yrt-ziti" :title="$t('message.user.title0')"></i>
       </div>
@@ -16,7 +16,7 @@
         </el-dropdown-menu>
       </template>
     </el-dropdown>
-    <el-dropdown :show-timeout="70" :hide-timeout="50" trigger="click" @command="onLanguageChange">
+    <el-dropdown class="header-control-language" :show-timeout="70" :hide-timeout="50" trigger="click" @command="onLanguageChange">
       <div class="layout-navbars-breadcrumb-user-icon">
         <i :class="state.disabledI18n === 'en' ? 'yrt2-fuhao-yingwen' : 'yrt2-fuhao-zhongwen'" :title="$t('message.user.title1')"></i>
       </div>
@@ -34,7 +34,7 @@
 				<ele-Search />
 			</el-icon>
 		</div> -->
-    <div class="layout-navbars-breadcrumb-user-icon" @click="onLayoutSetingClick">
+    <div class="layout-navbars-breadcrumb-user-icon header-control-theme" @click="onLayoutSetingClick">
       <i class="yrt2-skin" :title="$t('message.user.title3')"></i>
     </div>
     <!-- <div class="layout-navbars-breadcrumb-user-icon" ref="userNewsBadgeRef" v-click-outside="onUserNewsClick">
@@ -48,12 +48,12 @@
 			<UserNews />
 		</el-popover> -->
 
-    <tenant-change class="right-menu-item" />
-    <warning class="right-menu-item" />
-    <div class="layout-navbars-breadcrumb-user-icon mr5" @click="onScreenfullClick">
+    <tenant-change class="right-menu-item header-control-tenant" />
+    <warning class="right-menu-item header-control-warning" />
+    <div class="layout-navbars-breadcrumb-user-icon mr5 header-control-fullscreen" @click="onScreenfullClick">
       <i class="iconfont" :title="state.isScreenfull ? $t('message.user.title6') : $t('message.user.title5')" :class="!state.isScreenfull ? 'yrt2-fullscreen' : 'yrt2-tuichuquanping'"></i>
     </div>
-    <el-dropdown :show-timeout="70" :hide-timeout="50" @command="onHandleCommandClick">
+    <el-dropdown class="header-user-menu" :show-timeout="70" :hide-timeout="50" @command="onHandleCommandClick">
       <span class="layout-navbars-breadcrumb-user-link cursor-pointer">
         <img :src="userInfos.photo" class="layout-navbars-breadcrumb-user-link-photo mr5" />
         {{ proxy.common.getUserInfo().nickName }}
@@ -258,6 +258,8 @@ const goBackUrl = () => {
 
 <style scoped lang="scss">
 .layout-navbars-breadcrumb-user {
+  min-width: 0;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -306,6 +308,50 @@ const goBackUrl = () => {
     height: 50px;
     vertical-align: text-top;
     padding-top: 15px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .layout-navbars-breadcrumb-user {
+    padding-right: 8px !important;
+
+    &-icon {
+      padding: 0 7px;
+    }
+
+    .right-menu-item {
+      margin-left: 4px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .layout-navbars-breadcrumb-user {
+    .header-control-size,
+    .header-control-theme,
+    .header-control-tenant,
+    .header-control-warning,
+    .header-control-fullscreen {
+      display: none !important;
+    }
+
+    .header-control-language .layout-navbars-breadcrumb-user-icon {
+      padding: 0 8px;
+    }
+
+    .layout-navbars-breadcrumb-user-link {
+      max-width: 42px;
+      overflow: hidden;
+      font-size: 0;
+
+      &-photo {
+        flex: 0 0 25px;
+      }
+
+      .el-icon-right {
+        display: none;
+      }
+    }
   }
 }
 </style>

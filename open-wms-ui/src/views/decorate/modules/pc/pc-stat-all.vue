@@ -116,17 +116,76 @@ const onSearch = async () => {
 
 <style lang="scss" scoped>
 .stat-row {
+	display: grid !important;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	align-items: stretch;
+	gap: 12px;
+
 	.stat-col {
+		width: auto !important;
+		min-width: 0;
+		padding: 12px !important;
+		margin: 0 !important;
+		border: 1px solid var(--el-border-color-lighter, #ebeef5);
+		border-radius: 8px;
+
 		+ .stat-col {
-			border-left: 1px solid #ececece5;
+			border-left: 1px solid var(--el-border-color-lighter, #ebeef5);
+		}
+
+		.flex-row-center-start {
+			flex-wrap: wrap;
+			align-items: flex-start;
+			gap: 6px;
+		}
+
+		.flex-row-center-start > .mr-20 {
+			margin-right: 0 !important;
+			overflow-wrap: anywhere;
+		}
+
+		:deep(.el-tag) {
+			max-width: 100%;
+			height: auto;
+			white-space: normal;
+			line-height: 1.35;
+			padding-top: 5px;
+			padding-bottom: 5px;
 		}
 	}
 }
 .column-rows {
-	display: flex;
-	flex-flow: row wrap;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 4px 12px;
+
 	.column-row {
-		width: 50%;
+		width: 100%;
+		min-width: 0;
+		justify-content: flex-start;
+		align-items: flex-start;
+
+		.stat-title {
+			min-width: 0;
+			overflow-wrap: anywhere;
+		}
+
+		.stat-value {
+			flex-shrink: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.module-container > .inner {
+		height: auto !important;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.stat-row {
+		grid-template-columns: 1fr;
+		gap: 10px;
 	}
 }
 </style>

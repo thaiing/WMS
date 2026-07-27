@@ -341,7 +341,7 @@ const setCollapseStyle = computed(() => {
   const asideBrTheme = ['#FFFFFF', '#FFF', '#fff', '#ffffff'];
   const asideBrColor = asideBrTheme.includes(menuBar) ? 'layout-el-aside-br-color' : '';
   // 判断是否是手机端
-  if (state.clientWidth <= 1000) {
+  if (state.clientWidth <= 1200) {
     if (isCollapse) {
       document.body.setAttribute('class', 'el-popup-parent--hidden');
       const asideEle = document.querySelector('.layout-container') as HTMLElement;
@@ -380,7 +380,7 @@ const closeLayoutAsideMobileMode = () => {
     el?.parentNode?.removeChild(el);
   }, 300);
   const clientWidth = document.body.clientWidth;
-  if (clientWidth < 1000) themeConfig.value.isCollapse = false;
+  if (clientWidth <= 1200) themeConfig.value.isCollapse = false;
   document.body.setAttribute('class', '');
 };
 // 设置/过滤路由（非静态路由/是否显示在菜单中）
@@ -468,7 +468,7 @@ onBeforeRouteUpdate((to) => {
   state.defaultActivePath = getRootPath(state.menuList, to);
 
   const clientWidth = document.body.clientWidth;
-  if (clientWidth < 1000) themeConfig.value.isCollapse = false;
+  if (clientWidth <= 1200) themeConfig.value.isCollapse = false;
 });
 // 菜单高亮（详情时，父级高亮）
 const setParentHighlight = (currentRoute: RouteToFrom) => {

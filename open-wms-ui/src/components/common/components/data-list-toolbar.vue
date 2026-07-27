@@ -1051,4 +1051,100 @@ const onMenuItem = (row: any) => {
     padding-top: 3px;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .search-region {
+    :deep(.el-form-item__content) {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 8px;
+      width: 100%;
+    }
+
+    .tool-left {
+      float: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      width: 100%;
+
+      .tool-group {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+
+        + .tool-group {
+          margin-left: 0;
+        }
+      }
+
+      :deep(.el-button) {
+        max-width: 100%;
+        height: auto;
+        min-height: 32px;
+        margin-left: 0;
+        white-space: normal;
+        line-height: 1.35;
+      }
+    }
+
+    .tool-right {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+      width: 100%;
+      min-width: 0;
+      text-align: left;
+
+      &.search-only-line {
+        margin-top: 0;
+      }
+
+      > .inline-block,
+      > .w-120 {
+        flex: 1 1 160px;
+        width: auto !important;
+        min-width: 0;
+        margin: 0;
+
+        :deep(.el-input),
+        :deep(.el-select),
+        :deep(.el-date-editor) {
+          width: 100% !important;
+        }
+      }
+
+      .search-input {
+        flex: 1 1 240px;
+        width: auto;
+        max-width: none;
+        min-width: 0;
+      }
+
+      :deep(.el-button) {
+        margin-left: 0 !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .search-region {
+    .tool-left {
+      :deep(.el-button-group) {
+        width: 100%;
+      }
+    }
+
+    .tool-right {
+      > .inline-block,
+      > .w-120,
+      .search-input {
+        flex-basis: 100%;
+      }
+    }
+  }
+}
 </style>

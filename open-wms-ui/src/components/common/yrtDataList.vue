@@ -675,6 +675,8 @@ defineExpose({
 
 <style lang="scss" scoped>
 .datalist-container {
+  min-width: 0;
+  max-width: 100%;
   background-color: white;
   border-radius: 4px;
   padding: 10px;
@@ -753,6 +755,8 @@ defineExpose({
   }
 
   .table-region {
+    width: 100%;
+    max-width: 100%;
     z-index: 0;
 
     /* begin 解决合计滚动条问题 */
@@ -842,7 +846,22 @@ defineExpose({
 }
 
 .pagination-container {
+  max-width: 100%;
+  overflow-x: auto;
   margin-top: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .datalist-container {
+    padding: 8px;
+  }
+
+  .pagination-container {
+    :deep(.el-pagination) {
+      flex-wrap: wrap;
+      gap: 6px 0;
+    }
+  }
 }
 </style>
 

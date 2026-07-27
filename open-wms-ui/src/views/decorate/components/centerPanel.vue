@@ -419,11 +419,14 @@ export default {
     flex-direction: column;
     overflow: hidden;
     .scrollCon {
+      min-width: 0;
       overflow: auto scroll;
       -webkit-font-smoothing: antialiased;
       height: calc(100vh - 115px);
       min-height: 500px;
       &.is-viewer-pc {
+        width: 100%;
+        overflow-x: hidden;
         height: auto;
         max-height: auto;
         min-height: auto;
@@ -461,6 +464,7 @@ export default {
       }
 
       .drag-row {
+        min-width: 0;
         border: 0px dashed var(--color-whites);
         cursor: pointer;
         position: relative;
@@ -496,19 +500,29 @@ export default {
     .scroll-box {
       width: calc(var(--page-width) + 114px);
       margin: 0px auto;
+      &.is-viewer-pc {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+      }
       &.is-viewer-app {
         width: 380px;
       }
     }
     .scroll-box2 {
+      min-width: 0;
+      max-width: 100%;
       flex: 1 1 0%;
       width: var(--page-width);
       margin: 0px auto;
       padding-top: 1px;
       .draggable-main {
+        min-width: 0;
         min-height: 100px;
         padding-bottom: 50px;
         &.is-viewer-pc {
+          width: 100%;
+          max-width: 100%;
           min-height: auto;
           padding-bottom: inherit;
         }

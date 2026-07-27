@@ -70,6 +70,7 @@ body,
     padding: 15px !important;
   }
   .layout-flex {
+    min-width: 0;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -86,6 +87,9 @@ body,
     .el-scrollbar__view {
       overflow: hidden;
     }
+    .el-menu {
+      width: 100%;
+    }
   }
   .layout-header {
     padding: 0 !important;
@@ -95,6 +99,7 @@ body,
     z-index: 1;
   }
   .layout-main {
+    min-width: 0;
     padding: 0 !important;
     overflow: hidden;
     width: 100%;
@@ -103,8 +108,10 @@ body,
     flex-direction: column;
     // 内层 el-scrollbar样式，用于界面高度自适应（main.vue）
     .layout-main-scroll {
+      min-width: 0;
       @extend .layout-flex;
       .layout-parent {
+        min-width: 0;
         @extend .layout-flex;
         position: relative;
       }
@@ -155,7 +162,7 @@ body,
   }
   // pc端左侧导航样式
   .layout-aside-pc-220 {
-    width: 220px !important;
+    width: 270px !important;
     transition: width 0.3s ease;
   }
   .layout-aside-pc-64 {
@@ -172,12 +179,12 @@ body,
   .layout-aside-mobile {
     position: fixed;
     top: 0;
-    left: -220px;
-    width: 220px;
+    left: -260px;
+    width: 260px;
     z-index: 9999999;
   }
   .layout-aside-mobile-close {
-    left: -220px;
+    left: -260px;
     transition: all 0.3s cubic-bezier(0.39, 0.58, 0.57, 1);
   }
   .layout-aside-mobile-open {
@@ -206,6 +213,15 @@ body,
   }
   .layout-hide {
     display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .layout-container {
+    .layout-pd,
+    .layout-padding {
+      padding: 8px !important;
+    }
   }
 }
 

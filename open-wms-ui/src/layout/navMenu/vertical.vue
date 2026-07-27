@@ -93,13 +93,13 @@ onBeforeRouteUpdate((to) => {
   // 修复：https://gitee.com/lyt-top/vue-next-admin/issues/I3YX6G
   state.defaultActive = setParentHighlight(to);
   const clientWidth = document.body.clientWidth;
-  if (clientWidth < 1000) themeConfig.value.isCollapse = false;
+  if (clientWidth <= 1200) themeConfig.value.isCollapse = false;
 });
 // 设置菜单的收起/展开
 watch(
   () => themeConfig.value.isCollapse,
   (isCollapse) => {
-    document.body.clientWidth <= 1000 ? (state.isCollapse = false) : (state.isCollapse = isCollapse);
+    document.body.clientWidth <= 1200 ? (state.isCollapse = false) : (state.isCollapse = isCollapse);
   },
   {
     immediate: true,
@@ -198,3 +198,17 @@ const findRouteByMenuId = (routes: Array<any>, menuId: number): any => {
   return routes.find((route) => route.children && findRouteByMenuId(route.children, menuId)) || null;
 };
 </script>
+
+<style scoped lang="scss">
+:deep(.el-menu-item),
+:deep(.el-sub-menu__title) {
+	min-width: 0;
+
+	span {
+		min-width: 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+}
+</style>

@@ -27,7 +27,7 @@ const { themeConfig } = storeToRefs(storesThemeConfig);
 const onLayoutResize = () => {
 	if (!Local.get('oldLayout')) Local.set('oldLayout', themeConfig.value.layout);
 	const clientWidth = document.body.clientWidth;
-	if (clientWidth < 1000) {
+	if (clientWidth <= 1200) {
 		themeConfig.value.isCollapse = false;
 		mittBus.emit('layoutMobileResize', {
 			layout: 'defaults',
