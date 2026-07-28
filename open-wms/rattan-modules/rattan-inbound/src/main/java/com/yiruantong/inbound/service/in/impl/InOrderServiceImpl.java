@@ -233,7 +233,7 @@ public class InOrderServiceImpl extends ServiceImplPlus<InOrderMapper, InOrder, 
         throw new ServiceException("只有审核成功才允许操作");
       }
 
-      for (InOrder orderInfo : data) {
+      for (InOrder orderInfo : orders) {
         //修改数据
         this.updateStatus(orderInfo.getOrderId(), InOrderStatusEnum.IN_TRANSIT);
         //添加轨迹信息
