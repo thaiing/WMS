@@ -19,7 +19,7 @@
     <slot v-if="state.browserType === 'waterfall' && props.dataOptions.openWaterfall" name="datalist-waterfall" :data="state.dataList">未实现瀑布流，请联系管理员</slot>
     <!--table数据列表-->
     <template v-else>
-      <el-table ref="dataListRef" :data="state.dataList" :show-summary="props.dataOptions.showSumField" :summary-method="aHook.getSummaries" :max-height="props.dataOptions.maxHeight || 715" :row-style="props.rowStyle" :cell-style="(props.cellStyle as any)" :row-key="dataOptions.idField" :tree-props="{ children: 'children', hasChildren: 'hasChildren' }" :default-expand-all="state.defaultExpandAll" :show-overflow-tooltip="false" highlight-current-row :size="props.size" class="table-region" @selection-change="aHook.handleSelectionChange" @header-click="aHook.headerClick" @sort-change="aHook.sortChange" @expand-change="aHook.expandChange" :key="state.expandkey">
+      <el-table ref="dataListRef" :data="state.dataList" :show-summary="props.dataOptions.showSumField" :summary-method="aHook.getSummaries" :max-height="props.dataOptions.maxHeight || 715" :row-style="props.rowStyle" :cell-style="(props.cellStyle as any)" :row-key="dataOptions.idField" :tree-props="{ children: 'children', hasChildren: 'hasChildren' }" :default-expand-all="state.defaultExpandAll" :show-overflow-tooltip="false" border highlight-current-row :size="props.size" class="table-region" @selection-change="aHook.handleSelectionChange" @header-click="aHook.headerClick" @header-dragend="onHeaderDragend" @sort-change="aHook.sortChange" @expand-change="aHook.expandChange" :key="state.expandkey">
         <el-table-column :width="'30px'" type="selection" fixed="left" class="col-selection" align="center"></el-table-column>
         <el-table-column :width="'30px'" :index="(index:number) => (dataOptions.pageIndex - 1) * dataOptions.pageSize + index + 1" type="index" fixed="left" class="col-index" label="#" align="center">
           <template #header>
@@ -488,6 +488,13 @@ const currentFields = computed(() => {
   }
   return _fields;
 });
+
+const onHeaderDragend = (newWidth: number, _oldWidth: number, column: any) => {
+  const field = currentFields.value.find((item: any) => item.prop === column.property);
+  if (!field) return;
+  field.width = newWidth;
+  localStorage.setItem('tableConfig_' + proxy.$route.fullPath, JSON.stringify(currentFields.value));
+};
 
 // 快速查询
 const quickSearch = computed(() => {

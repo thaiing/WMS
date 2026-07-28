@@ -520,7 +520,7 @@ export default function actionHook(options: ListLoadOptions) {
         return item.prop;
       });
 
-    sums[0] = '合';
+    sums[0] = '';
     sums[1] = '';
     let length = 2;
     // 如果打开了展开列
@@ -537,7 +537,7 @@ export default function actionHook(options: ListLoadOptions) {
           let footerRow = footerRows[0];
           if (footerRow) sums[index + length] = Number(footerRow[field.prop] || 0);
         } else {
-          sums[index + length] = '';
+          sums[index + length] = index === 0 ? '合计' : '';
         }
       });
 

@@ -134,6 +134,7 @@ public class InOrderPlanServiceImpl extends ServiceImplPlus<InOrderPlanMapper, I
    *
    * @param ids@return
    */
+  @Transactional(rollbackFor = Exception.class)
   public R<Void> toInOrder(List<Long> ids) {
     // 是否开启唯一码
     var in_autoSingleSignCode = sysConfigService.getConfigBool("in_autoSingleSignCode");
@@ -153,6 +154,22 @@ public class InOrderPlanServiceImpl extends ServiceImplPlus<InOrderPlanMapper, I
       LambdaQueryWrapper<InOrderPlanDetail> planLma = new LambdaQueryWrapper<>();
       planLma.eq(InOrderPlanDetail::getPlanId, planId);
       List<InOrderPlanDetail> inOrderPlanDetails = inOrderPlanDetailService.list(planLma);
+
+      for (InOrderPlanDetail detail : inOrderPlanDetails) {
+        if (ObjectUtil.isNull(detail.getStorageId())) {
+          detail.setStorageId(inOrderPlanVo.getStorageId());
+          detail.setStorageCode(inOrderPlanVo.getStorageCode());
+          detail.setStorageName(inOrderPlanVo.getStorageName());
+        }
+        if (ObjectUtil.isNull(detail.getConsignorId())) {
+          detail.setConsignorId(inOrderPlanVo.getConsignorId());
+          detail.setConsignorCode(inOrderPlanVo.getConsignorCode());
+          detail.setConsignorName(inOrderPlanVo.getConsignorName());
+        }
+        if (ObjectUtil.isNull(detail.getStorageId()) || ObjectUtil.isNull(detail.getConsignorId())) {
+          throw new ServiceException("Chi tiết phiếu " + inOrderPlanVo.getPlanCode() + " thiếu kho hoặc chủ hàng");
+        }
+      }
 
       // 仓库+货主分组
 //        Map<Long, Map<Long, List<InOrderPlanDetail>>> groupList = inOrderPlanDetails.stream()
