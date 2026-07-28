@@ -12,8 +12,8 @@
 </template>
 
 <script setup lang="ts" name="manager-form-item">
-import FmUpload from './upload/index.vue';
-import Tinymce from '/@/components/Tinymce/index.vue';
+import FmUpload from './Upload/index.vue';
+import Tinymce from '/@/components/tinymce/index.vue';
 import InputSelect from '/@/components/base/InputSelect.vue';
 import TableSelect from '/@/components/base/TableSelect.vue';
 import { ComponentInternalInstance } from 'vue';

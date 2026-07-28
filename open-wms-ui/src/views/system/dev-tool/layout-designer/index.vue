@@ -71,7 +71,7 @@ import { BaseProperties } from '/@/types/base-type';
 import draggable from 'vuedraggable';
 import widgetConfig from './widgetConfig.vue';
 import widgetForm from './widgetForm.vue';
-import cusDialog from './cusDialog.vue';
+import cusDialog from './CusDialog.vue';
 // import JSONEditor from 'jsoneditor'
 // import 'jsoneditor/dist/jsoneditor.min.css'
 // import Sticky from "@/components/sticky/index.vue";

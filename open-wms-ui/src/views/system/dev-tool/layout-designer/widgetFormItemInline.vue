@@ -76,7 +76,7 @@
 </template>
 
 <script setup lang="ts" name="manager-form-item-in=line">
-import FmUpload from './upload/index.vue';
+import FmUpload from './Upload/index.vue';
 import { ComponentInternalInstance } from 'vue';
 import { BaseProperties } from '/@/types/base-type';
 let ins = getCurrentInstance() as ComponentInternalInstance;

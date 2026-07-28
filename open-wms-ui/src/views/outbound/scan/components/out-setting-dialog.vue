@@ -98,7 +98,7 @@ import { ComponentInternalInstance, nextTick } from 'vue';
 import { BaseProperties } from '/@/types/base-type';
 let ins = getCurrentInstance() as ComponentInternalInstance;
 let proxy: BaseProperties = ins.proxy as BaseProperties;
-import { getLodop } from '/@/utils/LodopFuncs.js';
+import { getLodop } from '/@/utils/lodopFuncs.js';
 import { DataType, QueryBo, QueryType } from '/@/types/common';
 import { postData } from '/@/api/common/baseApi';
 import to from 'await-to-js';
