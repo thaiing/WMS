@@ -82,7 +82,7 @@
       },
       {
         "type": "input",
-        "label": "客户单号",
+        "label": "关联单号",
         "dataType": "string",
         "icon": "yrt-danhangshurukuang",
         "options": {

@@ -264,8 +264,14 @@ public class CoreInventoryServiceImpl extends ServiceImplPlus<CoreInventoryMappe
     tableDataInfoV.setTableName(pageQuery.getTableName());
     //#region 计算合计数量
     if (pageQuery.getSumColumnNames() != null && !pageQuery.getSumColumnNames().isEmpty()) {
+      var sumColumnNames = pageQuery.getSumColumnNames().stream()
+        .filter(item -> !item.isExpandField() && isEntityField(item.getProp()))
+        .toList();
+      if (sumColumnNames.isEmpty()) {
+        return tableDataInfoV;
+      }
       MPJLambdaWrapper<CoreInventory> inventoryMpjLambdaWrapper = new MPJLambdaWrapper<>();
-      for (var sumItem : pageQuery.getSumColumnNames()) {
+      for (var sumItem : sumColumnNames) {
         inventoryMpjLambdaWrapper.select("SUM(" + StringUtils.toUnderScoreCase(sumItem.getProp()) + ") AS " + sumItem.getProp());
       }
       inventoryMpjLambdaWrapper

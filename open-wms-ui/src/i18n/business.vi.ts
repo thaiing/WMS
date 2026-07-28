@@ -186,6 +186,7 @@ const exact: Record<string, string> = {
   客户简称: 'Tên viết tắt khách hàng',
   所属客户: 'Khách hàng',
   客户单号: 'Mã đơn của khách hàng',
+  关联单号: 'Số chứng từ liên kết',
   供应商: 'Nhà cung cấp',
   供应商名称: 'Nhà cung cấp',
   供应商编号: 'Mã nhà cung cấp',

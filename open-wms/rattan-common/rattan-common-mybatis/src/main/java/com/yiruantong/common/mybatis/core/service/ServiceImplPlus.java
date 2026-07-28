@@ -220,11 +220,14 @@ public class ServiceImplPlus<M extends BaseMapperPlus<T, V>, T, V, BO> extends M
 
     //#region 列表合计求和
     if (ObjectUtil.isNotNull(pageQuery.getSumColumnNames())) {
+      var sumColumnNames = pageQuery.getSumColumnNames().stream()
+        .filter(item -> !item.isExpandField() && isEntityField(item.getProp()))
+        .toList();
       // 拼接查询条件
       QueryWrapper<T> sumWrapper = BuildWrapperHelper.createWrapper(pageQuery.getQueryBoList(), modelClass);
-      if (!pageQuery.getSumColumnNames().isEmpty()) {
+      if (!sumColumnNames.isEmpty()) {
         List<String> sums = new ArrayList<>();
-        for (var sumItem : pageQuery.getSumColumnNames()) {
+        for (var sumItem : sumColumnNames) {
           sums.add("SUM(" + StringUtils.toUnderScoreCase(sumItem.getProp()) + ") AS " + sumItem.getProp());
         }
         sumWrapper.select(CollUtil.join(sums, ","));
@@ -235,6 +238,11 @@ public class ServiceImplPlus<M extends BaseMapperPlus<T, V>, T, V, BO> extends M
     this.afterPageList(pageQuery, tableDataInfoV);
 
     return tableDataInfoV;
+  }
+
+  protected boolean isEntityField(String fieldName) {
+    return StringUtils.isNotEmpty(fieldName)
+      && TableInfoHelper.getAllFields(super.getEntityClass()).stream().anyMatch(field -> StringUtils.equals(field.getName(), fieldName));
   }
 
   /**
