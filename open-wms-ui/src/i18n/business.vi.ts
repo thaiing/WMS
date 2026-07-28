@@ -37,6 +37,8 @@ const exact: Record<string, string> = {
   查看: 'Xem',
   详情: 'Chi tiết',
   审核: 'Duyệt',
+  在途中: 'Đang giao hàng',
+  确认为在途中: 'Xác nhận đang giao hàng',
   反审核: 'Hủy duyệt',
   批量审核: 'Duyệt hàng loạt',
   复核状态: 'Trạng thái rà soát',
